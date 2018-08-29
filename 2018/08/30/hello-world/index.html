@@ -1,0 +1,346 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<link rel="bookmark"  type="image/x-icon"  href="/img/logo_miccall.png"/>
+	<link rel="shortcut icon" href="/img/logo_miccall.png">
+	
+			    <title>
+    GTY-Hexo
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/css/mic_main.css" />
+    <link rel="stylesheet" href="/css/dropdownMenu.css" />
+    <meta name="keywords" content="miccall" />
+    
+    	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	 
+    <noscript>
+        <link rel="stylesheet" href="/css/noscript.css" />
+    </noscript>
+    <style type="text/css">
+        body:before {
+          content: ' ';
+          position: fixed;
+          top: 0;
+          background: url('/img/bg.jpg') center 0 no-repeat;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background-size: cover; 
+        }
+    </style>
+
+			    
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script async type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+	
+</head>
+    
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_coy.css" />
+<link rel="stylesheet" href="/css/typo.css" />
+<!-- 文章页 -->
+<body class="is-loading">
+    <!-- Wrapper 外包 s-->
+    <div id="wrapper" class="fade-in">
+        <!-- Intro 头部显示 s -->
+        <!-- Intro 头部显示 e -->
+        <!-- Header 头部logo start -->
+        <header id="header">
+    <a href="/" class="logo">MICCALL</a>
+</header>
+        <!-- Nav 导航条 start -->
+        <nav id="nav" class="special" >
+            <ul class="menu links" >
+			<!-- Homepage  主页  --> 
+			<li >
+	            <a href="/" rel="nofollow">主页</a>
+	        </li>
+			<!-- categories_name  分类   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">分类</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="category-link" href="/categories/Python/">Python</a></li><li><a class="category-link" href="/categories/ubuntu/">ubuntu</a>
+	                    </ul>
+	        </li>
+	        
+	        <!-- archives  归档   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">归档</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="archive-link" href="/archives/2018/08/">August 2018</a>
+	                    </ul>
+	        </li>
+	        
+	        
+		        <!-- Pages 自定义   -->
+		        
+		        <li>
+		            <a href="/about/" title="简历">
+		                简历
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/group/" title="团队">
+		                团队
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/gallery/" title="图库">
+		                图库
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/tag/" title="标签">
+		                标签
+		            </a>
+		        </li>
+		        
+
+
+            </ul>
+            <!-- icons 图标   -->
+			<ul class="icons">
+                    
+                    <li>
+                        <a title="github" href="https://github.com/miccall" target="_blank" rel="noopener">
+                            <i class="icon fa fa-github"></i>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a title="500px" href="http://500px.com" target="_blank" rel="noopener">
+                            <i class="icon fa fa-500px"></i>
+                        </a>
+                    </li>
+                    
+			</ul>
+</nav>
+
+        <div id="main" >
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(http://img0.ph.126.net/6XscsQmPJX5Iek7wGPhgrA==/6608252899424535255.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >ubuntu安装Gogs的一些坑和心得</h2></a>
+            </div>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <h3 id="Gogs作为用go语言写的轻量级的git仓库很适合大家部署在自己的服务器上，建立私人仓库更是很舒服（觉得自己代码不够漂亮）废话不多说进入正题。"><a href="#Gogs作为用go语言写的轻量级的git仓库很适合大家部署在自己的服务器上，建立私人仓库更是很舒服（觉得自己代码不够漂亮）废话不多说进入正题。" class="headerlink" title="Gogs作为用go语言写的轻量级的git仓库很适合大家部署在自己的服务器上，建立私人仓库更是很舒服（觉得自己代码不够漂亮）废话不多说进入正题。"></a>Gogs作为用go语言写的轻量级的git仓库很适合大家部署在自己的服务器上，建立私人仓库更是很舒服（觉得自己代码不够漂亮）废话不多说进入正题。</h3><p>首先我们要安装数据库：所有的版本都支持 MySQL、PostgreSQL、MSSQL 和 TiDB（使用 MySQL 协议）作为数据库，并且均使用构建标签（build tags）cert 进行构建。需要注意的是，不同的版本的支持状态有所不同，请根据实际的 Gogs 提示进行操作。。我选择的是mysql</p>
+<pre class=" language-bash"><code class="language-bash">代码很简单——sudo <span class="token function">apt-get</span> <span class="token function">install</span> mysql-server
+
+根据提示一步步安装，完成后可以终端输入 mysql --version  成功的话会看到mysql的版本号
+
+第二步安装git--sudo <span class="token function">apt-get</span> <span class="token function">install</span> <span class="token function">git</span> 
+
+同样根据提示进行安装或者 <span class="token function">sudo</span> <span class="token function">apt-get</span> -y <span class="token function">install</span> <span class="token function">git</span> （默认所有需要输入操作输入yes）
+
+<span class="token function">git</span> --version查看版本号观察是否安装成功
+
+上面都成功之后开始创建一个新用户git （是系统用户和git软件并无联系）我们将gogs安装在git用户中
+
+<span class="token function">sudo</span> adduser <span class="token function">git</span>  按照提示设置密码等
+
+切换git用户  <span class="token function">sudo</span> <span class="token function">su</span> - <span class="token function">git</span>
+
+先安装go语言，linux可直接用sudo <span class="token function">apt-get</span> <span class="token function">install</span> golang <span class="token punctuation">(</span>直接打go是没有的会显示找不到软件包，go又名golang,镜像源中go的包为golang<span class="token punctuation">)</span>   
+
+附注：如出现找不到软件包可以尝试更新镜像源，国内较好的镜像源有阿里云等，我们可以通过
+
+software-properties-gtk 然后选择合适的镜像源也可以通过编辑源文件——vim /etc/apt/sources.list 亦可以sudo gedit /etc/apt/source.list 然后把自己网上找的镜像源代码复制进去 比如这个网站里的一个源http://blog.sina.com.cn/s/blog_6bc5571a0101077t.html
+还可以通过wget 命令直接从网上下载压缩包例如 
+<span class="token function">su</span> - <span class="token function">git</span>
+
+<span class="token function">wget</span> https://dl.google.com/go/go1.9.2.linux-amd64.tar.gz
+网址可以自己在网页上寻找最新版的压缩包
+
+解压并删除该安装包（建议先不删避免出现错误之后重新下载）
+
+
+<span class="token function">tar</span> -xf go1.9.2.linux-amd64.tar.gz
+<span class="token function">rm</span> -f go1.9.2.linux-amd64.tar.gz
+tar.gz为二进制压缩文件解压后相当于安装在了该计算机上
+
+我们需要设置环境变量设置 GOROOT 和 GOPATH 目录到系统环境，这样，我们就可以在 <span class="token function">git</span> 用户下执行 go 命令。
+
+执行下方的命令
+
+<span class="token function">cd</span> ~/
+<span class="token keyword">echo</span> <span class="token string">'export GOROOT=<span class="token variable">$HOME</span>/local/go'</span> <span class="token operator">>></span> <span class="token variable">$HOME</span>/.bashrc
+<span class="token keyword">echo</span> <span class="token string">'export GOPATH=<span class="token variable">$HOME</span>/go'</span> <span class="token operator">>></span> <span class="token variable">$HOME</span>/.bashrc
+<span class="token keyword">echo</span> <span class="token string">'export PATH=<span class="token variable">$PATH</span>:<span class="token variable">$GOROOT</span>/bin:<span class="token variable">$GOPATH</span>/bin'</span> <span class="token operator">>></span> <span class="token variable">$HOME</span>/.bashrc
+然后运行source ~/.bashrc 重载Bash 一定确保自己不会写错！认真认真认真！！！！！重要的事情说三遍
+</code></pre>
+<p>大体上完成了我们可以进入正题了！！！！</p>
+<p>使用git安装gogs—–即使用git用户用go命令下载Gogs</p>
+<pre class=" language-bash"><code class="language-bash">$ <span class="token function">su</span> - <span class="token function">git</span>
+$ go get -u github.com/gogits/gogs
+</code></pre>
+<p>此命令将在 GOPATH/src 目录下载 Gogs 的所有源代码。</p>
+<p>个人觉得这个非常慢，刚开始弄甚至以为电脑坏了。。</p>
+<p>切换至 $GOPATH/src/github.com/gogits/gogs 目录，并且使用下列命令搭建 Gogs。</p>
+<pre class=" language-bash"><code class="language-bash"><span class="token function">cd</span> <span class="token variable">$GOPATH</span>/src/github.com/gogits/gogs
+
+go build
+</code></pre>
+<p>官网上还可以构造分支什么的可以尝试一下。。。不做论述</p>
+<p>既然这个比较慢那么当然有快捷办法——参考安装go的方法我们可以运行wget</p>
+<pre class=" language-bash"><code class="language-bash"><span class="token function">wget</span> -c https://dl.gogs.io/0.11.19/linux_amd64.tar.gz
+</code></pre>
+<p>等待下载完成tar zxvf 压缩包名即可将二进制的文件安装进行下列操作</p>
+<p>两种方法完成后都可以进入gogs文件夹运行  ./gogs web</p>
+<p>看到这里恭喜你，基本完成了。我们可以crtl c让进程停下。。因为我们的数据库还没有配置</p>
+<p>mysql -u root(这是用户名） -p  （因为我们要创建用户所以要用最高权限的用户）</p>
+<p>输入密码进入然后然后数据库的基本操作百度吧。。（数据库名和数据库用户名不是一个概念）</p>
+<p>exit;  退出数据库</p>
+<p>再次进入gogs文件夹  ./gogs web</p>
+<p>浏览器输入对应网址。。。。。不知道本机ip?那么 ipconfig -a 即可看到自己的ip</p>
+<p>我的是：<a href="http://192.168.176.129:3000/然后设置对应的配置" target="_blank" rel="noopener">http://192.168.176.129:3000/然后设置对应的配置</a></p>
+<p>如果还想要其他的操作那么去这里<a href="https://linux.cn/article-9391-1.html" target="_blank" rel="noopener">https://linux.cn/article-9391-1.html</a></p>
+<p>以及一些解压文件<a href="https://blog.csdn.net/zhongnanjun_3/article/details/6312678" target="_blank" rel="noopener">https://blog.csdn.net/zhongnanjun_3/article/details/6312678</a></p>
+<p>还有vim编译器的读写操作<a href="https://my.oschina.net/liujinofhome/blog/36648" target="_blank" rel="noopener">https://my.oschina.net/liujinofhome/blog/36648</a></p>
+<p>同时因为电脑的不同的不同可能还会有其他各种奇葩错误，且行且珍惜</p>
+
+            </div>
+
+            <!-- Post Comments -->
+            
+    <!-- 使用 DISQUS_CLICK -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+
+<!-- add animation -->
+<style>
+	.disqus_click_btn {
+            line-height: 30px;
+            margin: 0;
+            min-width: 50px;
+            padding: 0 14px;
+            display: inline-block;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0;
+            overflow: hidden;
+            will-change: box-shadow;
+            transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1), background-color .2s cubic-bezier(.4, 0, .2, 1), color .2s cubic-bezier(.4, 0, .2, 1);
+            outline: 0;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            vertical-align: middle;
+            border: 0;
+            background: rgba(158, 158, 158, .2);
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+            color: #fff;
+            background-color: #7EC0EE;
+            text-shadow: 0
+        }
+</style>
+	
+<div class="btn_click_load" id="disqus_bt"> 
+    <button class="disqus_click_btn">点击查看评论</button>
+</div>
+
+<!--
+<script type="text/javascript">
+$('.btn_click_load').click(function() {
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'http-miccall-tech'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+    document.getElementById('disqus_bt').style.display = "none";
+});
+</script>
+-->
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://yoursite.com/2018/08/30/hello-world/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://yoursite.com/2018/08/30/hello-world/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+
+<script type="text/javascript">
+    $('.btn_click_load').click(function() {  //click to load comments
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//http-miccall-tech.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+        $('.btn_click_load').css('display','none');
+    });
+</script>
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+
+        </div>
+        <!-- Copyright 版权 start -->
+                <div id="copyright">
+            <ul>
+                <li>&copy;Powered By <a href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li>
+                <li>Design: <a href="http://miccall.tech " style="border-bottom: none;">miccall</a></li>
+            </ul>
+            
+            	<span id="busuanzi_container_site_pv">2018总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+			
+        </div>
+    </div>
+</body>
+
+
+
+ 	
+</html>
