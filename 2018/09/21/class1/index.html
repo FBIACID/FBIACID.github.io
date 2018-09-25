@@ -232,7 +232,7 @@ r.content  <span class="token comment" spellcheck="true">#图片、音频、视�
 <h3 id="正则re"><a href="#正则re" class="headerlink" title="正则re"></a>正则re</h3><pre class=" language-bash"><code class="language-bash">pip <span class="token function">install</span> re
 </code></pre>
 <p>正则表达式是处理字符串的强大工具，它有向己特定的语法结构，有了它，实现字符串的检索、替换、匹配验证都不在话下当然,对于爬虫来说，有了它，从HTML 里提取想要的信息就非常方便了<br>可以在开源中国里练手，强大的在线匹配功能<a href="http://tool.oschina.net/regex/" target="_blank" rel="noopener">http://tool.oschina.net/regex/</a><br>正则不是python独有的，其他编程语言中也有，re库是整个正则表达式的实现，很方便实用。</p>
-<h2 id="1：-match"><a href="#1：-match" class="headerlink" title="1： match()"></a>1： match()</h2><p>这个函数可以检测你的正则表达式是否能成功匹配数据，如果失败就返回None,代表匹配失败。举个栗子！</p>
+<h2 id="match"><a href="#match" class="headerlink" title="match()"></a>match()</h2><p>这个函数可以检测你的正则表达式是否能成功匹配数据，如果失败就返回None,代表匹配失败。举个栗子！</p>
 <pre class=" language-bash"><code class="language-bash">re.match<span class="token punctuation">(</span>pattern, string, flags<span class="token operator">=</span>0<span class="token punctuation">)</span>  <span class="token comment" spellcheck="true">#对应正则表达式，字符串，标识符</span>
 栗子：
     <span class="token function">import</span> re
@@ -284,7 +284,7 @@ re.S  <span class="token comment" spellcheck="true">#使.匹配包括换行符�
 result <span class="token operator">=</span> re.match<span class="token punctuation">(</span><span class="token string">'\(百度\)www\.baidu\.com'</span>,content<span class="token punctuation">)</span>
 print<span class="token punctuation">(</span>result<span class="token punctuation">)</span>
 </code></pre>
-<h2 id="2-：-search"><a href="#2-：-search" class="headerlink" title="2 ： search()"></a>2 ： search()</h2><p>match()方法是从字符串的开头匹配，我们用它来提取信息显然不方便，更适合用来检测某个字符串是否符合规则，所以我们介绍search()-扫描整个字符串返回第一个成功匹配的结果，没找到则返回None.</p>
+<h2 id="search"><a href="#search" class="headerlink" title="search()"></a>search()</h2><p>match()方法是从字符串的开头匹配，我们用它来提取信息显然不方便，更适合用来检测某个字符串是否符合规则，所以我们介绍search()-扫描整个字符串返回第一个成功匹配的结果，没找到则返回None.</p>
 <pre class=" language-bash"><code class="language-bash">re.search<span class="token punctuation">(</span>pattern, string, flags<span class="token operator">=</span>0<span class="token punctuation">)</span> <span class="token comment" spellcheck="true">#对应正则表达式，字符串，标识符</span>
 栗子：
     <span class="token function">import</span> re
