@@ -106,7 +106,7 @@
 	            <a href="#s1">归档</a>
 	                    <ul class="submenu">
 	                        <li>
-	                        <a class="archive-link" href="/archives/2018/09/">September 2018</a></li><li><a class="archive-link" href="/archives/2018/08/">August 2018</a>
+	                        <a class="archive-link" href="/archives/2018/10/">October 2018</a></li><li><a class="archive-link" href="/archives/2018/09/">September 2018</a></li><li><a class="archive-link" href="/archives/2018/08/">August 2018</a>
 	                    </ul>
 	        </li>
 	        
@@ -298,7 +298,7 @@ print<span class="token punctuation">(</span>list<span class="token punctuation"
 print<span class="token punctuation">(</span>list<span class="token punctuation">(</span>soup.a.next_siblings<span class="token punctuation">)</span><span class="token punctuation">[</span>0<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token string">'class'</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">#获取节点的class属性</span>
 和我们刚开始讲的方法是一样的！
 </code></pre>
-<h2 id="方法选择器"><a href="#方法选择器" class="headerlink" title="方法选择器."></a>方法选择器.</h2><p>上面的选择方法是通过属性选择，速度比较快，但明显不够灵活，还好BeautifulSoup 为我们提供了类似于正则表达式的一种查询方法find_all() find()等，输入对应的参数就可以灵活查询。<br>1-find_all() 和正则的findall()功能类似，但需要的不再是正则表达式，而是一些属性或者文本进行查询操作。</p>
+<h2 id="方法选择器"><a href="#方法选择器" class="headerlink" title="方法选择器."></a>方法选择器.</h2><p>上面的选择方法是通过属性选择，速度比较快，但明显不够灵活，还好BeautifulSoup 为我们提供了类似于正则表达式的一种查询方法find_all() find()等，输入对应的参数就可以灵活查询。<br>1：find_all() 和正则的findall()功能类似，但需要的不再是正则表达式，而是一些属性或者文本进行查询操作。</p>
 <p>(1)name 故名思意通过节点的名称来查询</p>
 <pre class=" language-bash"><code class="language-bash">它的标准形式是find_all<span class="token punctuation">(</span>name,attrs,recursive,text,**kwargs<span class="token punctuation">)</span>
 html <span class="token operator">=</span> <span class="token string">""</span><span class="token string">"
@@ -320,8 +320,8 @@ html <span class="token operator">=</span> <span class="token string">""</span><
 &lt;/div>
 "</span><span class="token string">""</span>
 soup <span class="token operator">=</span> BeautifulSoup<span class="token punctuation">(</span>html,<span class="token string">'lxml'</span><span class="token punctuation">)</span>
-print<span class="token punctuation">(</span>soup.1-find_all<span class="token punctuation">(</span>name <span class="token operator">=</span> <span class="token string">'ul'</span><span class="token punctuation">))</span>
-print<span class="token punctuation">(</span>type<span class="token punctuation">(</span>soup.1-find_all<span class="token punctuation">(</span>name<span class="token operator">=</span><span class="token string">'ul'</span><span class="token punctuation">)</span><span class="token punctuation">[</span>0<span class="token punctuation">]</span><span class="token punctuation">))</span>
+print<span class="token punctuation">(</span>soup.find_all<span class="token punctuation">(</span>name <span class="token operator">=</span> <span class="token string">'ul'</span><span class="token punctuation">))</span>
+print<span class="token punctuation">(</span>type<span class="token punctuation">(</span>soup.find_all<span class="token punctuation">(</span>name<span class="token operator">=</span><span class="token string">'ul'</span><span class="token punctuation">)</span><span class="token punctuation">[</span>0<span class="token punctuation">]</span><span class="token punctuation">))</span>
 <span class="token operator">>></span><span class="token operator">></span> <span class="token punctuation">[</span><span class="token operator">&lt;</span>ul class<span class="token operator">=</span><span class="token string">"list"</span> id<span class="token operator">=</span><span class="token string">"list-1"</span><span class="token operator">></span>
     <span class="token operator">&lt;</span>li class<span class="token operator">=</span><span class="token string">"element"</span><span class="token operator">></span>A<span class="token operator">&lt;</span>/li<span class="token operator">></span>
     <span class="token operator">&lt;</span>li class<span class="token operator">=</span><span class="token string">"element"</span><span class="token operator">></span>B<span class="token operator">&lt;</span>/li<span class="token operator">></span>

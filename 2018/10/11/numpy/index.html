@@ -159,40 +159,19 @@
 </nav>
 
         <div id="main" >
-            <div class ="post_page_title_img" style="height: 25rem;background-image: url(http://img1.ph.126.net/IvYcoIO9YHwZxDn7a5w6Ng==/6632715933630947950.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
-                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >Python链接数据库报错</h2></a>
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url();background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 ></h2></a>
             </div>
             <!-- Post -->
             <div class="typo" style="padding: 3rem;">
-                <h2 id="在pycharm中连接数据库报错"><a href="#在pycharm中连接数据库报错" class="headerlink" title="在pycharm中连接数据库报错"></a>在pycharm中连接数据库报错</h2><pre class=" language-bash"><code class="language-bash">$   <span class="token function">import</span> hashlib,os,requests,ast
-$   <span class="token function">import</span> pymysql
-$   from bs4 <span class="token function">import</span> BeautifulSoup
-$   <span class="token comment" spellcheck="true">#数据库链接</span>
-$   conn<span class="token operator">=</span>pymysql.connect<span class="token punctuation">(</span>host<span class="token operator">=</span><span class="token string">"localhost"</span>,port<span class="token operator">=</span>3306,user<span class="token operator">=</span><span class="token string">"root"</span>,passwd<span class="token operator">=</span><span class="token string">"1820401746yuan.A"</span>,db<span class="token operator">=</span><span class="token string">"pm"</span><span class="token punctuation">)</span>
-$   cursor<span class="token operator">=</span>conn.cursor<span class="token punctuation">(</span><span class="token punctuation">)</span>   <span class="token comment" spellcheck="true">#创建cursor对象</span>
-$   host 主机名也可用127.0.0.1.代替（本地服务器）
-
-port端口（附查看方式，登陆mysql输入下列代码）
-
- show global variables like <span class="token string">'port'</span><span class="token punctuation">;</span>
-+---------------+-------+
-<span class="token operator">|</span> Variable_name <span class="token operator">|</span> Value <span class="token operator">|</span>
-+---------------+-------+
-<span class="token operator">|</span> port          <span class="token operator">|</span> 3306  <span class="token operator">|</span>
-+---------------+-------+
-
-1 row <span class="token keyword">in</span> set, 1 warning <span class="token punctuation">(</span>0.16 sec<span class="token punctuation">)</span>
-
-user 用户名默认为root——权限最大的用户
-
-ERROR 1045 <span class="token punctuation">(</span>28000<span class="token punctuation">)</span>: Access denied <span class="token keyword">for</span> user <span class="token string">'root'</span>@<span class="token string">'localhost'</span> <span class="token punctuation">(</span>using password: NO<span class="token punctuation">)</span>
-</code></pre>
-<p>网上有很多的办法，但都不能解决我的问题。</p>
-<p>比如赋予数据库权限，以及创建新用户等等。。。</p>
-<p>然后在我的努力寻找下成功了</p>
-<h4 id="最简单的方法是更换了root密码的认证方式解决的，新版mysql使用的caching-sha2-password，换成mysql-native-password我就可以连上了。"><a href="#最简单的方法是更换了root密码的认证方式解决的，新版mysql使用的caching-sha2-password，换成mysql-native-password我就可以连上了。" class="headerlink" title="最简单的方法是更换了root密码的认证方式解决的，新版mysql使用的caching_sha2_password，换成mysql_native_password我就可以连上了。"></a>最简单的方法是更换了root密码的认证方式解决的，新版mysql使用的caching_sha2_password，换成mysql_native_password我就可以连上了。</h4><pre class=" language-bash"><code class="language-bash">然后输入ALTER USER <span class="token string">'root'</span>@<span class="token string">'localhost'</span> IDENTIFIED WITH mysql_native_password BY <span class="token string">'password'</span><span class="token punctuation">;</span> password即你的密码）
-</code></pre>
-<p>原博客地址 <a href="https://blog.csdn.net/dongweionly/article/details/80273095" target="_blank" rel="noopener">https://blog.csdn.net/dongweionly/article/details/80273095</a></p>
+                <pre><code>title: numpy基础
+date: 2018/10/11 18:09:07
+tags:
+- Python
+- numpy
+categories: Python
+thumbnail: http://img1.ph.126.net/IvYcoIO9YHwZxDn7a5w6Ng==/6632715933630947950.jpg
+</code></pre><p>fromfunction()<br>flat 对数组内所有元素迭代：<br>矩阵堆叠：vstack hstack<br>column_stack 1-2</p>
 
             </div>
 
@@ -255,8 +234,8 @@ $('.btn_click_load').click(function() {
 -->
 <script type="text/javascript">
     var disqus_config = function () {
-        this.page.url = 'http://yoursite.com/2018/08/28/first/';  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = 'http://yoursite.com/2018/08/28/first/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        this.page.url = 'http://yoursite.com/2018/10/11/numpy/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://yoursite.com/2018/10/11/numpy/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
 </script>
 
