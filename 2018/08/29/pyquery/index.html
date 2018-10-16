@@ -165,95 +165,94 @@
             <!-- Post -->
             <div class="typo" style="padding: 3rem;">
                 <h3 id="简单的说一下用到的知识，多进程，pyquery解析，pymongo链接数据库，requests发送请求"><a href="#简单的说一下用到的知识，多进程，pyquery解析，pymongo链接数据库，requests发送请求" class="headerlink" title="简单的说一下用到的知识，多进程，pyquery解析，pymongo链接数据库，requests发送请求"></a>简单的说一下用到的知识，多进程，pyquery解析，pymongo链接数据库，requests发送请求</h3><p>这里以一个简单的实例讲解一下如何提取网页信息并储存在MongoDB数据库<br>爬取的网站是<a href="https://isujin.com" target="_blank" rel="noopener">https://isujin.com</a><br>主函数很简单一层一层的传递</p>
-<pre class=" language-bash"><code class="language-bash">def main<span class="token punctuation">(</span>page<span class="token punctuation">)</span>:
+<pre class=" language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">main</span><span class="token punctuation">(</span>page<span class="token punctuation">)</span><span class="token punctuation">:</span>
     urls <span class="token operator">=</span> get_index<span class="token punctuation">(</span>page<span class="token punctuation">)</span>
-    <span class="token keyword">for</span> url <span class="token keyword">in</span> urls:
+    <span class="token keyword">for</span> url <span class="token keyword">in</span> urls<span class="token punctuation">:</span>
         html <span class="token operator">=</span> get_html<span class="token punctuation">(</span>url<span class="token punctuation">)</span>
-        <span class="token keyword">if</span> html:
+        <span class="token keyword">if</span> html<span class="token punctuation">:</span>
             data <span class="token operator">=</span> parse_html<span class="token punctuation">(</span>html<span class="token punctuation">)</span>
-            <span class="token keyword">if</span> data:
+            <span class="token keyword">if</span> data<span class="token punctuation">:</span>
                 save_as_text<span class="token punctuation">(</span>html<span class="token punctuation">)</span>
                 save_to_mongo<span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token comment" spellcheck="true"># 如果没安装mongo可以取消此项</span>
                 save_picture<span class="token punctuation">(</span>html<span class="token punctuation">)</span>
 
 </code></pre>
 <p>首先是获取所有的链接</p>
-<pre class=" language-bash"><code class="language-bash">def get_index<span class="token punctuation">(</span>page<span class="token punctuation">)</span>:
-    URL <span class="token operator">=</span> <span class="token string">'https://isujin.com/page/{}'</span>.format<span class="token punctuation">(</span>page<span class="token punctuation">)</span>
-    try:
-        response <span class="token operator">=</span> requests.get<span class="token punctuation">(</span>URL<span class="token punctuation">)</span>
-        <span class="token keyword">if</span> response.status_code <span class="token operator">==</span> 200:
-            html <span class="token operator">=</span> response.text
+<pre class=" language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">get_index</span><span class="token punctuation">(</span>page<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    URL <span class="token operator">=</span> <span class="token string">'https://isujin.com/page/{}'</span><span class="token punctuation">.</span>format<span class="token punctuation">(</span>page<span class="token punctuation">)</span>
+    <span class="token keyword">try</span><span class="token punctuation">:</span>
+        response <span class="token operator">=</span> requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span>URL<span class="token punctuation">)</span>
+        <span class="token keyword">if</span> response<span class="token punctuation">.</span>status_code <span class="token operator">==</span> <span class="token number">200</span><span class="token punctuation">:</span>
+            html <span class="token operator">=</span> response<span class="token punctuation">.</span>text
             doc <span class="token operator">=</span> pq<span class="token punctuation">(</span>html<span class="token punctuation">)</span>
-            urls <span class="token operator">=</span> doc<span class="token punctuation">(</span><span class="token string">'#primary .post > a'</span><span class="token punctuation">)</span>.items<span class="token punctuation">(</span><span class="token punctuation">)</span>
-            <span class="token keyword">for</span> url <span class="token keyword">in</span> urls:
-                url <span class="token operator">=</span> url.attr<span class="token punctuation">(</span><span class="token string">'href'</span><span class="token punctuation">)</span>
-                yield url
-            <span class="token keyword">return</span> doc<span class="token punctuation">(</span><span class="token string">'#post0 > h2 > a'</span><span class="token punctuation">)</span>.attr<span class="token punctuation">(</span><span class="token string">'href'</span><span class="token punctuation">)</span>
-    except ConnectionError:
+            urls <span class="token operator">=</span> doc<span class="token punctuation">(</span><span class="token string">'#primary .post > a'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>items<span class="token punctuation">(</span><span class="token punctuation">)</span>
+            <span class="token keyword">for</span> url <span class="token keyword">in</span> urls<span class="token punctuation">:</span>
+                url <span class="token operator">=</span> url<span class="token punctuation">.</span>attr<span class="token punctuation">(</span><span class="token string">'href'</span><span class="token punctuation">)</span>
+                <span class="token keyword">yield</span> url
+            <span class="token keyword">return</span> doc<span class="token punctuation">(</span><span class="token string">'#post0 > h2 > a'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>attr<span class="token punctuation">(</span><span class="token string">'href'</span><span class="token punctuation">)</span>
+    <span class="token keyword">except</span> ConnectionError<span class="token punctuation">:</span>
         <span class="token keyword">return</span> None
 </code></pre>
 <p> 我们提取出所有的网页的url 如果返回值的状态码为200证明为正确响应，通过pq(html)将HTML网页转化为pyquery的格式，pyquery依据CSS选择器提取信息，#开头根据标签的id属性提取；.开头则依据class属性提取 具体CSS选择器的内容可以去<a href="http://www.w3school.com.cn/" target="_blank" rel="noopener">http://www.w3school.com.cn/</a></p>
-<pre class=" language-bash"><code class="language-bash">$    urls <span class="token operator">=</span> doc<span class="token punctuation">(</span><span class="token string">'#primary .post > a'</span><span class="token punctuation">)</span>.items<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<pre class=" language-python"><code class="language-python">    urls <span class="token operator">=</span> doc<span class="token punctuation">(</span><span class="token string">'#primary .post > a'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>items<span class="token punctuation">(</span><span class="token punctuation">)</span>
 </code></pre>
 <p>items() 在pyquery中是一个生成器把所有的选中的许多<a href="....">生成一个列表，然后我们用for循环进行遍历每个标签并提取出链接 通过yield迭代器将链接返回到外层</a></p>
 <p>返回html文档的函数不在赘述，很简单。接下来是解析html文档提取我们要的信息</p>
-<pre class=" language-bash"><code class="language-bash">def parse_html<span class="token punctuation">(</span>html<span class="token punctuation">)</span>:
+<pre class=" language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">parse_html</span><span class="token punctuation">(</span>html<span class="token punctuation">)</span><span class="token punctuation">:</span>
     doc <span class="token operator">=</span> pq<span class="token punctuation">(</span>html<span class="token punctuation">)</span>
-    title <span class="token operator">=</span> doc<span class="token punctuation">(</span><span class="token string">'.title'</span><span class="token punctuation">)</span>.text<span class="token punctuation">(</span><span class="token punctuation">)</span>
-    <span class="token function">time</span> <span class="token operator">=</span> doc<span class="token punctuation">(</span><span class="token string">'div.stuff > span:nth-child(1)'</span><span class="token punctuation">)</span>.text<span class="token punctuation">(</span><span class="token punctuation">)</span>
-    readcount <span class="token operator">=</span> doc<span class="token punctuation">(</span><span class="token string">'div.stuff > span:nth-child(2)'</span><span class="token punctuation">)</span>.text<span class="token punctuation">(</span><span class="token punctuation">)</span>
-    content <span class="token operator">=</span> doc<span class="token punctuation">(</span><span class="token string">'.content'</span><span class="token punctuation">)</span>.text<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    title <span class="token operator">=</span> doc<span class="token punctuation">(</span><span class="token string">'.title'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>text<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    time <span class="token operator">=</span> doc<span class="token punctuation">(</span><span class="token string">'div.stuff > span:nth-child(1)'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>text<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    readcount <span class="token operator">=</span> doc<span class="token punctuation">(</span><span class="token string">'div.stuff > span:nth-child(2)'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>text<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    content <span class="token operator">=</span> doc<span class="token punctuation">(</span><span class="token string">'.content'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>text<span class="token punctuation">(</span><span class="token punctuation">)</span>
     <span class="token keyword">return</span> <span class="token punctuation">{</span>
-        <span class="token string">'title'</span> <span class="token keyword">:</span> title,
-        <span class="token string">'time'</span> <span class="token keyword">:</span> time,
-        <span class="token string">'readcount'</span> <span class="token keyword">:</span> readcount,
-        <span class="token string">'content'</span> <span class="token keyword">:</span> content
+        <span class="token string">'title'</span> <span class="token punctuation">:</span> title<span class="token punctuation">,</span>
+        <span class="token string">'time'</span> <span class="token punctuation">:</span> time<span class="token punctuation">,</span>
+        <span class="token string">'readcount'</span> <span class="token punctuation">:</span> readcount<span class="token punctuation">,</span>
+        <span class="token string">'content'</span> <span class="token punctuation">:</span> content
     <span class="token punctuation">}</span>
 </code></pre>
 <p>和提取herf一样 通过CSS 选择器获取我们索要的节点然后text() 即可提取所要的文本信息。之后以字典的形式返回数据到外层函数（因为数据库存储是以字典型）</p>
-<pre class=" language-bash"><code class="language-bash">client <span class="token operator">=</span> pymongo.MongoClient<span class="token punctuation">(</span>MONGO_URl<span class="token punctuation">)</span>
+<pre class=" language-python"><code class="language-python">client <span class="token operator">=</span> pymongo<span class="token punctuation">.</span>MongoClient<span class="token punctuation">(</span>MONGO_URl<span class="token punctuation">)</span>
 db <span class="token operator">=</span> client<span class="token punctuation">[</span>MONGO_DB<span class="token punctuation">]</span>
-def save_to_mongo<span class="token punctuation">(</span>data<span class="token punctuation">)</span>:
-    <span class="token keyword">if</span> db<span class="token punctuation">[</span>MONGO_TABLE<span class="token punctuation">]</span>.update<span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token string">'title'</span> <span class="token keyword">:</span> data<span class="token punctuation">[</span><span class="token string">'title'</span><span class="token punctuation">]</span><span class="token punctuation">}</span>,<span class="token punctuation">{</span><span class="token string">'<span class="token variable">$set</span>'</span> <span class="token keyword">:</span> data<span class="token punctuation">}</span>, True<span class="token punctuation">)</span>:
-        print<span class="token punctuation">(</span><span class="token string">"Saved to Mongo"</span>, data<span class="token punctuation">[</span><span class="token string">'title'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
-    else:
-        print<span class="token punctuation">(</span><span class="token string">"Saved to Mongo Failed"</span>, data<span class="token punctuation">[</span><span class="token string">'title'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token keyword">def</span> <span class="token function">save_to_mongo</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">if</span> db<span class="token punctuation">[</span>MONGO_TABLE<span class="token punctuation">]</span><span class="token punctuation">.</span>update<span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token string">'title'</span> <span class="token punctuation">:</span> data<span class="token punctuation">[</span><span class="token string">'title'</span><span class="token punctuation">]</span><span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token punctuation">{</span><span class="token string">'$set'</span> <span class="token punctuation">:</span> data<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token boolean">True</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Saved to Mongo"</span><span class="token punctuation">,</span> data<span class="token punctuation">[</span><span class="token string">'title'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    <span class="token keyword">else</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Saved to Mongo Failed"</span><span class="token punctuation">,</span> data<span class="token punctuation">[</span><span class="token string">'title'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
 </code></pre>
-<p>mongodb数据库的操作也极为简单，设定好MONGO_URL = ‘localhost’ MONGO_DB = ‘数据库名称’ MONGO_TABLE = ‘表名’<br>我们采取更新的方式储存，如果信息已经出现我们选择更新，以title为关键字，如果title对应的数据已经出现那么就更新它更新的内容为{‘$set’ : data}，也就是data的全部数据，若最后一个参数为false 那么如果只执行更新操作，原来不存在的数据不会插入. MONGO 学习网站可以参考这个很简单http://www.runoob.com/mongodb/mongodb-update.html</p>
+<p>mongodb数据库的操作也极为简单，设定好MONGO_URL = ‘localhost’ MONGO_DB = ‘数据库名称’ MONGO_TABLE = ‘表名’<br>我们采取更新的方式储存，如果信息已经出现我们选择更新，以title为关键字，如果title对应的数据已经出现那么就更新它更新的内容为{‘$set’ : data}，也就是data的全部数据，若最后一个参数为false 那么如果只执行更新操作，原来不存在的数据不会插入. MONGO 学习网站可以参考这个很简单<a href="http://www.runoob.com/mongodb/mongodb-update.html" target="_blank" rel="noopener">http://www.runoob.com/mongodb/mongodb-update.html</a></p>
 <p>其他储存照片也是一样的不在赘述贴一下代码</p>
-<pre class=" language-bash"><code class="language-bash">def save_picture<span class="token punctuation">(</span>html<span class="token punctuation">)</span>:
+<pre class=" language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">save_picture</span><span class="token punctuation">(</span>html<span class="token punctuation">)</span><span class="token punctuation">:</span>
     doc <span class="token operator">=</span> pq<span class="token punctuation">(</span>html<span class="token punctuation">)</span>
-    images <span class="token operator">=</span> doc<span class="token punctuation">(</span><span class="token string">'#jg > a'</span><span class="token punctuation">)</span>.items<span class="token punctuation">(</span><span class="token punctuation">)</span>
-    <span class="token keyword">if</span> not os.path.exists<span class="token punctuation">(</span>doc<span class="token punctuation">(</span><span class="token string">'title'</span><span class="token punctuation">))</span>:
-        os.mkdir<span class="token punctuation">(</span>doc<span class="token punctuation">(</span><span class="token string">'title'</span><span class="token punctuation">))</span>
-    <span class="token keyword">for</span> image <span class="token keyword">in</span> images:
-        image <span class="token operator">=</span> image.attr<span class="token punctuation">(</span><span class="token string">'href'</span><span class="token punctuation">)</span>
-        try:
-            response <span class="token operator">=</span> requests.get<span class="token punctuation">(</span>image<span class="token punctuation">)</span>
-            <span class="token keyword">if</span> response.status_code <span class="token operator">==</span> 200:
-                file_path <span class="token operator">=</span> <span class="token string">'{0}/{1}.jpg'</span>.format<span class="token punctuation">(</span>doc<span class="token punctuation">(</span><span class="token string">'.title'</span><span class="token punctuation">)</span>.text<span class="token punctuation">(</span><span class="token punctuation">)</span>,md5<span class="token punctuation">(</span>response.content<span class="token punctuation">)</span>.hexdigest<span class="token punctuation">(</span><span class="token punctuation">))</span>
-                <span class="token keyword">if</span> not os.path.exists<span class="token punctuation">(</span>file_path<span class="token punctuation">)</span>:
-                    print<span class="token punctuation">(</span><span class="token string">"Downloading"</span>,file_path<span class="token punctuation">)</span>
-                    with open<span class="token punctuation">(</span>file_path,<span class="token string">'wb'</span><span class="token punctuation">)</span> as f:
-                        f.write<span class="token punctuation">(</span>response.content<span class="token punctuation">)</span>
-                else:
-                    print<span class="token punctuation">(</span><span class="token string">"Already Downloaded"</span>,file_path<span class="token punctuation">)</span>
-        except ConnectionError as e:
-            print<span class="token punctuation">(</span><span class="token string">"Download Error"</span>, e.args<span class="token punctuation">)</span>
+    images <span class="token operator">=</span> doc<span class="token punctuation">(</span><span class="token string">'#jg > a'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>items<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">if</span> <span class="token operator">not</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>exists<span class="token punctuation">(</span>doc<span class="token punctuation">(</span><span class="token string">'title'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        os<span class="token punctuation">.</span>mkdir<span class="token punctuation">(</span>doc<span class="token punctuation">(</span><span class="token string">'title'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token keyword">for</span> image <span class="token keyword">in</span> images<span class="token punctuation">:</span>
+        image <span class="token operator">=</span> image<span class="token punctuation">.</span>attr<span class="token punctuation">(</span><span class="token string">'href'</span><span class="token punctuation">)</span>
+        <span class="token keyword">try</span><span class="token punctuation">:</span>
+            response <span class="token operator">=</span> requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span>image<span class="token punctuation">)</span>
+            <span class="token keyword">if</span> response<span class="token punctuation">.</span>status_code <span class="token operator">==</span> <span class="token number">200</span><span class="token punctuation">:</span>
+                file_path <span class="token operator">=</span> <span class="token string">'{0}/{1}.jpg'</span><span class="token punctuation">.</span>format<span class="token punctuation">(</span>doc<span class="token punctuation">(</span><span class="token string">'.title'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>text<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>md5<span class="token punctuation">(</span>response<span class="token punctuation">.</span>content<span class="token punctuation">)</span><span class="token punctuation">.</span>hexdigest<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+                <span class="token keyword">if</span> <span class="token operator">not</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>exists<span class="token punctuation">(</span>file_path<span class="token punctuation">)</span><span class="token punctuation">:</span>
+                    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Downloading"</span><span class="token punctuation">,</span>file_path<span class="token punctuation">)</span>
+                    <span class="token keyword">with</span> open<span class="token punctuation">(</span>file_path<span class="token punctuation">,</span><span class="token string">'wb'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> f<span class="token punctuation">:</span>
+                        f<span class="token punctuation">.</span>write<span class="token punctuation">(</span>response<span class="token punctuation">.</span>content<span class="token punctuation">)</span>
+                <span class="token keyword">else</span><span class="token punctuation">:</span>
+                    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Already Downloaded"</span><span class="token punctuation">,</span>file_path<span class="token punctuation">)</span>
+        <span class="token keyword">except</span> ConnectionError <span class="token keyword">as</span> e<span class="token punctuation">:</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Download Error"</span><span class="token punctuation">,</span> e<span class="token punctuation">.</span>args<span class="token punctuation">)</span>
 </code></pre>
 <p>需要注意的是储存文本时f.write()中的内容必须为字符串</p>
 <p>一个简易爬虫就写好了，还差最后一个多进程问题</p>
-<pre class=" language-bash"><code class="language-bash"><span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">"__main__"</span><span class="token keyword">:</span>
+<pre class=" language-python"><code class="language-python"><span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">"__main__"</span><span class="token punctuation">:</span>
     pool <span class="token operator">=</span> Pool<span class="token punctuation">(</span><span class="token punctuation">)</span>
-    group <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">[</span>x <span class="token keyword">for</span> x <span class="token keyword">in</span> range<span class="token punctuation">(</span>1,14<span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
-    pool.map<span class="token punctuation">(</span>main,group<span class="token punctuation">)</span>
-    pool.close<span class="token punctuation">(</span><span class="token punctuation">)</span>
-    pool.join<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    group <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">[</span>x <span class="token keyword">for</span> x <span class="token keyword">in</span> range<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">14</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    pool<span class="token punctuation">.</span>map<span class="token punctuation">(</span>main<span class="token punctuation">,</span>group<span class="token punctuation">)</span>
+    pool<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    pool<span class="token punctuation">.</span>join<span class="token punctuation">(</span><span class="token punctuation">)</span>
 </code></pre>
-<p>pool = Pool() 没有指定的话会根据系统自动分配，通过map()函数,map(main,group)，第一个参数是方法，第二个是数组列表，简单的来说就是把main方法依次执行<br>close() 关闭pool，使其不在接受新的任务。<br>join() 主进程阻塞，等待子进程的退出， join方法要在close或terminate之后使用<br>具体请看大神的作品 https://cuiqingcai.com/3335</p>
-<pre class=" language-bash"><code class="language-bash">链接：https://pan.baidu.com/s/1lKcM4PgJaV-gKMuioQwaWQ 密码：gczk
-</code></pre>
+<p>pool = Pool() 没有指定的话会根据系统自动分配，通过map()函数,map(main,group)，第一个参数是方法，第二个是数组列表，简单的来说就是把main方法依次执行<br>close() 关闭pool，使其不在接受新的任务。<br>join() 主进程阻塞，等待子进程的退出， join方法要在close或terminate之后使用<br>具体请看大神的作品 <a href="https://cuiqingcai.com/3335" target="_blank" rel="noopener">https://cuiqingcai.com/3335</a></p>
+<p>[链接]：<a href="https://pan.baidu.com/s/1lKcM4PgJaV-gKMuioQwaWQ" target="_blank" rel="noopener">https://pan.baidu.com/s/1lKcM4PgJaV-gKMuioQwaWQ</a> 密码：gczk</p>
 
             </div>
 

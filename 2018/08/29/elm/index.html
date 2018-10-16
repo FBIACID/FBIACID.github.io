@@ -164,59 +164,59 @@
             </div>
             <!-- Post -->
             <div class="typo" style="padding: 3rem;">
-                <h3 id="突发奇想，想爬取外卖商家的信息（虽然吃了一暑假外卖，要吐的感觉）。用到了分析Ajax请求，储存库依旧是MongoDB，还用了一下代理池（因为第一次爬取出现了429状态码，限制爬取速度，但是配置完代理池之后这个错误竟然消失了）"><a href="#突发奇想，想爬取外卖商家的信息（虽然吃了一暑假外卖，要吐的感觉）。用到了分析Ajax请求，储存库依旧是MongoDB，还用了一下代理池（因为第一次爬取出现了429状态码，限制爬取速度，但是配置完代理池之后这个错误竟然消失了）" class="headerlink" title="突发奇想，想爬取外卖商家的信息（虽然吃了一暑假外卖，要吐的感觉）。用到了分析Ajax请求，储存库依旧是MongoDB，还用了一下代理池（因为第一次爬取出现了429状态码，限制爬取速度，但是配置完代理池之后这个错误竟然消失了）"></a>突发奇想，想爬取外卖商家的信息（虽然吃了一暑假外卖，要吐的感觉）。用到了分析Ajax请求，储存库依旧是MongoDB，还用了一下代理池（因为第一次爬取出现了429状态码，限制爬取速度，但是配置完代理池之后这个错误竟然消失了）</h3><pre class=" language-bash"><code class="language-bash">headers <span class="token operator">=</span> <span class="token punctuation">{</span>
-    <span class="token string">"cookie"</span><span class="token keyword">:</span> <span class="token string">"ubt_ssid=rp2q5djs0u6ewmuztcx8mgd2mrkv0vgy_2018-08-29; _utrace=04d8824d7caede2317d2342af2517ebf_2018-08-29; SL_GWPT_Show_Hide_tmp=1; SL_wptGlobTipTmp=1; track_id=1535537453|22aa0399855feb682fdaec9615fcab851e46acb633c7ede4a1|28e66234a33c368946d7476ac4a530f8; USERID=457663306; SID=8qvMlmIw0lzs0oBSvJXJoHiG0ohT7yC77chA"</span>,
-    <span class="token string">"referer"</span><span class="token keyword">:</span> <span class="token string">"https://www.ele.me/place/wtswdqsgbhhq?latitude=32.11645&amp;longitude=118.933531"</span>,
-    <span class="token string">"user-agent"</span><span class="token keyword">:</span> <span class="token string">"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36"</span>,
-    <span class="token string">"x-shard"</span><span class="token keyword">:</span> <span class="token string">"loc=118.933531,32.1164"</span>
+                <h3 id="突发奇想，想爬取外卖商家的信息（虽然吃了一暑假外卖，要吐的感觉）。用到了分析Ajax请求，储存库依旧是MongoDB，还用了一下代理池（因为第一次爬取出现了429状态码，限制爬取速度，但是配置完代理池之后这个错误竟然消失了）"><a href="#突发奇想，想爬取外卖商家的信息（虽然吃了一暑假外卖，要吐的感觉）。用到了分析Ajax请求，储存库依旧是MongoDB，还用了一下代理池（因为第一次爬取出现了429状态码，限制爬取速度，但是配置完代理池之后这个错误竟然消失了）" class="headerlink" title="突发奇想，想爬取外卖商家的信息（虽然吃了一暑假外卖，要吐的感觉）。用到了分析Ajax请求，储存库依旧是MongoDB，还用了一下代理池（因为第一次爬取出现了429状态码，限制爬取速度，但是配置完代理池之后这个错误竟然消失了）"></a>突发奇想，想爬取外卖商家的信息（虽然吃了一暑假外卖，要吐的感觉）。用到了分析Ajax请求，储存库依旧是MongoDB，还用了一下代理池（因为第一次爬取出现了429状态码，限制爬取速度，但是配置完代理池之后这个错误竟然消失了）</h3><pre class=" language-python"><code class="language-python">headers <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token string">"cookie"</span><span class="token punctuation">:</span> <span class="token string">"ubt_ssid=rp2q5djs0u6ewmuztcx8mgd2mrkv0vgy_2018-08-29; _utrace=04d8824d7caede2317d2342af2517ebf_2018-08-29; SL_GWPT_Show_Hide_tmp=1; SL_wptGlobTipTmp=1; track_id=1535537453|22aa0399855feb682fdaec9615fcab851e46acb633c7ede4a1|28e66234a33c368946d7476ac4a530f8; USERID=457663306; SID=8qvMlmIw0lzs0oBSvJXJoHiG0ohT7yC77chA"</span><span class="token punctuation">,</span>
+    <span class="token string">"referer"</span><span class="token punctuation">:</span> <span class="token string">"https://www.ele.me/place/wtswdqsgbhhq?latitude=32.11645&amp;longitude=118.933531"</span><span class="token punctuation">,</span>
+    <span class="token string">"user-agent"</span><span class="token punctuation">:</span> <span class="token string">"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36"</span><span class="token punctuation">,</span>
+    <span class="token string">"x-shard"</span><span class="token punctuation">:</span> <span class="token string">"loc=118.933531,32.1164"</span>
 <span class="token punctuation">}</span>
 </code></pre>
 <p>因为需要登陆后才能看到商家信息，所以我们在heads中加入cookies，User-agent参数则是屏蔽爬虫的标识让网站认为我们是正常的浏览。<br>通过观察我们发现网站采取Ajax,和微信与头条一样，下拉能看到更多的内容，因此我们直接爬去这部分字符串即可</p>
-<pre class=" language-bash"><code class="language-bash">BASE_URL <span class="token operator">=</span> <span class="token string">'https://www.ele.me/restapi/shopping/restaurants?'</span>
+<pre class=" language-python"><code class="language-python">BASE_URL <span class="token operator">=</span> <span class="token string">'https://www.ele.me/restapi/shopping/restaurants?'</span>
 params <span class="token operator">=</span> <span class="token punctuation">{</span>
-        <span class="token string">"extras[]"</span><span class="token keyword">:</span> <span class="token string">"activities"</span>,
-        <span class="token string">"geohash"</span><span class="token keyword">:</span> <span class="token string">"wtswdqsgbhhq"</span>,
-        <span class="token string">"latitude"</span><span class="token keyword">:</span> 32.11645,
-        <span class="token string">"limit"</span><span class="token keyword">:</span> 24,
-        <span class="token string">"longitude"</span><span class="token keyword">:</span> 118.933531,
-        <span class="token string">"offset"</span><span class="token keyword">:</span> offset,
-        <span class="token string">"terminal"</span><span class="token keyword">:</span> <span class="token string">"web"</span>
+        <span class="token string">"extras[]"</span><span class="token punctuation">:</span> <span class="token string">"activities"</span><span class="token punctuation">,</span>
+        <span class="token string">"geohash"</span><span class="token punctuation">:</span> <span class="token string">"wtswdqsgbhhq"</span><span class="token punctuation">,</span>
+        <span class="token string">"latitude"</span><span class="token punctuation">:</span> <span class="token number">32.11645</span><span class="token punctuation">,</span>
+        <span class="token string">"limit"</span><span class="token punctuation">:</span> <span class="token number">24</span><span class="token punctuation">,</span>
+        <span class="token string">"longitude"</span><span class="token punctuation">:</span> <span class="token number">118.933531</span><span class="token punctuation">,</span>
+        <span class="token string">"offset"</span><span class="token punctuation">:</span> offset<span class="token punctuation">,</span>
+        <span class="token string">"terminal"</span><span class="token punctuation">:</span> <span class="token string">"web"</span>
     <span class="token punctuation">}</span>
-url <span class="token operator">=</span> BASE_URL + urlencode<span class="token punctuation">(</span>params<span class="token punctuation">)</span>
+url <span class="token operator">=</span> BASE_URL <span class="token operator">+</span> urlencode<span class="token punctuation">(</span>params<span class="token punctuation">)</span>
 </code></pre>
 <p>通过urlencode将文本拼接为正常的url 参数我们可以直接打印出来然后访问这个url 发现返回的是一堆字符串，当然我们要的信息就在里面</p>
-<pre class=" language-bash"><code class="language-bash">response <span class="token operator">=</span> requests.get<span class="token punctuation">(</span>url<span class="token operator">=</span>url, headers<span class="token operator">=</span>headers,timeout <span class="token operator">=</span> 1<span class="token punctuation">)</span>
-<span class="token keyword">if</span> response.status_code <span class="token operator">==</span> 200:
-    <span class="token keyword">return</span> response.json<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<pre class=" language-python"><code class="language-python">response <span class="token operator">=</span> requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span>url<span class="token operator">=</span>url<span class="token punctuation">,</span> headers<span class="token operator">=</span>headers<span class="token punctuation">,</span>timeout <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">)</span>
+<span class="token keyword">if</span> response<span class="token punctuation">.</span>status_code <span class="token operator">==</span> <span class="token number">200</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span> response<span class="token punctuation">.</span>json<span class="token punctuation">(</span><span class="token punctuation">)</span>
 </code></pre>
 <p>timeout 为超时处理，如果超过指定时间未响应则报错<br>得到字符串列表之后通过查找则可以找到相关的信息</p>
-<pre class=" language-bash"><code class="language-bash">    <span class="token keyword">for</span> item <span class="token keyword">in</span> json:
-        yield <span class="token punctuation">{</span>
-            <span class="token string">"shopname"</span> <span class="token keyword">:</span> item.get<span class="token punctuation">(</span><span class="token string">'name'</span><span class="token punctuation">)</span>,
-            <span class="token string">"adress"</span> <span class="token keyword">:</span> item.get<span class="token punctuation">(</span><span class="token string">'address'</span><span class="token punctuation">)</span>,
-            <span class="token string">"opening_hours"</span> <span class="token keyword">:</span> item.get<span class="token punctuation">(</span><span class="token string">'opening_hours'</span><span class="token punctuation">)</span>,
-            <span class="token string">"flavors"</span> <span class="token keyword">:</span> item.get<span class="token punctuation">(</span><span class="token string">'flavors'</span><span class="token punctuation">)</span>,
-            <span class="token string">"piecewise_agent_fee"</span> <span class="token keyword">:</span> item.get<span class="token punctuation">(</span><span class="token string">'piecewise_agent_fee'</span><span class="token punctuation">)</span>.get<span class="token punctuation">(</span><span class="token string">'description'</span><span class="token punctuation">)</span>,
-            <span class="token string">"order_lead_time"</span> <span class="token keyword">:</span> item.get<span class="token punctuation">(</span><span class="token string">'order_lead_time'</span><span class="token punctuation">)</span>,
+<pre class=" language-python"><code class="language-python">    <span class="token keyword">for</span> item <span class="token keyword">in</span> json<span class="token punctuation">:</span>
+        <span class="token keyword">yield</span> <span class="token punctuation">{</span>
+            <span class="token string">"shopname"</span> <span class="token punctuation">:</span> item<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">'name'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+            <span class="token string">"adress"</span> <span class="token punctuation">:</span> item<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">'address'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+            <span class="token string">"opening_hours"</span> <span class="token punctuation">:</span> item<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">'opening_hours'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+            <span class="token string">"flavors"</span> <span class="token punctuation">:</span> item<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">'flavors'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+            <span class="token string">"piecewise_agent_fee"</span> <span class="token punctuation">:</span> item<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">'piecewise_agent_fee'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">'description'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+            <span class="token string">"order_lead_time"</span> <span class="token punctuation">:</span> item<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">'order_lead_time'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
         <span class="token punctuation">}</span>
 </code></pre>
 <p> 分别为店家名称，地址，开放时间，特色，配送费，平均配送时间。<br> 之后储存全套服务不在啰嗦。<br> 还剩下刚开始说的代理池，虽然没太大用，但为了避免时不时的429状态码，还是加上为妙。</p>
-<pre class=" language-bash"><code class="language-bash"> def get_proxy<span class="token punctuation">(</span><span class="token punctuation">)</span>:
-    try:
-        response <span class="token operator">=</span> requests.get<span class="token punctuation">(</span>PROXY_POOL_URL<span class="token punctuation">)</span>
-        <span class="token keyword">if</span> response.status_code <span class="token operator">==</span> 200:
-            <span class="token keyword">return</span> response.text
+<pre class=" language-python"><code class="language-python"> <span class="token keyword">def</span> <span class="token function">get_proxy</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">try</span><span class="token punctuation">:</span>
+        response <span class="token operator">=</span> requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span>PROXY_POOL_URL<span class="token punctuation">)</span>
+        <span class="token keyword">if</span> response<span class="token punctuation">.</span>status_code <span class="token operator">==</span> <span class="token number">200</span><span class="token punctuation">:</span>
+            <span class="token keyword">return</span> response<span class="token punctuation">.</span>text
         <span class="token keyword">return</span> None
-    except ConnectionError:
+    <span class="token keyword">except</span> ConnectionError<span class="token punctuation">:</span>
         <span class="token keyword">return</span> None
 </code></pre>
 <p> 运用代理则为</p>
-<pre class=" language-bash"><code class="language-bash">         <span class="token keyword">if</span> PROXY:
+<pre class=" language-python"><code class="language-python">         <span class="token keyword">if</span> PROXY<span class="token punctuation">:</span>
             proxies <span class="token operator">=</span> <span class="token punctuation">{</span>
-                <span class="token string">"https"</span> <span class="token keyword">:</span> <span class="token string">"https://"</span> + PROXY
+                <span class="token string">"https"</span> <span class="token punctuation">:</span> <span class="token string">"https://"</span> <span class="token operator">+</span> PROXY
             <span class="token punctuation">}</span>
-            print<span class="token punctuation">(</span><span class="token string">"Using proxy"</span>,PROXY<span class="token punctuation">)</span>
-            response <span class="token operator">=</span> requests.get<span class="token punctuation">(</span>url <span class="token operator">=</span> url,headers <span class="token operator">=</span> headers,allow_redirects <span class="token operator">=</span> False,proxies <span class="token operator">=</span> proxies,timeout <span class="token operator">=</span> 1<span class="token punctuation">)</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Using proxy"</span><span class="token punctuation">,</span>PROXY<span class="token punctuation">)</span>
+            response <span class="token operator">=</span> requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span>url <span class="token operator">=</span> url<span class="token punctuation">,</span>headers <span class="token operator">=</span> headers<span class="token punctuation">,</span>allow_redirects <span class="token operator">=</span> <span class="token boolean">False</span><span class="token punctuation">,</span>proxies <span class="token operator">=</span> proxies<span class="token punctuation">,</span>timeout <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">)</span>
 </code></pre>
 <p> proxies 就是requests包中的代理参数，allow_redirects是禁止重定向，requests函数遇到错误会自动帮我们重定向，因为我们要用代理所以禁止重定向。<br> 基本这个爬虫就完成了，说说它的缺点：这个界面没有详细的餐点目录仅有一些店家的信息，还需多多努力，且行且珍惜</p>
 

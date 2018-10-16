@@ -166,52 +166,52 @@
             <div class="typo" style="padding: 3rem;">
                 <h3 id="这个爬虫用到了代理池，Pyquery解析库，requests请求库-and-万年不变的MongoDB数据库"><a href="#这个爬虫用到了代理池，Pyquery解析库，requests请求库-and-万年不变的MongoDB数据库" class="headerlink" title="这个爬虫用到了代理池，Pyquery解析库，requests请求库,and 万年不变的MongoDB数据库."></a>这个爬虫用到了代理池，Pyquery解析库，requests请求库,and 万年不变的MongoDB数据库.</h3><p>完成这个爬虫我们需要做下列准备，首先当然是分析一下网页的结构，我们可以随便搜索一下，发现如果不登录可以看前十页内容，登陆后可以看到100页，而且每页出现一堆文章列表，打开开发者模式发现他们都各自包含一个超链接，指向微信文章。原来搜狗已经用自己的爬虫爬取了一次文章，然后打包为自己的搜索内容，然而我们多次刷新后会出现验证界面，也就是搜狗的反爬虫机制，这也是我们开头说要用代理的原因，原理基本就是这样，然后贴代码。</p>
 <p>首先是设置heads,也就是模拟登陆，网站采取cookies来验证是否登陆，因此我们只需把这些复制过去，</p>
-<pre class=" language-bash"><code class="language-bash">headers <span class="token operator">=</span> <span class="token punctuation">{</span>
-    <span class="token string">'Cookie'</span> <span class="token keyword">:</span> <span class="token string">'ABTEST=0|1534834504|v1; SNUID=1C3DF36DB3B6C05E33DD8DD8B303CE03; IPLOC=CN3201; SUID=AF8E41DF3E18960A000000005B7BB748; SUID=AF8E41DF2C18960A000000005B7BB748; SUV=00151DF1DF418EAF5B7BB74C32B4D814; weixinIndexVisited=1; ppinf=5|1534908615|1536118215|dHJ1c3Q6MToxfGNsaWVudGlkOjQ6MjAxN3x1bmlxbmFtZTo2OlBzeWNob3xjcnQ6MTA6MTUzNDkwODYxNXxyZWZuaWNrOjY6UHN5Y2hvfHVzZXJpZDo0NDpvOXQybHVJV0FROGwzSTFjYlg3M3Z1akxfd3prQHdlaXhpbi5zb2h1LmNvbXw; pprdig=xm9mkmMYDlvMRbH0pAjDEpcsEDCvoz3ORcB-9-lzvVhkxyM55AmN7NQJ8KU3Ei67B6DAqmo_DjyIu3NchvKgznUCthv3eMG2u_T1MhiMkJD7nV3HrDRKv0KVeNyQnt4Zl6D4y1v8SlHfHd-6aGhSCKW_NDIv_JqJmP-7eWQgsKw; sgid=22-36710215-AVt82MciatqU4SaMibG2iceyUs; sct=3; ppmdig=1534925103000000f514b9c5b91510b7cd851626696ec141; JSESSIONID=aaaGoZeH3bNXx-s9OFBvw; SL_GWPT_Show_Hide_tmp=1; SL_wptGlobTipTmp=1'</span>,
-    <span class="token string">'Host'</span> <span class="token keyword">:</span> <span class="token string">'weixin.sogou.com'</span>,
-    <span class="token string">'Upgrade-Insecure-Requests'</span> <span class="token keyword">:</span> <span class="token string">'1'</span>,
-    <span class="token string">'User-Agent'</span> <span class="token keyword">:</span> <span class="token string">'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36'</span>
+<pre class=" language-python"><code class="language-python">headers <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token string">'Cookie'</span> <span class="token punctuation">:</span> <span class="token string">'ABTEST=0|1534834504|v1; SNUID=1C3DF36DB3B6C05E33DD8DD8B303CE03; IPLOC=CN3201; SUID=AF8E41DF3E18960A000000005B7BB748; SUID=AF8E41DF2C18960A000000005B7BB748; SUV=00151DF1DF418EAF5B7BB74C32B4D814; weixinIndexVisited=1; ppinf=5|1534908615|1536118215|dHJ1c3Q6MToxfGNsaWVudGlkOjQ6MjAxN3x1bmlxbmFtZTo2OlBzeWNob3xjcnQ6MTA6MTUzNDkwODYxNXxyZWZuaWNrOjY6UHN5Y2hvfHVzZXJpZDo0NDpvOXQybHVJV0FROGwzSTFjYlg3M3Z1akxfd3prQHdlaXhpbi5zb2h1LmNvbXw; pprdig=xm9mkmMYDlvMRbH0pAjDEpcsEDCvoz3ORcB-9-lzvVhkxyM55AmN7NQJ8KU3Ei67B6DAqmo_DjyIu3NchvKgznUCthv3eMG2u_T1MhiMkJD7nV3HrDRKv0KVeNyQnt4Zl6D4y1v8SlHfHd-6aGhSCKW_NDIv_JqJmP-7eWQgsKw; sgid=22-36710215-AVt82MciatqU4SaMibG2iceyUs; sct=3; ppmdig=1534925103000000f514b9c5b91510b7cd851626696ec141; JSESSIONID=aaaGoZeH3bNXx-s9OFBvw; SL_GWPT_Show_Hide_tmp=1; SL_wptGlobTipTmp=1'</span><span class="token punctuation">,</span>
+    <span class="token string">'Host'</span> <span class="token punctuation">:</span> <span class="token string">'weixin.sogou.com'</span><span class="token punctuation">,</span>
+    <span class="token string">'Upgrade-Insecure-Requests'</span> <span class="token punctuation">:</span> <span class="token string">'1'</span><span class="token punctuation">,</span>
+    <span class="token string">'User-Agent'</span> <span class="token punctuation">:</span> <span class="token string">'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36'</span>
 <span class="token punctuation">}</span>
 </code></pre>
 <p>当然cookies会过期复制这个是没用的。然后就是请求网页。</p>
-<pre class=" language-bash"><code class="language-bash">$    global PROXY
-    try:
-        <span class="token keyword">if</span> PROXY:
+<pre class=" language-python"><code class="language-python">$    <span class="token keyword">global</span> PROXY
+    <span class="token keyword">try</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> PROXY<span class="token punctuation">:</span>
             proxies <span class="token operator">=</span> <span class="token punctuation">{</span>
-                <span class="token string">'http'</span> <span class="token keyword">:</span> <span class="token string">'http://'</span> + PROXY
+                <span class="token string">'http'</span> <span class="token punctuation">:</span> <span class="token string">'http://'</span> <span class="token operator">+</span> PROXY
             <span class="token punctuation">}</span>
-            response <span class="token operator">=</span> requests.get<span class="token punctuation">(</span>url <span class="token operator">=</span> url, allow_redirects <span class="token operator">=</span> False, headers <span class="token operator">=</span> headers , proxies <span class="token operator">=</span> proxies, <span class="token function">timeout</span> <span class="token operator">=</span> 1<span class="token punctuation">)</span>
-        else:
-            response <span class="token operator">=</span> requests.get<span class="token punctuation">(</span>url <span class="token operator">=</span> url, allow_redirects <span class="token operator">=</span> False, headers <span class="token operator">=</span> headers, <span class="token function">timeout</span> <span class="token operator">=</span> 1<span class="token punctuation">)</span>
-        <span class="token keyword">if</span> response.status_code <span class="token operator">==</span> 200:
-            <span class="token keyword">return</span> response.text
-        <span class="token keyword">if</span> response.status_code <span class="token operator">==</span> 302:
-            print<span class="token punctuation">(</span><span class="token string">"302"</span><span class="token punctuation">)</span>
+            response <span class="token operator">=</span> requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span>url <span class="token operator">=</span> url<span class="token punctuation">,</span> allow_redirects <span class="token operator">=</span> <span class="token boolean">False</span><span class="token punctuation">,</span> headers <span class="token operator">=</span> headers <span class="token punctuation">,</span> proxies <span class="token operator">=</span> proxies<span class="token punctuation">,</span> timeout <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">)</span>
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            response <span class="token operator">=</span> requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span>url <span class="token operator">=</span> url<span class="token punctuation">,</span> allow_redirects <span class="token operator">=</span> <span class="token boolean">False</span><span class="token punctuation">,</span> headers <span class="token operator">=</span> headers<span class="token punctuation">,</span> timeout <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">)</span>
+        <span class="token keyword">if</span> response<span class="token punctuation">.</span>status_code <span class="token operator">==</span> <span class="token number">200</span><span class="token punctuation">:</span>
+            <span class="token keyword">return</span> response<span class="token punctuation">.</span>text
+        <span class="token keyword">if</span> response<span class="token punctuation">.</span>status_code <span class="token operator">==</span> <span class="token number">302</span><span class="token punctuation">:</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"302"</span><span class="token punctuation">)</span>
             proxy <span class="token operator">=</span> get_proxy<span class="token punctuation">(</span><span class="token punctuation">)</span>
-            <span class="token keyword">if</span> proxy:
-                print<span class="token punctuation">(</span><span class="token string">'Using Proxy'</span>, proxy<span class="token punctuation">)</span>
+            <span class="token keyword">if</span> proxy<span class="token punctuation">:</span>
+                <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'Using Proxy'</span><span class="token punctuation">,</span> proxy<span class="token punctuation">)</span>
                 <span class="token keyword">return</span> get_html<span class="token punctuation">(</span>url<span class="token punctuation">)</span>
-            else:
-                print<span class="token punctuation">(</span><span class="token string">"Get Proxy Failed"</span><span class="token punctuation">)</span>
+            <span class="token keyword">else</span><span class="token punctuation">:</span>
+                <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Get Proxy Failed"</span><span class="token punctuation">)</span>
                 <span class="token keyword">return</span> None
-    except ConnectionError as e:
-        print<span class="token punctuation">(</span><span class="token string">"Error Occurred"</span>, e.args<span class="token punctuation">)</span>
+    <span class="token keyword">except</span> ConnectionError <span class="token keyword">as</span> e<span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Error Occurred"</span><span class="token punctuation">,</span> e<span class="token punctuation">.</span>args<span class="token punctuation">)</span>
         proxy <span class="token operator">=</span> get_proxy<span class="token punctuation">(</span><span class="token punctuation">)</span>
-        <span class="token keyword">return</span> get_html<span class="token punctuation">(</span>url,count<span class="token punctuation">)</span>
-    except Timeout as T:
-        print<span class="token punctuation">(</span><span class="token string">"Error Occurred"</span>, T.args<span class="token punctuation">)</span>
+        <span class="token keyword">return</span> get_html<span class="token punctuation">(</span>url<span class="token punctuation">,</span>count<span class="token punctuation">)</span>
+    <span class="token keyword">except</span> Timeout <span class="token keyword">as</span> T<span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Error Occurred"</span><span class="token punctuation">,</span> T<span class="token punctuation">.</span>args<span class="token punctuation">)</span>
         proxy <span class="token operator">=</span> get_proxy<span class="token punctuation">(</span><span class="token punctuation">)</span>
-        <span class="token keyword">return</span> get_html<span class="token punctuation">(</span>url, count<span class="token punctuation">)</span>
+        <span class="token keyword">return</span> get_html<span class="token punctuation">(</span>url<span class="token punctuation">,</span> count<span class="token punctuation">)</span>
 </code></pre>
 <p>这里我们获取搜狗的搜索结果页面，如果正常的话返回网页源码，如果触发反爬虫机制，那么我们就选择更换代理，当然我们可以加一个最大重复次数的验证，避免死循环。</p>
-<pre class=" language-bash"><code class="language-bash">def parse_index<span class="token punctuation">(</span>html<span class="token punctuation">)</span>:
+<pre class=" language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">parse_index</span><span class="token punctuation">(</span>html<span class="token punctuation">)</span><span class="token punctuation">:</span>
     doc <span class="token operator">=</span> pq<span class="token punctuation">(</span>html<span class="token punctuation">)</span>
-    items <span class="token operator">=</span> doc<span class="token punctuation">(</span><span class="token string">'.news-box .news-list li .txt-box h3 a'</span><span class="token punctuation">)</span>.items<span class="token punctuation">(</span><span class="token punctuation">)</span>
-    <span class="token keyword">for</span> item <span class="token keyword">in</span> items:
-        yield item.attr<span class="token punctuation">(</span><span class="token string">'href'</span><span class="token punctuation">)</span>
+    items <span class="token operator">=</span> doc<span class="token punctuation">(</span><span class="token string">'.news-box .news-list li .txt-box h3 a'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>items<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">for</span> item <span class="token keyword">in</span> items<span class="token punctuation">:</span>
+        <span class="token keyword">yield</span> item<span class="token punctuation">.</span>attr<span class="token punctuation">(</span><span class="token string">'href'</span><span class="token punctuation">)</span>
 </code></pre>
 <p>我们解析这个网页，然后提取出对应的href，超链接然后通过生成器yield将结果返回上层，再之后就是普通的挨个访问，然后提取信息，这里不在赘述。<br>有一个问题就是pyquery好像不能把时间那个标签完整的提取出来，大佬们可以采取正则表达式尝试一下</p>
-<pre class=" language-bash"><code class="language-bash">from lxml.etree <span class="token function">import</span> XMLSyntaxError
+<pre class=" language-python"><code class="language-python"><span class="token keyword">from</span> lxml<span class="token punctuation">.</span>etree <span class="token keyword">import</span> XMLSyntaxError
 </code></pre>
 <p>在解析过程中，我们发现程序报错显示XMLSyntaxError，这是一个不常见的解析错误，我们将其引入即可，数据库操作还是老样子也不在多提，代理池的事情下篇文章再讲~~~~</p>
 
