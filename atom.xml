@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-10-17T10:52:16.286Z</updated>
+  <updated>2018-10-20T08:46:36.877Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,13 +21,14 @@
     <link href="http://yoursite.com/2018/10/18/%E7%BD%91%E6%98%93%E4%BA%91%E8%AF%84%E8%AE%BA/"/>
     <id>http://yoursite.com/2018/10/18/网易云评论/</id>
     <published>2018-10-18T02:02:00.000Z</published>
-    <updated>2018-10-17T10:52:16.286Z</updated>
+    <updated>2018-10-20T08:46:36.877Z</updated>
     
     <summary type="html">
     
       
       
-        &lt;h2 id=&quot;想爬取遍地情圣的网易云评论区，发现有一堆坑，还好依赖着前人勉强踩过坑获得了成功。用到的知识主要有-requestes-beautifulsoup-PyCryptodome等。&quot;&gt;&lt;a href=&quot;#想爬取遍地情圣的网易云评论区，发现有一堆坑，还好依赖着前人勉强踩过
+        &lt;p&gt;本文是为了爬取遍地情圣的网易评论区&lt;/p&gt;
+&lt;h2 id=&quot;用到的知识&quot;&gt;&lt;a href=&quot;#用到的知识&quot; class=&quot;headerlink&quot; title=&quot;用到的知识&quot;&gt;&lt;/a&gt;用到的知识&lt;/h2&gt;&lt;p&gt;主要有:requestes,beautifulsoup,PyCry
       
     
     </summary>
@@ -46,13 +47,14 @@
     <link href="http://yoursite.com/2018/10/13/k%E8%BF%91%E9%82%BB%E7%AE%97%E6%B3%95/"/>
     <id>http://yoursite.com/2018/10/13/k近邻算法/</id>
     <published>2018-10-12T22:40:01.000Z</published>
-    <updated>2018-10-14T15:53:14.270Z</updated>
+    <updated>2018-10-20T08:32:41.936Z</updated>
     
     <summary type="html">
     
       
       
-        &lt;h2 id=&quot;k近邻算法，简单的来说就是根据测量不同特征值之间的距离进而对数据集进行分类。&quot;&gt;&lt;a href=&quot;#k近邻算法，简单的来说就是根据测量不同特征值之间的距离进而对数据集进行分类。&quot; class=&quot;headerlink&quot; title=&quot;k近邻算法，简单的来说就是根据测
+        &lt;p&gt;本文是根据机器学习实战那本书学习的部分总结&lt;/p&gt;
+&lt;h2 id=&quot;k近邻算法简介&quot;&gt;&lt;a href=&quot;#k近邻算法简介&quot; class=&quot;headerlink&quot; title=&quot;k近邻算法简介&quot;&gt;&lt;/a&gt;k近邻算法简介&lt;/h2&gt;&lt;p&gt;简单的来说就是根据测量不同特征值之间的距离
       
     
     </summary>
@@ -71,13 +73,14 @@
     <link href="http://yoursite.com/2018/09/28/class2/"/>
     <id>http://yoursite.com/2018/09/28/class2/</id>
     <published>2018-09-28T11:27:23.126Z</published>
-    <updated>2018-10-20T01:55:10.170Z</updated>
+    <updated>2018-10-20T08:15:30.386Z</updated>
     
     <summary type="html">
     
       
       
-        &lt;h3 id=&quot;Beautoful-Soup借助网页的结构和属性来进行解析网页，比正则表达式要简便的多。省去很多繁琐的提取工作，大大提高了解析效率。&quot;&gt;&lt;a href=&quot;#Beautoful-Soup借助网页的结构和属性来进行解析网页，比正则表达式要简便的多。省去很多繁琐的提取工
+        &lt;p&gt;本文简单的记录一下自己对于Beautifulsoup库的理解&lt;/p&gt;
+&lt;h2 id=&quot;Beautiful-Soup简介&quot;&gt;&lt;a href=&quot;#Beautiful-Soup简介&quot; class=&quot;headerlink&quot; title=&quot;Beautiful Soup简介&quot;&gt;&lt;/a&gt;
       
     
     </summary>
@@ -96,13 +99,14 @@
     <link href="http://yoursite.com/2018/09/21/class1/"/>
     <id>http://yoursite.com/2018/09/21/class1/</id>
     <published>2018-09-21T08:35:33.000Z</published>
-    <updated>2018-10-14T14:03:45.922Z</updated>
+    <updated>2018-10-20T08:09:47.159Z</updated>
     
     <summary type="html">
     
       
       
-        &lt;h3 id=&quot;简单的讲一下requests-请求库&quot;&gt;&lt;a href=&quot;#简单的讲一下requests-请求库&quot; class=&quot;headerlink&quot; title=&quot;简单的讲一下requests 请求库&quot;&gt;&lt;/a&gt;简单的讲一下requests 请求库&lt;/h3&gt;&lt;p&gt;首先确定你已
+        &lt;p&gt;本文简单的讲一下requests库的基本操作&lt;/p&gt;
+&lt;h2 id=&quot;requests库的安装&quot;&gt;&lt;a href=&quot;#requests库的安装&quot; class=&quot;headerlink&quot; title=&quot;requests库的安装&quot;&gt;&lt;/a&gt;requests库的安装&lt;/h2&gt;&lt;p&gt;
       
     
     </summary>
@@ -121,13 +125,14 @@
     <link href="http://yoursite.com/2018/09/01/weixin/"/>
     <id>http://yoursite.com/2018/09/01/weixin/</id>
     <published>2018-08-31T16:00:01.000Z</published>
-    <updated>2018-10-14T14:06:20.880Z</updated>
+    <updated>2018-10-20T08:40:56.629Z</updated>
     
     <summary type="html">
     
       
       
-        &lt;h3 id=&quot;这个爬虫用到了代理池，Pyquery解析库，requests请求库-and-万年不变的MongoDB数据库&quot;&gt;&lt;a href=&quot;#这个爬虫用到了代理池，Pyquery解析库，requests请求库-and-万年不变的MongoDB数据库&quot; class=&quot;heade
+        &lt;p&gt;本文涉及到反爬虫措施和代理池&lt;/p&gt;
+&lt;h2 id=&quot;需要用的知识&quot;&gt;&lt;a href=&quot;#需要用的知识&quot; class=&quot;headerlink&quot; title=&quot;需要用的知识&quot;&gt;&lt;/a&gt;需要用的知识&lt;/h2&gt;&lt;p&gt;代理池，Pyquery解析库，requests请求库,and 万
       
     
     </summary>
@@ -146,13 +151,14 @@
     <link href="http://yoursite.com/2018/08/30/hello-world/"/>
     <id>http://yoursite.com/2018/08/30/hello-world/</id>
     <published>2018-08-30T03:08:09.000Z</published>
-    <updated>2018-10-14T14:09:48.024Z</updated>
+    <updated>2018-10-20T08:25:26.200Z</updated>
     
     <summary type="html">
     
       
       
-        &lt;h3 id=&quot;Gogs作为用go语言写的轻量级的git仓库很适合大家部署在自己的服务器上，建立私人仓库更是很舒服（觉得自己代码不够漂亮）废话不多说进入正题。&quot;&gt;&lt;a href=&quot;#Gogs作为用go语言写的轻量级的git仓库很适合大家部署在自己的服务器上，建立私人仓库更是很舒服
+        &lt;p&gt;本文是自己准备搭建自己的git仓库时遇到的一些事&lt;/p&gt;
+&lt;h2 id=&quot;为什么选择Gogs&quot;&gt;&lt;a href=&quot;#为什么选择Gogs&quot; class=&quot;headerlink&quot; title=&quot;为什么选择Gogs&quot;&gt;&lt;/a&gt;为什么选择Gogs&lt;/h2&gt;&lt;p&gt;Gogs作为用go语
       
     
     </summary>
@@ -171,13 +177,14 @@
     <link href="http://yoursite.com/2018/08/29/elm/"/>
     <id>http://yoursite.com/2018/08/29/elm/</id>
     <published>2018-08-29T15:02:00.000Z</published>
-    <updated>2018-10-14T14:04:45.473Z</updated>
+    <updated>2018-10-20T08:18:37.446Z</updated>
     
     <summary type="html">
     
       
       
-        &lt;h3 id=&quot;突发奇想，想爬取外卖商家的信息（虽然吃了一暑假外卖，要吐的感觉）。用到了分析Ajax请求，储存库依旧是MongoDB，还用了一下代理池（因为第一次爬取出现了429状态码，限制爬取速度，但是配置完代理池之后这个错误竟然消失了）&quot;&gt;&lt;a href=&quot;#突发奇想，想爬取
+        &lt;p&gt;本文是自己临时起意想写的一点东西。&lt;/p&gt;
+&lt;h2 id=&quot;需要用到的知识&quot;&gt;&lt;a href=&quot;#需要用到的知识&quot; class=&quot;headerlink&quot; title=&quot;需要用到的知识&quot;&gt;&lt;/a&gt;需要用到的知识&lt;/h2&gt;&lt;p&gt;突发奇想，想爬取外卖商家的信息（虽然吃了一暑假外卖
       
     
     </summary>
@@ -196,13 +203,16 @@
     <link href="http://yoursite.com/2018/08/29/pyquery/"/>
     <id>http://yoursite.com/2018/08/29/pyquery/</id>
     <published>2018-08-29T08:40:01.000Z</published>
-    <updated>2018-10-14T14:02:07.179Z</updated>
+    <updated>2018-10-20T08:38:01.274Z</updated>
     
     <summary type="html">
     
       
       
-        &lt;h3 id=&quot;简单的说一下用到的知识，多进程，pyquery解析，pymongo链接数据库，requests发送请求&quot;&gt;&lt;a href=&quot;#简单的说一下用到的知识，多进程，pyquery解析，pymongo链接数据库，requests发送请求&quot; class=&quot;headerlin
+        &lt;p&gt;本文以简单的例子讲如何写爬虫&lt;/p&gt;
+&lt;p&gt;##需要的知识&lt;br&gt;多进程，pyquery解析，pymongo链接数据库，requests发送请求&lt;/p&gt;
+&lt;p&gt;这里以一个简单的实例讲解一下如何提取网页信息并储存在MongoDB数据库&lt;/p&gt;
+&lt;h3 id=&quot;主代码结构&quot;&gt;&lt;
       
     
     </summary>
@@ -221,13 +231,14 @@
     <link href="http://yoursite.com/2018/08/28/first/"/>
     <id>http://yoursite.com/2018/08/28/first/</id>
     <published>2018-08-28T10:01:07.000Z</published>
-    <updated>2018-10-18T10:45:00.836Z</updated>
+    <updated>2018-10-20T08:21:43.843Z</updated>
     
     <summary type="html">
     
       
       
-        &lt;h2 id=&quot;在pycharm中连接数据库报错&quot;&gt;&lt;a href=&quot;#在pycharm中连接数据库报错&quot; class=&quot;headerlink&quot; title=&quot;在pycharm中连接数据库报错&quot;&gt;&lt;/a&gt;在pycharm中连接数据库报错&lt;/h2&gt;&lt;pre class=&quot; lang
+        &lt;p&gt;本文是自己刚接触python时踩的坑&lt;/p&gt;
+&lt;h2 id=&quot;在pycharm中连接数据库报错&quot;&gt;&lt;a href=&quot;#在pycharm中连接数据库报错&quot; class=&quot;headerlink&quot; title=&quot;在pycharm中连接数据库报错&quot;&gt;&lt;/a&gt;在pycharm中连接数
       
     
     </summary>

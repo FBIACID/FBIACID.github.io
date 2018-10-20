@@ -112,18 +112,20 @@
 
 
 
-  <meta name="description" content="在pycharm中连接数据库报错$   import hashlib,os,requests,ast $   import pymysql $   from bs4 import BeautifulSoup $   #数据库链接 $   conn=pymysql.connect(host=&quot;localhost&quot;,port=3306,user=&quot;root&quot;,passwd=&quot;1820401746yua">
+  <meta name="description" content="本文是自己刚接触python时踩的坑 在pycharm中连接数据库报错$   import hashlib,os,requests,ast $   import pymysql $   from bs4 import BeautifulSoup $   #数据库链接 $   conn=pymysql.connect(host=&quot;localhost&quot;,port=3306,user=&quot;root&quot;,pa">
 <meta name="keywords" content="Python,Mysql">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Python链接数据库报错">
 <meta property="og:url" content="http://yoursite.com/2018/08/28/first/index.html">
 <meta property="og:site_name" content="烟柳画桥&amp;晚来风急">
-<meta property="og:description" content="在pycharm中连接数据库报错$   import hashlib,os,requests,ast $   import pymysql $   from bs4 import BeautifulSoup $   #数据库链接 $   conn=pymysql.connect(host=&quot;localhost&quot;,port=3306,user=&quot;root&quot;,passwd=&quot;1820401746yua">
+<meta property="og:description" content="本文是自己刚接触python时踩的坑 在pycharm中连接数据库报错$   import hashlib,os,requests,ast $   import pymysql $   from bs4 import BeautifulSoup $   #数据库链接 $   conn=pymysql.connect(host=&quot;localhost&quot;,port=3306,user=&quot;root&quot;,pa">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-10-18T10:45:00.836Z">
+<meta property="og:image" content="http://yoursite.com/img/first.jpg">
+<meta property="og:updated_time" content="2018-10-20T08:21:43.843Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python链接数据库报错">
-<meta name="twitter:description" content="在pycharm中连接数据库报错$   import hashlib,os,requests,ast $   import pymysql $   from bs4 import BeautifulSoup $   #数据库链接 $   conn=pymysql.connect(host=&quot;localhost&quot;,port=3306,user=&quot;root&quot;,passwd=&quot;1820401746yua">
+<meta name="twitter:description" content="本文是自己刚接触python时踩的坑 在pycharm中连接数据库报错$   import hashlib,os,requests,ast $   import pymysql $   from bs4 import BeautifulSoup $   #数据库链接 $   conn=pymysql.connect(host=&quot;localhost&quot;,port=3306,user=&quot;root&quot;,pa">
+<meta name="twitter:image" content="http://yoursite.com/img/first.jpg">
 
 
 
@@ -402,7 +404,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2018-10-18 18:45:00" itemprop="dateModified" datetime="2018-10-18T18:45:00+08:00">2018-10-18</time>
+                <time title="修改时间：2018-10-20 16:21:43" itemprop="dateModified" datetime="2018-10-20T16:21:43+08:00">2018-10-20</time>
               
             
           </span>
@@ -459,9 +461,26 @@
 
       
       
+        <div class="post-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+          
+          
+            <div class="post-gallery-row">
+              <a class="post-gallery-img fancybox"
+                 href="/img/first.jpg" rel="gallery_cjnh5a9l100082ct9mbkssgy2"
+                 itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
+                <img src="/img/first.jpg" itemprop="contentUrl"/>
+              </a>
+            
+          
+
+          
+          </div>
+        </div>
+      
 
       
-        <h2 id="在pycharm中连接数据库报错"><a href="#在pycharm中连接数据库报错" class="headerlink" title="在pycharm中连接数据库报错"></a>在pycharm中连接数据库报错</h2><pre class=" language-python"><code class="language-python">$   <span class="token keyword">import</span> hashlib<span class="token punctuation">,</span>os<span class="token punctuation">,</span>requests<span class="token punctuation">,</span>ast
+        <p>本文是自己刚接触python时踩的坑</p>
+<h2 id="在pycharm中连接数据库报错"><a href="#在pycharm中连接数据库报错" class="headerlink" title="在pycharm中连接数据库报错"></a>在pycharm中连接数据库报错</h2><pre class=" language-python"><code class="language-python">$   <span class="token keyword">import</span> hashlib<span class="token punctuation">,</span>os<span class="token punctuation">,</span>requests<span class="token punctuation">,</span>ast
 $   <span class="token keyword">import</span> pymysql
 $   <span class="token keyword">from</span> bs4 <span class="token keyword">import</span> BeautifulSoup
 $   <span class="token comment" spellcheck="true">#数据库链接</span>
@@ -487,9 +506,10 @@ ERROR <span class="token number">1045</span> <span class="token punctuation">(</
 <p>网上有很多的办法，但都不能解决我的问题。</p>
 <p>比如赋予数据库权限，以及创建新用户等等。。。</p>
 <p>然后在我的努力寻找下成功了</p>
-<h4 id="最简单的方法是更换了root密码的认证方式解决的，新版mysql使用的caching-sha2-password，换成mysql-native-password我就可以连上了。"><a href="#最简单的方法是更换了root密码的认证方式解决的，新版mysql使用的caching-sha2-password，换成mysql-native-password我就可以连上了。" class="headerlink" title="最简单的方法是更换了root密码的认证方式解决的，新版mysql使用的caching_sha2_password，换成mysql_native_password我就可以连上了。"></a>最简单的方法是更换了root密码的认证方式解决的，新版mysql使用的caching_sha2_password，换成mysql_native_password我就可以连上了。</h4><pre class=" language-python"><code class="language-python">然后输入ALTER USER <span class="token string">'root'</span>@<span class="token string">'localhost'</span> IDENTIFIED WITH mysql_native_password BY <span class="token string">'password'</span><span class="token punctuation">;</span> password即你的密码）
+<h3 id="最简单的方法"><a href="#最简单的方法" class="headerlink" title="最简单的方法"></a>最简单的方法</h3><p>更换了root密码的认证方式解决，新版mysql使用的caching_sha2_password，换成mysql_native_password我就可以连上了。</p>
+<pre class=" language-python"><code class="language-python">然后输入ALTER USER <span class="token string">'root'</span>@<span class="token string">'localhost'</span> IDENTIFIED WITH mysql_native_password BY <span class="token string">'password'</span><span class="token punctuation">;</span> password即你的密码）
 </code></pre>
-<p>原博客地址 <a href="https://blog.csdn.net/dongweionly/article/details/80273095" target="_blank" rel="noopener">https://blog.csdn.net/dongweionly/article/details/80273095</a></p>
+<p>转自<br><a href="https://blog.csdn.net/dongweionly/article/details/80273095" title="原博客地址" target="_blank" rel="noopener">https://blog.csdn.net/dongweionly/article/details/80273095</a></p>
 
       
     </div>
@@ -693,11 +713,6 @@ ERROR <span class="token number">1045</span> <span class="token punctuation">(</
                   
                 </span>
               
-                <span class="links-of-author-item">
-                  <a href="https://www.youtube.com/" target="_blank" title="YouTube"><i class="fa fa-fw fa-youtube"></i>YouTube</a>
-                  
-                </span>
-              
             </div>
           
 
@@ -710,7 +725,7 @@ ERROR <span class="token number">1045</span> <span class="token punctuation">(</
           
             
           
-          
+          <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=100 src="//music.163.com/outchain/player?type=2&id=461525011&auto=1&height=66"></iframe>
         </div>
       </section>
 
@@ -724,7 +739,7 @@ ERROR <span class="token number">1045</span> <span class="token punctuation">(</
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#在pycharm中连接数据库报错"><span class="nav-number">1.</span> <span class="nav-text">在pycharm中连接数据库报错</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#最简单的方法是更换了root密码的认证方式解决的，新版mysql使用的caching-sha2-password，换成mysql-native-password我就可以连上了。"><span class="nav-number">1.0.1.</span> <span class="nav-text">最简单的方法是更换了root密码的认证方式解决的，新版mysql使用的caching_sha2_password，换成mysql_native_password我就可以连上了。</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#在pycharm中连接数据库报错"><span class="nav-number">1.</span> <span class="nav-text">在pycharm中连接数据库报错</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#最简单的方法"><span class="nav-number">1.1.</span> <span class="nav-text">最简单的方法</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -774,7 +789,7 @@ ERROR <span class="token number">1045</span> <span class="token punctuation">(</
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共13.7k字</span>
+  <span class="post-count">博客全站共14k字</span>
 </div>
         
 <div class="busuanzi-count">

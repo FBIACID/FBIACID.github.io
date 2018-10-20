@@ -112,18 +112,20 @@
 
 
 
-  <meta name="description" content="简单的讲一下requests 请求库首先确定你已经安装了requests库，如果没有的话 pip install requests  请求可以这样写 $      r = requests.get(&quot;http://www.baidu.com&quot;)  #对应GET $     data = {&apos;key&apos;:&apos;value&apos;} $     r = requests.post(&quot;http://www.baid">
+  <meta name="description" content="本文简单的讲一下requests库的基本操作 requests库的安装首先确定你已经安装了requests库，如果没有的话 pip install requests  简单的使用请求可以这样写 $      r = requests.get(&quot;http://www.baidu.com&quot;)  #对应GET $     data = {&apos;key&apos;:&apos;value&apos;} $     r = requests">
 <meta name="keywords" content="Python,爬虫">
 <meta property="og:type" content="article">
 <meta property="og:title" content="requests 库 and 正则表达式">
 <meta property="og:url" content="http://yoursite.com/2018/09/21/class1/index.html">
 <meta property="og:site_name" content="烟柳画桥&amp;晚来风急">
-<meta property="og:description" content="简单的讲一下requests 请求库首先确定你已经安装了requests库，如果没有的话 pip install requests  请求可以这样写 $      r = requests.get(&quot;http://www.baidu.com&quot;)  #对应GET $     data = {&apos;key&apos;:&apos;value&apos;} $     r = requests.post(&quot;http://www.baid">
+<meta property="og:description" content="本文简单的讲一下requests库的基本操作 requests库的安装首先确定你已经安装了requests库，如果没有的话 pip install requests  简单的使用请求可以这样写 $      r = requests.get(&quot;http://www.baidu.com&quot;)  #对应GET $     data = {&apos;key&apos;:&apos;value&apos;} $     r = requests">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-10-14T14:03:45.922Z">
+<meta property="og:image" content="http://yoursite.com/img/class1.jpg">
+<meta property="og:updated_time" content="2018-10-20T08:09:47.159Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="requests 库 and 正则表达式">
-<meta name="twitter:description" content="简单的讲一下requests 请求库首先确定你已经安装了requests库，如果没有的话 pip install requests  请求可以这样写 $      r = requests.get(&quot;http://www.baidu.com&quot;)  #对应GET $     data = {&apos;key&apos;:&apos;value&apos;} $     r = requests.post(&quot;http://www.baid">
+<meta name="twitter:description" content="本文简单的讲一下requests库的基本操作 requests库的安装首先确定你已经安装了requests库，如果没有的话 pip install requests  简单的使用请求可以这样写 $      r = requests.get(&quot;http://www.baidu.com&quot;)  #对应GET $     data = {&apos;key&apos;:&apos;value&apos;} $     r = requests">
+<meta name="twitter:image" content="http://yoursite.com/img/class1.jpg">
 
 
 
@@ -402,7 +404,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2018-10-14 22:03:45" itemprop="dateModified" datetime="2018-10-14T22:03:45+08:00">2018-10-14</time>
+                <time title="修改时间：2018-10-20 16:09:47" itemprop="dateModified" datetime="2018-10-20T16:09:47+08:00">2018-10-20</time>
               
             
           </span>
@@ -459,12 +461,29 @@
 
       
       
+        <div class="post-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+          
+          
+            <div class="post-gallery-row">
+              <a class="post-gallery-img fancybox"
+                 href="/img/class1.jpg" rel="gallery_cjnh5a9k300002ct9ruqhis0e"
+                 itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
+                <img src="/img/class1.jpg" itemprop="contentUrl"/>
+              </a>
+            
+          
+
+          
+          </div>
+        </div>
+      
 
       
-        <h3 id="简单的讲一下requests-请求库"><a href="#简单的讲一下requests-请求库" class="headerlink" title="简单的讲一下requests 请求库"></a>简单的讲一下requests 请求库</h3><p>首先确定你已经安装了requests库，如果没有的话</p>
+        <p>本文简单的讲一下requests库的基本操作</p>
+<h2 id="requests库的安装"><a href="#requests库的安装" class="headerlink" title="requests库的安装"></a>requests库的安装</h2><p>首先确定你已经安装了requests库，如果没有的话</p>
 <pre class=" language-python"><code class="language-python">pip install requests
 </code></pre>
-<p>请求可以这样写</p>
+<h2 id="简单的使用"><a href="#简单的使用" class="headerlink" title="简单的使用"></a>简单的使用</h2><p>请求可以这样写</p>
 <pre class=" language-python"><code class="language-python">$      r <span class="token operator">=</span> requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">"http://www.baidu.com"</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true">#对应GET</span>
 $     data <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">'key'</span><span class="token punctuation">:</span><span class="token string">'value'</span><span class="token punctuation">}</span>
 $     r <span class="token operator">=</span> requests<span class="token punctuation">.</span>post<span class="token punctuation">(</span><span class="token string">"http://www.baidu.com"</span><span class="token punctuation">,</span>data<span class="token operator">=</span>data<span class="token punctuation">)</span>  <span class="token comment" spellcheck="true">#对应POST 提交表单, data为表单数据，以字典型数据存储</span>
@@ -476,7 +495,7 @@ $     r <span class="token operator">=</span> requests<span class="token punctua
 <p>很方便的看出请求很简单，一行代码就可以完成请求，但是这只是一般网站的主页，我们肯定是要去其他部分提取信息的，所以会附加一大串的参数，比如</p>
 <pre class=" language-python"><code class="language-python">r <span class="token operator">=</span> requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">'http://httpbin.org/get?name=germey&amp;age=22'</span><span class="token punctuation">)</span>  
 </code></pre>
-<p>虽然也能完成任务，但翻页操作什么的每次都构造这个显然是不够好用，这个库当然不会让我们用这么笨的方法</p>
+<h3 id="构造一些参数"><a href="#构造一些参数" class="headerlink" title="构造一些参数"></a>构造一些参数</h3><p>虽然也能完成任务，但翻页操作什么的每次都构造这个显然是不够好用，这个库当然不会让我们用这么笨的方法</p>
 <pre class=" language-python"><code class="language-python"><span class="token keyword">for</span> age <span class="token keyword">in</span> range<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">50</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
     parmas <span class="token operator">=</span> <span class="token punctuation">{</span>
         <span class="token string">"name"</span> <span class="token punctuation">:</span> <span class="token string">"germey"</span><span class="token punctuation">,</span>
@@ -507,7 +526,7 @@ r <span class="token operator">=</span> requests<span class="token punctuation">
 还有一个超时操作的处理直接在末尾的timeout 参数赋值即可，如果你使用的是GET、OPTIONS、POST、PUT、PATCH 或者 DELETE，那么你可以通过 allow_redirects 参数禁用重定向处理：
 r <span class="token operator">=</span> requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">'http://github.com'</span><span class="token punctuation">,</span> allow_redirects<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">)</span>
 </code></pre>
-<p>遇到网络问题（如：DNS 查询失败、拒绝连接等）时，Requests 会抛出一个 ConnectionError 异常。</p>
+<h3 id="常遇到的问题"><a href="#常遇到的问题" class="headerlink" title="常遇到的问题"></a>常遇到的问题</h3><p>遇到网络问题（如：DNS 查询失败、拒绝连接等）时，Requests 会抛出一个 ConnectionError 异常。</p>
 <p>如果 HTTP 请求返回了不成功的状态码， Response.raise_for_status() 会抛出一个 HTTPError 异常。</p>
 <p>若请求超时，则抛出一个 Timeout 异常。</p>
 <p>若请求超过了设定的最大重定向次数，则会抛出一个 TooManyRedirects 异常。</p>
@@ -526,10 +545,10 @@ type<span class="token punctuation">(</span><span class="token operator">**</spa
 r<span class="token punctuation">.</span>json<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">#可以发现，调用json(）方法，就可以将返回结果是 JSON 格式的字符串转化为字典dict</span>
 r<span class="token punctuation">.</span>content  <span class="token comment" spellcheck="true">#图片、音频、视频这些文件本质上都是由二进制码组成的，由于有特定的保存格式和对应的解析方式， 我们才可以看到这些形形色色的多媒体 所以，想要抓取它们，就要拿到它们的二进制码</span>
 </code></pre>
-<h3 id="正则re"><a href="#正则re" class="headerlink" title="正则re"></a>正则re</h3><pre class=" language-python"><code class="language-python">pip install re
+<h2 id="正则re"><a href="#正则re" class="headerlink" title="正则re"></a>正则re</h2><pre class=" language-python"><code class="language-python">pip install re
 </code></pre>
 <p>正则表达式是处理字符串的强大工具，它有向己特定的语法结构，有了它，实现字符串的检索、替换、匹配验证都不在话下当然,对于爬虫来说，有了它，从HTML 里提取想要的信息就非常方便了<br>可以在开源中国里练手，强大的在线匹配功能<a href="http://tool.oschina.net/regex/" target="_blank" rel="noopener">http://tool.oschina.net/regex/</a><br>正则不是python独有的，其他编程语言中也有，re库是整个正则表达式的实现，很方便实用。</p>
-<h2 id="match"><a href="#match" class="headerlink" title="match()"></a>match()</h2><p>这个函数可以检测你的正则表达式是否能成功匹配数据，如果失败就返回None,代表匹配失败。举个栗子！</p>
+<h3 id="match"><a href="#match" class="headerlink" title="match()"></a>match()</h3><p>这个函数可以检测你的正则表达式是否能成功匹配数据，如果失败就返回None,代表匹配失败。举个栗子！</p>
 <pre class=" language-python"><code class="language-python">re<span class="token punctuation">.</span>match<span class="token punctuation">(</span>pattern<span class="token punctuation">,</span> string<span class="token punctuation">,</span> flags<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true">#对应正则表达式，字符串，标识符</span>
 栗子：
     <span class="token keyword">import</span> re
@@ -565,7 +584,7 @@ result2 <span class="token operator">=</span> re<span class="token punctuation">
 result1
 result2 KEraCN
 </code></pre>
-<h2 id="修饰符"><a href="#修饰符" class="headerlink" title="修饰符"></a>修饰符</h2><p>正则表达式可以包含一些可选标志修饰符来控制匹配的模式 修饰符被指定为一个可选的标志。<br>我们改一下字符串 </p>
+<h3 id="修饰符"><a href="#修饰符" class="headerlink" title="修饰符"></a>修饰符</h3><p>正则表达式可以包含一些可选标志修饰符来控制匹配的模式 修饰符被指定为一个可选的标志。<br>我们改一下字符串 </p>
 <pre class=" language-python"><code class="language-python">str <span class="token operator">=</span> <span class="token string">"Hello 123 456 World is a demo"</span>
 result <span class="token operator">=</span> re<span class="token punctuation">.</span>match<span class="token punctuation">(</span><span class="token string">'^Hello.*demo'</span><span class="token punctuation">,</span>str<span class="token punctuation">)</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span>result<span class="token punctuation">.</span>group<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
@@ -581,7 +600,7 @@ re<span class="token punctuation">.</span>S  <span class="token comment" spellch
 result <span class="token operator">=</span> re<span class="token punctuation">.</span>match<span class="token punctuation">(</span><span class="token string">'\(百度\)www\.baidu\.com'</span><span class="token punctuation">,</span>content<span class="token punctuation">)</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span>
 </code></pre>
-<h2 id="search"><a href="#search" class="headerlink" title="search()"></a>search()</h2><p>match()方法是从字符串的开头匹配，我们用它来提取信息显然不方便，更适合用来检测某个字符串是否符合规则，所以我们介绍search()-扫描整个字符串返回第一个成功匹配的结果，没找到则返回None.</p>
+<h3 id="search"><a href="#search" class="headerlink" title="search()"></a>search()</h3><p>match()方法是从字符串的开头匹配，我们用它来提取信息显然不方便，更适合用来检测某个字符串是否符合规则，所以我们介绍search()-扫描整个字符串返回第一个成功匹配的结果，没找到则返回None.</p>
 <pre class=" language-python"><code class="language-python">re<span class="token punctuation">.</span>search<span class="token punctuation">(</span>pattern<span class="token punctuation">,</span> string<span class="token punctuation">,</span> flags<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">#对应正则表达式，字符串，标识符</span>
 栗子：
     <span class="token keyword">import</span> re
@@ -615,7 +634,7 @@ result <span class="token operator">=</span> re<span class="token punctuation">.
     <span class="token keyword">print</span><span class="token punctuation">(</span>result<span class="token punctuation">.</span>group<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span>result<span class="token punctuation">.</span>group<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
     <span class="token operator">>></span><span class="token operator">></span>beyond光辉岁月
 </code></pre>
-<h2 id="findall"><a href="#findall" class="headerlink" title="findall()"></a>findall()</h2><p>search方法只能返回一个值，显然不足以满足我们的需求，findall方法返回所有符合要求的字符串，以列表的形式存储。</p>
+<h3 id="findall"><a href="#findall" class="headerlink" title="findall()"></a>findall()</h3><p>search方法只能返回一个值，显然不足以满足我们的需求，findall方法返回所有符合要求的字符串，以列表的形式存储。</p>
 <pre class=" language-python"><code class="language-python">    re<span class="token punctuation">.</span>findall<span class="token punctuation">(</span>pattern<span class="token punctuation">,</span> string<span class="token punctuation">,</span> flags<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">)</span>
     html 同上
     results <span class="token operator">=</span> re<span class="token punctuation">.</span>findall<span class="token punctuation">(</span><span class="token string">'&lt;li.*?href='</span><span class="token punctuation">(</span><span class="token punctuation">.</span><span class="token operator">*</span>?<span class="token punctuation">)</span><span class="token string">'.*?singer='</span><span class="token punctuation">(</span><span class="token punctuation">.</span><span class="token operator">*</span>?<span class="token punctuation">)</span><span class="token string">'>(.*?)&lt;/a>'</span><span class="token punctuation">,</span>html<span class="token punctuation">,</span>re<span class="token punctuation">.</span>S<span class="token punctuation">)</span>
@@ -625,14 +644,14 @@ result <span class="token operator">=</span> re<span class="token punctuation">.
 
     <span class="token operator">>></span><span class="token operator">></span>自己运行吧
 </code></pre>
-<h2 id="sub"><a href="#sub" class="headerlink" title="sub()"></a>sub()</h2><p>除了提取信息我们还可用用正则修改文本，这时候就用到了sub()方法。还以上面的为例</p>
+<h3 id="sub"><a href="#sub" class="headerlink" title="sub()"></a>sub()</h3><p>除了提取信息我们还可用用正则修改文本，这时候就用到了sub()方法。还以上面的为例</p>
 <pre class=" language-python"><code class="language-python"><span class="token operator">>></span><span class="token operator">></span>html <span class="token operator">=</span> re<span class="token punctuation">.</span>sub<span class="token punctuation">(</span><span class="token string">'&lt;a.*?>|&lt;/a>'</span><span class="token punctuation">,</span><span class="token string">''</span><span class="token punctuation">,</span>html<span class="token punctuation">)</span>
     results <span class="token operator">=</span> re<span class="token punctuation">.</span>findall<span class="token punctuation">(</span><span class="token string">'&lt;li.*?>(.*?)&lt;/li>'</span><span class="token punctuation">,</span>html<span class="token punctuation">,</span>re<span class="token punctuation">.</span>S<span class="token punctuation">)</span>
     <span class="token keyword">for</span> result <span class="token keyword">in</span> results<span class="token punctuation">:</span>
         <span class="token keyword">print</span><span class="token punctuation">(</span>result<span class="token punctuation">.</span>strip<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
     <span class="token operator">>></span><span class="token operator">></span>自己运行吧
 </code></pre>
-<h2 id="compile"><a href="#compile" class="headerlink" title="compile()"></a>compile()</h2><p>前面所讲的方法都是用来处理字符串的方法，最后再介绍一下 compile()方法，这个方法可以将<br>正则字符串编译成正则表达式对象，以便在后面的匹配中复用</p>
+<h3 id="compile"><a href="#compile" class="headerlink" title="compile()"></a>compile()</h3><p>前面所讲的方法都是用来处理字符串的方法，最后再介绍一下 compile()方法，这个方法可以将<br>正则字符串编译成正则表达式对象，以便在后面的匹配中复用</p>
 <pre class=" language-python"><code class="language-python"><span class="token keyword">import</span> re 
 contnet <span class="token operator">=</span> <span class="token string">'2018-2-11 12:00'</span>
 pattrtn <span class="token operator">=</span> re<span class="token punctuation">.</span>compile<span class="token punctuation">(</span><span class="token string">'\d{2}:\d{2}'</span><span class="token punctuation">)</span>
@@ -846,11 +865,6 @@ pattrtn <span class="token operator">=</span> re<span class="token punctuation">
                   
                 </span>
               
-                <span class="links-of-author-item">
-                  <a href="https://www.youtube.com/" target="_blank" title="YouTube"><i class="fa fa-fw fa-youtube"></i>YouTube</a>
-                  
-                </span>
-              
             </div>
           
 
@@ -863,7 +877,7 @@ pattrtn <span class="token operator">=</span> re<span class="token punctuation">
           
             
           
-          
+          <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=100 src="//music.163.com/outchain/player?type=2&id=461525011&auto=1&height=66"></iframe>
         </div>
       </section>
 
@@ -877,7 +891,7 @@ pattrtn <span class="token operator">=</span> re<span class="token punctuation">
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#简单的讲一下requests-请求库"><span class="nav-number">1.</span> <span class="nav-text">简单的讲一下requests 请求库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#正则re"><span class="nav-number">2.</span> <span class="nav-text">正则re</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#match"><span class="nav-number"></span> <span class="nav-text">match()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#修饰符"><span class="nav-number"></span> <span class="nav-text">修饰符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#search"><span class="nav-number"></span> <span class="nav-text">search()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#findall"><span class="nav-number"></span> <span class="nav-text">findall()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#sub"><span class="nav-number"></span> <span class="nav-text">sub()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#compile"><span class="nav-number"></span> <span class="nav-text">compile()</span></a></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#requests库的安装"><span class="nav-number">1.</span> <span class="nav-text">requests库的安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#简单的使用"><span class="nav-number">2.</span> <span class="nav-text">简单的使用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#构造一些参数"><span class="nav-number">2.1.</span> <span class="nav-text">构造一些参数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常遇到的问题"><span class="nav-number">2.2.</span> <span class="nav-text">常遇到的问题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#正则re"><span class="nav-number">3.</span> <span class="nav-text">正则re</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#match"><span class="nav-number">3.1.</span> <span class="nav-text">match()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修饰符"><span class="nav-number">3.2.</span> <span class="nav-text">修饰符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#search"><span class="nav-number">3.3.</span> <span class="nav-text">search()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#findall"><span class="nav-number">3.4.</span> <span class="nav-text">findall()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sub"><span class="nav-number">3.5.</span> <span class="nav-text">sub()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#compile"><span class="nav-number">3.6.</span> <span class="nav-text">compile()</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -927,7 +941,7 @@ pattrtn <span class="token operator">=</span> re<span class="token punctuation">
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共13.7k字</span>
+  <span class="post-count">博客全站共14k字</span>
 </div>
         
 <div class="busuanzi-count">
