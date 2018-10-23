@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-10-23T04:13:39.522Z</updated>
+  <updated>2018-10-23T04:19:51.363Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>爬虫-网页</title>
+    <title>爬虫-网页基础</title>
     <link href="http://yoursite.com/2018/10/21/class0-1/"/>
     <id>http://yoursite.com/2018/10/21/class0-1/</id>
     <published>2018-10-21T07:21:27.000Z</published>
-    <updated>2018-10-23T04:13:39.522Z</updated>
+    <updated>2018-10-23T04:19:51.363Z</updated>
     
     <summary type="html">
     
@@ -43,11 +43,11 @@
   </entry>
   
   <entry>
-    <title>爬虫-HTTP基本</title>
+    <title>爬虫-HTTP基础</title>
     <link href="http://yoursite.com/2018/10/21/class0/"/>
     <id>http://yoursite.com/2018/10/21/class0/</id>
     <published>2018-10-21T05:58:57.000Z</published>
-    <updated>2018-10-23T04:14:03.069Z</updated>
+    <updated>2018-10-23T04:20:21.488Z</updated>
     
     <summary type="html">
     
