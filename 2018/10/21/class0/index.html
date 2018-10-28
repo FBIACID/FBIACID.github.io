@@ -121,7 +121,7 @@
 <meta property="og:description" content="本文主要讲一下写爬虫必须大体了解的网页基础  简单的说一下写一个爬虫，我们不能盲人摸象，什么都不知道就随便的请求，即使我们熟悉那些基本库，但不了解网页还是无法完成一个真正的爬虫。主要讲解一下基本知识。 HTTP基本原理URL 和 URI我们经常会听到 URI 和 URL 两个术语，URI 全称为 UniformResource Identifier，即统一资源标志符，URL 全称为 Univers">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://yoursite.com/img/class0.jpg">
-<meta property="og:updated_time" content="2018-10-23T04:20:21.488Z">
+<meta property="og:updated_time" content="2018-10-28T05:31:06.658Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="爬虫-HTTP基础">
 <meta name="twitter:description" content="本文主要讲一下写爬虫必须大体了解的网页基础  简单的说一下写一个爬虫，我们不能盲人摸象，什么都不知道就随便的请求，即使我们熟悉那些基本库，但不了解网页还是无法完成一个真正的爬虫。主要讲解一下基本知识。 HTTP基本原理URL 和 URI我们经常会听到 URI 和 URL 两个术语，URI 全称为 UniformResource Identifier，即统一资源标志符，URL 全称为 Univers">
@@ -264,7 +264,7 @@
           
           <li class="menu-item menu-item-archives">
     <a href="/archives" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档<span class="badge">12</span></a>
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档<span class="badge">13</span></a>
   </li>
 
       
@@ -404,7 +404,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2018-10-23 12:20:21" itemprop="dateModified" datetime="2018-10-23T12:20:21+08:00">2018-10-23</time>
+                <time title="修改时间：2018-10-28 13:31:06" itemprop="dateModified" datetime="2018-10-28T13:31:06+08:00">2018-10-28</time>
               
             
           </span>
@@ -466,7 +466,7 @@
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="/img/class0.jpg" rel="gallery_cjnlp2l53000a88t9ghg4ylol"
+                 href="/img/class0.jpg" rel="gallery_cjnsfu15p000gpkt91wavoxtr"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="/img/class0.jpg" itemprop="contentUrl"/>
               </a>
@@ -494,7 +494,40 @@
 <h4 id="Response"><a href="#Response" class="headerlink" title="Response"></a>Response</h4><p>响应状态码，此状态码表示了服务器的响应状态，如 200 则代表服务器正常响应，404 则代表页面未找到，500 则代表服务器内部发生错误。在爬虫中，我们可以根据状态码来判断服务器响应状态，如判断状态码为 200，则证明成功返回数据，再进行进一步的处理，否则直接忽略。<br>其他还有一些常见的比如：<br>404：服务器找不到请求的网页。<br>504：网关超时<br>其他的自行查找吧。</p>
 <h4 id="Response-Headers"><a href="#Response-Headers" class="headerlink" title="Response Headers"></a>Response Headers</h4><p>响应头，其中包含了服务器对请求的应答信息，如 Content-Type、Server、Set-Cookie 等，下面将一些常用的头信息说明如下：<br>Date，标识 Response 产生的时间。<br>Last-Modified，指定资源的最后修改时间。<br>Content-Encoding，指定 Response 内容的编码。<br>Server，包含了服务器的信息，名称，版本号等。<br>Content-Type，文档类型，指定了返回的数据类型是什么，如text/html 则代表返回 HTML 文档，application/x-javascript 则代表返回 JavaScript 文件，image/jpeg 则代表返回了图片。<br>Set-Cookie，设置Cookie，Response Headers 中的 Set-Cookie即告诉浏览器需要将此内容放在 Cookies 中，下次请求携带 Cookies 请求。<br>Expires，指定 Response 的过期时间，使用它可以控制代理服务器或浏览器将内容更新到缓存中，如果再次访问时，直接从缓存中加载，降低服务器负载，缩短加载时间。</p>
 <h4 id="Resposne-Body"><a href="#Resposne-Body" class="headerlink" title="Resposne Body"></a>Resposne Body</h4><p>即响应体，最重要的当属响应体内容了，响应的正文数据都是在响应体中，如请求一个网页，它的响应体就是网页的 HTML 代码，请求一张图片，它的响应体就是图片的二进制数据。所以最主要的数据都包含在响应体中了，我们做爬虫请求网页后要解析的内容就是解析响应体，如图 2-9 所示<img src="https://i.imgur.com/f9qesBu.png" alt=""><br>我们在浏览器开发者工具中点击 Preview，就可以看到网页的源代码，这也就是响应体内容，是解析的目标。<br>我们在做爬虫时主要解析的内容就是 Resposne Body，通过 Resposne Body 我们可以得到网页的源代码、Json 数据等等，然后从中做相应内容的提取。</p>
-<p>以上便是 Response 的组成部分。<br>我们了解了 HTTP 的基本原理，通过如上描述，我们应该对访问网页背后的请求和响应过程有了大体的认识，本节涉及到的知识点需要好好掌握，在后面分析网页请求的时候会经常用到。参考自 ：<a href="https://germey.gitbooks.io/python3webspider/" target="_blank" rel="noopener">https://germey.gitbooks.io/python3webspider/</a></p>
+<p>以上便是 Response 的组成部分。我们了解了 HTTP 的基本原理，通过如上描述，我们应该对访问网页背后的请求和响应过程有了大体的认识，本节涉及到的知识点需要好好掌握，在后面分析网页请求的时候会经常用到。</p>
+<h2 id="代理ip"><a href="#代理ip" class="headerlink" title="代理ip"></a>代理ip</h2><h3 id="为什么要用代理ip"><a href="#为什么要用代理ip" class="headerlink" title="为什么要用代理ip"></a>为什么要用代理ip</h3><p>有时候你会发现自己辛辛苦苦写好的爬虫程序正在运行，正当自己心底沾沾自喜的时候，突然报错，抓取不到网页了！这是为什么呢，自己程序也没错误啊！ 打开网页一看发现提示自己的ip被封了，说我们的访问频率太高了，因此把我们的ip封禁了，这也是常见的反爬虫措施之一。</p>
+<p>为什么要封禁我们的ip呢，因为我们的爬虫多次对这个网页请求，加大了服务器的负担，为了不影响正常用户的使用，也为了不让自己辛辛苦苦的数据被你无情的拿走，直接禁止你访问这个网页。</p>
+<p>一般是单位时间内设置一个阈值，如果超过这个访问频率，那么直接say goodbye.那么我们甘心被它无情的封禁吗？显然不可能，既然你根据单位时间内的阈值判断是否为爬虫，那么我可以设置缓冲时间来间歇访问，但这样显然会拖慢我们的时间，还是更换代理ip进行访问比较方便，你封了一个我就换个ip继续访问。</p>
+<h3 id="代理的基本原理"><a href="#代理的基本原理" class="headerlink" title="代理的基本原理"></a>代理的基本原理</h3><p>我们常称呼的代理实际上指的就是代理服务器，英文叫做 Proxy Server，它的功能是代理网络用户去取得网络信息。形象地说，它是网络信息的中转站。在我们正常请求一个网站时，是发送了 Request 给 Web 服务器，Web 服务器把 Response 传回给我们。如果设置了代理服务器，实际上就是在本机和服务器之间搭建了一个桥，此时本机不是直接向 Web 服务器发起请求，而是向代理服务器发出请求， Request 会发送给代理服务器，然后由代理服务器再发送给 Web 服务器，然后由代理服务器再把 Web 服务器返回的 Response 转发给本机，这样我们同样可以正常访问网页，但这个过程 Web 服务器识别出的真实的 IP 就不再是我们本机的 IP 了，就成功实现了 IP 伪装，这就是代理的基本原理。 通俗的讲就是找了一个不收差价的中间商，我们不直接对话，通过这个中间商进行沟通。</p>
+<h3 id="代理的作用"><a href="#代理的作用" class="headerlink" title="代理的作用"></a>代理的作用</h3><p>我们可以简单列举如下：</p>
+<ul>
+<li>突破自身 IP 访问限制，访问一些平时不能访问的站点。比如：YouTube，推特………..</li>
+<li>访问一些单位或团体内部资源，如使用教育网内地址段免费代理服务器，就可以用于对教育网开放的各类 FTP 下载上传，以及各类资料查询共享等服务。 比如我们学校的内网，在某些时候是不对外界开放的，只能通过校园网进行访问。</li>
+<li>提高访问速度，通常代理服务器都设置一个较大的硬盘缓冲区，当有外界的信息通过时，同时也将其保存到缓冲区中，当其他用户再访问相同的信息时， 则直接由缓冲区中取出信息，传给用户，以提高访问速度。</li>
+<li>隐藏真实 IP，上网者也可以通过这种方法隐藏自己的 IP，免受攻击，对于爬虫来说，我们用代理就是为了隐藏自身 IP，防止自身的 IP 被封锁。黑客也一般会使用很多代理，尽力隐藏自己的真实地址（为了人身安全）。</li>
+</ul>
+<h3 id="代理的类别"><a href="#代理的类别" class="headerlink" title="代理的类别"></a>代理的类别</h3><h4 id="匿名性分类"><a href="#匿名性分类" class="headerlink" title="匿名性分类"></a>匿名性分类</h4><p>列举如下：</p>
+<ul>
+<li>高度匿名代理，高度匿名代理会将数据包原封不动的转发，在服务端看来就好像真的是一个普通客户端在访问，而记录的 IP 是代理服务器的 IP。</li>
+<li>普通匿名代理，普通匿名代理会在数据包上做一些改动，服务端上有可能发现这是个代理服务器，也有一定几率追查到客户端的真实 IP。代理服务器通常会加入的 HTTP 头有 HTTP_VIA 和 HTTP_X_FORWARDED_FOR。</li>
+<li>透明代理，透明代理不但改动了数据包，还会告诉服务器客户端的真实 IP。这种代理除了能用缓存技术提高浏览速度，能用内容过滤提高安全性之外，并无其他显著作用，最常见的例子是内网中的硬件防火墙。</li>
+<li>间谍代理，间谍代理指组织或个人创建的，用于记录用户传输的数据，然后进行研究、监控等目的代理服务器。</li>
+</ul>
+<h4 id="协议分类"><a href="#协议分类" class="headerlink" title="协议分类"></a>协议分类</h4><ul>
+<li>FTP 代理服务器，主要用于访问 FTP 服务器，一般有上传、下载以及缓存功能，端口一般为 21、2121 等。</li>
+<li>HTTP 代理服务器，主要用于访问网页，一般有内容过滤和缓存功能，端口一般为 80、8080、3128 等。</li>
+<li>SSL/TLS 代理，主要用于访问加密网站，一般有 SSL 或 TLS 加密功能（最高支持 128 位加密强度），端口一般为 443。</li>
+<li>RTSP 代理，主要用于 Realplayer 访问 Real 流媒体服务器，一般有缓存功能，端口一般为 554。</li>
+<li>Telnet代理，主要用于 telnet 远程控制（黑客入侵计算机时常用于隐藏身份），端口一般为23。</li>
+<li>POP3/SMTP 代理，主要用于 POP3/SMTP 方式收发邮件，一般有缓存功能，端口一般为 110/25。</li>
+<li>SOCKS代理，只是单纯传递数据包，不关心具体协议和用法，所以速度快很多，一般有缓存功能，端口一般为1080。SOCKS 代理协议又分为 SOCKS4 和 SOCKS5，SOCKS4 协议只支持 TCP，而 SOCKS5 协议支持 TCP 和 UDP，还支持各种身份验证机制、服务器端域名解析等。简单来说，SOCK4能做到的SOCKS5都可以做到，但SOCKS5能做到的SOCK4不一定能做到。</li>
+</ul>
+<p>我们可以常见的有这些：</p>
+<ul>
+<li>网上的免费代理，最好使用高匿代理，使用前抓取下来筛选一下可用代理，也可以进一步维护一个代理池。</li>
+<li>付费代理服务，互联网上存在许多代理商，可以付费使用，质量比免费代理好很多。<br>ADSL拨号，拨一次号换一次 IP，稳定性高，也是一种比较有效的解决方案。</li>
+</ul>
+<p>参考自 ：<a href="https://germey.gitbooks.io/python3webspider/" target="_blank" rel="noopener">https://germey.gitbooks.io/python3webspider/</a><br><a href="https://zh.wikipedia.org/wiki/%E4%BB%A3%E7%90%86%E6%9C%8D%E5%8A%A1%E5%99%A8" title="代理服务器" target="_blank" rel="noopener">https://zh.wikipedia.org/wiki/%E4%BB%A3%E7%90%86%E6%9C%8D%E5%8A%A1%E5%99%A8</a></p>
 
       
     </div>
@@ -628,7 +661,7 @@
                 
                   <a href="/archives">
                 
-                    <span class="site-state-item-count">12</span>
+                    <span class="site-state-item-count">13</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -738,7 +771,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#HTTP基本原理"><span class="nav-number">1.</span> <span class="nav-text">HTTP基本原理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#URL-和-URI"><span class="nav-number">1.1.</span> <span class="nav-text">URL 和 URI</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#超文本"><span class="nav-number">1.2.</span> <span class="nav-text">超文本</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HTTPS-和HTTP"><span class="nav-number">1.3.</span> <span class="nav-text">HTTPS 和HTTP</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HTTP请求过程，"><span class="nav-number">1.4.</span> <span class="nav-text">HTTP请求过程，</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Request"><span class="nav-number">1.4.1.</span> <span class="nav-text">Request</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Request-Method"><span class="nav-number">1.4.1.1.</span> <span class="nav-text">Request Method</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Request-Headers"><span class="nav-number">1.4.2.</span> <span class="nav-text">Request Headers</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Response"><span class="nav-number">1.4.3.</span> <span class="nav-text">Response</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Response-Headers"><span class="nav-number">1.4.4.</span> <span class="nav-text">Response Headers</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Resposne-Body"><span class="nav-number">1.4.5.</span> <span class="nav-text">Resposne Body</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#HTTP基本原理"><span class="nav-number">1.</span> <span class="nav-text">HTTP基本原理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#URL-和-URI"><span class="nav-number">1.1.</span> <span class="nav-text">URL 和 URI</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#超文本"><span class="nav-number">1.2.</span> <span class="nav-text">超文本</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HTTPS-和HTTP"><span class="nav-number">1.3.</span> <span class="nav-text">HTTPS 和HTTP</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HTTP请求过程，"><span class="nav-number">1.4.</span> <span class="nav-text">HTTP请求过程，</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Request"><span class="nav-number">1.4.1.</span> <span class="nav-text">Request</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Request-Method"><span class="nav-number">1.4.1.1.</span> <span class="nav-text">Request Method</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Request-Headers"><span class="nav-number">1.4.2.</span> <span class="nav-text">Request Headers</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Response"><span class="nav-number">1.4.3.</span> <span class="nav-text">Response</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Response-Headers"><span class="nav-number">1.4.4.</span> <span class="nav-text">Response Headers</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Resposne-Body"><span class="nav-number">1.4.5.</span> <span class="nav-text">Resposne Body</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代理ip"><span class="nav-number">2.</span> <span class="nav-text">代理ip</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#为什么要用代理ip"><span class="nav-number">2.1.</span> <span class="nav-text">为什么要用代理ip</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代理的基本原理"><span class="nav-number">2.2.</span> <span class="nav-text">代理的基本原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代理的作用"><span class="nav-number">2.3.</span> <span class="nav-text">代理的作用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代理的类别"><span class="nav-number">2.4.</span> <span class="nav-text">代理的类别</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#匿名性分类"><span class="nav-number">2.4.1.</span> <span class="nav-text">匿名性分类</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#协议分类"><span class="nav-number">2.4.2.</span> <span class="nav-text">协议分类</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
@@ -788,7 +821,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共23.8k字</span>
+  <span class="post-count">博客全站共25.5k字</span>
 </div>
         
 <div class="busuanzi-count">
