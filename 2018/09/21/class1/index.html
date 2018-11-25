@@ -121,7 +121,7 @@
 <meta property="og:description" content="本文简单的讲一下requests库的基本操作 requests库的安装首先确定你已经安装了requests库，如果没有的话 pip install requests  简单的使用请求可以这样写 $      r = requests.get(&quot;http://www.baidu.com&quot;)  #对应GET $     data = {&apos;key&apos;:&apos;value&apos;} $     r = requests">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://yoursite.com/img/class1.jpg">
-<meta property="og:updated_time" content="2018-11-01T13:17:00.464Z">
+<meta property="og:updated_time" content="2018-11-25T09:01:21.879Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="requests 库 and 正则表达式">
 <meta name="twitter:description" content="本文简单的讲一下requests库的基本操作 requests库的安装首先确定你已经安装了requests库，如果没有的话 pip install requests  简单的使用请求可以这样写 $      r = requests.get(&quot;http://www.baidu.com&quot;)  #对应GET $     data = {&apos;key&apos;:&apos;value&apos;} $     r = requests">
@@ -404,7 +404,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2018-11-01 21:17:00" itemprop="dateModified" datetime="2018-11-01T21:17:00+08:00">2018-11-01</time>
+                <time title="修改时间：2018-11-25 17:01:21" itemprop="dateModified" datetime="2018-11-25T17:01:21+08:00">2018-11-25</time>
               
             
           </span>
@@ -552,9 +552,7 @@ type<span class="token punctuation">(</span><span class="token operator">**</spa
 r<span class="token punctuation">.</span>json<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">#可以发现，调用json(）方法，就可以将返回结果是 JSON 格式的字符串转化为字典dict</span>
 r<span class="token punctuation">.</span>content  <span class="token comment" spellcheck="true">#图片、音频、视频这些文件本质上都是由二进制码组成的，由于有特定的保存格式和对应的解析方式， 我们才可以看到这些形形色色的多媒体 所以，想要抓取它们，就要拿到它们的二进制码</span>
 </code></pre>
-<h2 id="正则re"><a href="#正则re" class="headerlink" title="正则re"></a>正则re</h2><pre class=" language-python"><code class="language-python">pip install re
-</code></pre>
-<p>正则表达式是处理字符串的强大工具，它有向己特定的语法结构，有了它，实现字符串的检索、替换、匹配验证都不在话下当然,对于爬虫来说，有了它，从HTML 里提取想要的信息就非常方便了<br>可以在开源中国里练手，强大的在线匹配功能<a href="http://tool.oschina.net/regex/" target="_blank" rel="noopener">http://tool.oschina.net/regex/</a><br>正则不是python独有的，其他编程语言中也有，re库是整个正则表达式的实现，很方便实用。</p>
+<h2 id="正则re"><a href="#正则re" class="headerlink" title="正则re"></a>正则re</h2><p>正则表达式是处理字符串的强大工具，它有向己特定的语法结构，有了它，实现字符串的检索、替换、匹配验证都不在话下当然,对于爬虫来说，有了它，从HTML 里提取想要的信息就非常方便了<br>可以在开源中国里练手，强大的在线匹配功能<a href="http://tool.oschina.net/regex/" target="_blank" rel="noopener">http://tool.oschina.net/regex/</a><br>正则不是python独有的，其他编程语言中也有，re库是整个正则表达式的实现，很方便实用。</p>
 <h3 id="match"><a href="#match" class="headerlink" title="match()"></a>match()</h3><p>这个函数可以检测你的正则表达式是否能成功匹配数据，如果失败就返回None,代表匹配失败。举个栗子！</p>
 <pre class=" language-python"><code class="language-python">re<span class="token punctuation">.</span>match<span class="token punctuation">(</span>pattern<span class="token punctuation">,</span> string<span class="token punctuation">,</span> flags<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true">#对应正则表达式，字符串，标识符</span>
 栗子：
@@ -603,8 +601,8 @@ re<span class="token punctuation">.</span>S  <span class="token comment" spellch
 还有其他不常用，自己去查阅吧
 </code></pre>
 <p>那么如果我们要匹配的字符包含.或者其他的特殊字符怎么办呢，比如匹配网址<a href="http://www.baidu.com。" target="_blank" rel="noopener">http://www.baidu.com。</a> 这个时候就要用到强大的转义字符了</p>
-<pre class=" language-python"><code class="language-python">content <span class="token operator">=</span> <span class="token string">'(百度）www.baidu.com'</span>
-result <span class="token operator">=</span> re<span class="token punctuation">.</span>match<span class="token punctuation">(</span><span class="token string">'\(百度\)www\.baidu\.com'</span><span class="token punctuation">,</span>content<span class="token punctuation">)</span>
+<pre class=" language-python"><code class="language-python">content <span class="token operator">=</span> <span class="token string">'www.baidu.com'</span>
+result <span class="token operator">=</span> re<span class="token punctuation">.</span>match<span class="token punctuation">(</span><span class="token string">'www\.baidu\.com'</span><span class="token punctuation">,</span>content<span class="token punctuation">)</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span>
 </code></pre>
 <h3 id="search"><a href="#search" class="headerlink" title="search()"></a>search()</h3><p>match()方法是从字符串的开头匹配，我们用它来提取信息显然不方便，更适合用来检测某个字符串是否符合规则，所以我们介绍search()-扫描整个字符串返回第一个成功匹配的结果，没找到则返回None.</p>
