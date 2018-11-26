@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-11-01T13:20:06.753Z</updated>
+  <updated>2018-11-26T15:30:24.545Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,46 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>pq</title>
+    <link href="http://yoursite.com/2018/11/26/pq/"/>
+    <id>http://yoursite.com/2018/11/26/pq/</id>
+    <published>2018-11-26T11:04:14.000Z</published>
+    <updated>2018-11-26T15:30:24.545Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;本文简单的讲解一下Pyquery的简单操作。&lt;/p&gt;
+&lt;h2 id=&quot;Pyquery简介&quot;&gt;&lt;a href=&quot;#Pyquery简介&quot; class=&quot;headerlink&quot; title=&quot;Pyquery简介&quot;&gt;&lt;/a&gt;Pyquery简介&lt;/h2&gt;&lt;p&gt;pyquery allo
+      
+    
+    </summary>
+    
+      <category term="Python" scheme="http://yoursite.com/categories/Python/"/>
+    
+    
+      <category term="爬虫" scheme="http://yoursite.com/tags/%E7%88%AC%E8%99%AB/"/>
+    
+      <category term="Python" scheme="http://yoursite.com/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>QT</title>
+    <link href="http://yoursite.com/2018/11/25/QT/"/>
+    <id>http://yoursite.com/2018/11/25/QT/</id>
+    <published>2018-11-25T09:06:12.000Z</published>
+    <updated>2018-11-25T09:06:12.744Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>梯度下降算法</title>
