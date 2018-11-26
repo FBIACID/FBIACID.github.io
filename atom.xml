@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-11-26T15:30:24.545Z</updated>
+  <updated>2018-11-26T15:39:21.079Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>pq</title>
+    <title>Pyquery解析库</title>
     <link href="http://yoursite.com/2018/11/26/pq/"/>
     <id>http://yoursite.com/2018/11/26/pq/</id>
     <published>2018-11-26T11:04:14.000Z</published>
-    <updated>2018-11-26T15:30:24.545Z</updated>
+    <updated>2018-11-26T15:39:21.079Z</updated>
     
     <summary type="html">
     
