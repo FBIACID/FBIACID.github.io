@@ -15,7 +15,13 @@
   <entry>
     <title><![CDATA[QT]]></title>
     <url>%2F2018%2F11%2F25%2FQT%2F</url>
-    <content type="text"></content>
+    <content type="text"><![CDATA[本文简单的说一下，Qt的一些基本用法。以及一些坑。 信号和槽。新建一个新的QT项目，然后点击.ui文件进行拖拉控件进行基本的布局。]]></content>
+      <categories>
+        <category>QT</category>
+      </categories>
+      <tags>
+        <tag>QT</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[梯度下降算法]]></title>

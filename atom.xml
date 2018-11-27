@@ -47,12 +47,22 @@
     <link href="http://yoursite.com/2018/11/25/QT/"/>
     <id>http://yoursite.com/2018/11/25/QT/</id>
     <published>2018-11-25T09:06:12.000Z</published>
-    <updated>2018-11-25T09:06:12.744Z</updated>
+    <updated>2018-11-27T06:55:26.580Z</updated>
     
     <summary type="html">
     
+      
+      
+        &lt;p&gt;本文简单的说一下，Qt的一些基本用法。以及一些坑。&lt;/p&gt;
+&lt;h2 id=&quot;信号和槽。&quot;&gt;&lt;a href=&quot;#信号和槽。&quot; class=&quot;headerlink&quot; title=&quot;信号和槽。&quot;&gt;&lt;/a&gt;信号和槽。&lt;/h2&gt;&lt;p&gt;新建一个新的QT项目，然后点击.ui文件进行拖拉控
+      
+    
     </summary>
     
+      <category term="QT" scheme="http://yoursite.com/categories/QT/"/>
+    
+    
+      <category term="QT" scheme="http://yoursite.com/tags/QT/"/>
     
   </entry>
   
