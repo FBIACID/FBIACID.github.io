@@ -112,16 +112,19 @@
 
 
 
-  <meta name="description" content="用心做好自己，不随波逐流">
-<meta property="og:type" content="website">
-<meta property="og:title" content="烟柳画桥&amp;晚来风急">
-<meta property="og:url" content="http://yoursite.com/categories/ubuntu/index.html">
+  <meta name="description" content="本文记一下自己的程序设计周 往set容器内插入自定义类（自定义排序函数） 需要重载（） 或者&amp;lt; 运算符，虽然它内部自定义了排序函数，但是对于我们自定义的类它无法自主判断`bool USER::operator&amp;lt;(const USER &amp;amp; demo) const{  if (this-&amp;gt;GetId_number() == demo.GetId_number())  //通过">
+<meta property="og:type" content="article">
+<meta property="og:title" content="set">
+<meta property="og:url" content="http://yoursite.com/2018/12/02/set/index.html">
 <meta property="og:site_name" content="烟柳画桥&amp;晚来风急">
-<meta property="og:description" content="用心做好自己，不随波逐流">
+<meta property="og:description" content="本文记一下自己的程序设计周 往set容器内插入自定义类（自定义排序函数） 需要重载（） 或者&amp;lt; 运算符，虽然它内部自定义了排序函数，但是对于我们自定义的类它无法自主判断`bool USER::operator&amp;lt;(const USER &amp;amp; demo) const{  if (this-&amp;gt;GetId_number() == demo.GetId_number())  //通过">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://i.imgur.com/8g6ibTO.png">
+<meta property="og:updated_time" content="2018-12-02T13:44:38.204Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="烟柳画桥&amp;晚来风急">
-<meta name="twitter:description" content="用心做好自己，不随波逐流">
+<meta name="twitter:title" content="set">
+<meta name="twitter:description" content="本文记一下自己的程序设计周 往set容器内插入自定义类（自定义排序函数） 需要重载（） 或者&amp;lt; 运算符，虽然它内部自定义了排序函数，但是对于我们自定义的类它无法自主判断`bool USER::operator&amp;lt;(const USER &amp;amp; demo) const{  if (this-&amp;gt;GetId_number() == demo.GetId_number())  //通过">
+<meta name="twitter:image" content="https://i.imgur.com/8g6ibTO.png">
 
 
 
@@ -130,7 +133,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/categories/ubuntu/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/12/02/set/"/>
 
 
 
@@ -140,7 +143,7 @@
   };
 </script>
 
-  <title>分类: ubuntu | 烟柳画桥&晚来风急</title>
+  <title>set | 烟柳画桥&晚来风急</title>
   
 
 
@@ -189,7 +192,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -250,7 +253,7 @@
         
         
           
-          <li class="menu-item menu-item-categories menu-item-active">
+          <li class="menu-item menu-item-categories">
     <a href="/categories" rel="section">
       <i class="menu-item-icon fa fa-fw fa-th"></i> <br />分类<span class="badge">8</span></a>
   </li>
@@ -321,85 +324,210 @@
           
             
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
           
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block category">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>ubuntu<small>分类</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
+
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/02/set/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="烟柳画桥">
+      <meta itemprop="description" content="用心做好自己，不随波逐流">
+      <meta itemprop="image" content="/images/user.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="烟柳画桥&晚来风急">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2018/08/30/hello-world/" itemprop="url">
-              
-                <span itemprop="name">ubuntu安装Gogs的一些坑和心得</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">set
+              
+            
+          </h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-08-30T11:08:09+08:00"
-              content="2018-08-30" >
-          08-30
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
 
-    </header>
-  </article>
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-12-02 17:36:09 / 修改时间：21:44:38" itemprop="dateCreated datePublished" datetime="2018-12-02T17:36:09+08:00">2018-12-02</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon"
+            >
+            <i class="fa fa-eye"></i>
+             热度： 
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>本文记一下自己的程序设计周</p>
+<h2 id="往set容器内插入自定义类（自定义排序函数）"><a href="#往set容器内插入自定义类（自定义排序函数）" class="headerlink" title="往set容器内插入自定义类（自定义排序函数）"></a>往set容器内插入自定义类（自定义排序函数）</h2><ul>
+<li>需要重载（） 或者&lt; 运算符，虽然它内部自定义了排序函数，但是对于我们自定义的类它无法自主判断<br><code>`</code><br>bool USER::operator&lt;(const USER &amp; demo) const<br>{<br>  if (this-&gt;GetId_number() == demo.GetId_number())  //通过比较身份证号码去重<br>  {<pre><code>  return false;
+</code></pre>  }<br>  else<br>  {<pre><code>  if (Age != demo.Age)    //如果年龄不同按年龄升序排列，如果相同则按身份证号码升序排列。
+  {
+      return Age &lt; demo.Age;
+  }
+  else
+  {
+      return Id_number &lt; demo.Id_number;
+  }
+</code></pre>  }<br>}</li>
+</ul>
+<p>如果重载的是（）运算符那么是这样<br>bool USER::operator()(const USER &amp; demo,const USER &amp; demo2) const<br>{<br>    if (demo-&gt;GetId_number() == demo2.GetId_number())  ////通过比较身份证号码去重<br>    {<br>        return false;<br>    }<br>    else<br>    {<br>        if (demo.Age != demo2.Age)                                        //如果年龄不同按年龄升序排列，如果相同则按身份证号码升序排列。<br>        {<br>            return demo.Age &lt; demo2.Age;<br>        }<br>        else<br>        {<br>            return demo.Id_number &lt; demo2.Id_number;<br>        }<br>    }<br>}</p>
+<pre><code>
+## 如何对容器内对象进行更改
+
+放入&lt;set&gt;容器内的对象默认是不可更改的，是常对象。但一般我们还是需要对其更改，这时候我们只有采取先删除这个元素然后添加新元素的方法。
+</code></pre><p>set<user>::iterator p = user.begin();<br><code>`</code><br>这里是我自己定义的类USER,user为已经保存数据的<set>,采取生成迭代器方法，然后令指针指向容器的第一个元素。（注，begin()/end()不会检查容器是否为空，可用empty()检查）<br>begin()和end()是指向第一个元素和最后一个元素吗？？<br><img src="https://i.imgur.com/8g6ibTO.png" alt=""><br>有些博客上说end()是最后一个元素，其实是错的。end()指向最后一个元素之后为空的部分</set></user></p>
+<p>删除元素-erase()  ps-需要加一个判断，如果指针指向了容器的end()，没有办法删除操作。<br>添加元素-insert() ps-不要忘记自定义排序函数</p>
+<p>补一句既然是常对象，那么如果你要定义类函数访问他的某个属性，那么函数必须为常函数。</p>
+<p>其他常见函数见<a href="https://zh.cppreference.com/w/cpp/container/set" target="_blank" rel="noopener">https://zh.cppreference.com/w/cpp/container/set</a></p>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+    <div>
+      
+        
 
 
       
     </div>
 
+    
+
+    
+
+    
+      <div>
+        
+
+
+      </div>
+    
+
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/11/26/pq/" rel="next" title="Pyquery解析库">
+                <i class="fa fa-chevron-left"></i> Pyquery解析库
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+  </div>
 
 
           </div>
           
+
+  
+
+
 
         </div>
         
@@ -420,8 +548,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -546,6 +683,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#往set容器内插入自定义类（自定义排序函数）"><span class="nav-number">1.</span> <span class="nav-text">往set容器内插入自定义类（自定义排序函数）</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -708,6 +861,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.4.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.4.2"></script>
+
+
 
   
 

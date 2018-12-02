@@ -112,19 +112,19 @@
 
 
 
-  <meta name="description" content="本文简单的说一下，Qt的一些基本用法。以及一些坑。 信号和槽。新建一个新的QT项目，然后点击.ui文件进行拖拉控件进行基本的布局。">
+  <meta name="description" content="本文简单的说一下，Qt一些坑。 文字兼容问题由于字符编码的储存不一样，Qt的中文显示会出现一些问题（如果仅仅是让它在代码里显示中文的话，打开时选择一下字符编码就好了） 解决办法如下（含一些已经失效的办法）  先将对应的cpp文件用windows自带的记事本打开，另存为UTF-8格式，然后在代码中，遇到中文字符，使用QStringLiteral(“中文”)进行修饰这种方式每次新建一个class就要切">
 <meta name="keywords" content="QT">
 <meta property="og:type" content="article">
 <meta property="og:title" content="QT">
 <meta property="og:url" content="http://yoursite.com/2018/11/25/QT/index.html">
 <meta property="og:site_name" content="烟柳画桥&amp;晚来风急">
-<meta property="og:description" content="本文简单的说一下，Qt的一些基本用法。以及一些坑。 信号和槽。新建一个新的QT项目，然后点击.ui文件进行拖拉控件进行基本的布局。">
+<meta property="og:description" content="本文简单的说一下，Qt一些坑。 文字兼容问题由于字符编码的储存不一样，Qt的中文显示会出现一些问题（如果仅仅是让它在代码里显示中文的话，打开时选择一下字符编码就好了） 解决办法如下（含一些已经失效的办法）  先将对应的cpp文件用windows自带的记事本打开，另存为UTF-8格式，然后在代码中，遇到中文字符，使用QStringLiteral(“中文”)进行修饰这种方式每次新建一个class就要切">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://yoursite.com/img/QT.jpg">
-<meta property="og:updated_time" content="2018-11-27T06:55:26.580Z">
+<meta property="og:updated_time" content="2018-12-02T16:16:17.807Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="QT">
-<meta name="twitter:description" content="本文简单的说一下，Qt的一些基本用法。以及一些坑。 信号和槽。新建一个新的QT项目，然后点击.ui文件进行拖拉控件进行基本的布局。">
+<meta name="twitter:description" content="本文简单的说一下，Qt一些坑。 文字兼容问题由于字符编码的储存不一样，Qt的中文显示会出现一些问题（如果仅仅是让它在代码里显示中文的话，打开时选择一下字符编码就好了） 解决办法如下（含一些已经失效的办法）  先将对应的cpp文件用windows自带的记事本打开，另存为UTF-8格式，然后在代码中，遇到中文字符，使用QStringLiteral(“中文”)进行修饰这种方式每次新建一个class就要切">
 <meta name="twitter:image" content="http://yoursite.com/img/QT.jpg">
 
 
@@ -264,7 +264,7 @@
           
           <li class="menu-item menu-item-archives">
     <a href="/archives" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档<span class="badge">15</span></a>
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档<span class="badge">16</span></a>
   </li>
 
       
@@ -404,7 +404,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2018-11-27 14:55:26" itemprop="dateModified" datetime="2018-11-27T14:55:26+08:00">2018-11-27</time>
+                <time title="修改时间：2018-12-03 00:16:17" itemprop="dateModified" datetime="2018-12-03T00:16:17+08:00">2018-12-03</time>
               
             
           </span>
@@ -466,7 +466,7 @@
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="/img/QT.jpg" rel="gallery_cjoygz18g000028t9odw5ui3n"
+                 href="/img/QT.jpg" rel="gallery_cjp739b7t0000eot9wfrxxxiq"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="/img/QT.jpg" itemprop="contentUrl"/>
               </a>
@@ -479,8 +479,63 @@
       
 
       
-        <p>本文简单的说一下，Qt的一些基本用法。以及一些坑。</p>
-<h2 id="信号和槽。"><a href="#信号和槽。" class="headerlink" title="信号和槽。"></a>信号和槽。</h2><p>新建一个新的QT项目，然后点击.ui文件进行拖拉控件进行基本的布局。</p>
+        <p>本文简单的说一下，Qt一些坑。</p>
+<h2 id="文字兼容问题"><a href="#文字兼容问题" class="headerlink" title="文字兼容问题"></a>文字兼容问题</h2><p>由于字符编码的储存不一样，Qt的中文显示会出现一些问题（如果仅仅是让它在代码里显示中文的话，打开时选择一下字符编码就好了）</p>
+<p>解决办法如下（含一些已经失效的办法）</p>
+<ul>
+<li>先将对应的cpp文件用windows自带的记事本打开，另存为UTF-8格式，然后在代码中，遇到中文字符，使用QStringLiteral(“中文”)进行修饰<br>这种方式每次新建一个class就要切出去用记事本编辑一下实在麻烦，而且每个中文字符串都要用QStringLiteral来修饰，实在麻烦</li>
+<li>在头文件申明中加上<pre><code>#pragma execution_character_set(&quot;utf-8&quot;)
+</code></pre>一切OK了</li>
+</ul>
+<p>但方法二已经废弃了，只可以用在QT5的最初几个版本。</p>
+<p>此外还有一些办法</p>
+<pre><code>QString str1=QStringLiteral(&quot;中文字符&quot;);  
+QString str2=QString::fromLocal8bit(&quot;中文字符&quot;);  
+QString str3=QString::fromWCharArray(L&quot;中文字符&quot;);  
+QString str4=u8&quot;中文字符&quot;;    //好像这种方法只适合C++11以上版本
+</code></pre><p>不过这些办法貌似还是没能解决我的问题——分别用QT和VS2017读取文本数据，中文就会变为一些奇妙的东西。（ps_暂时未找到合适的办法，以上是我网上找了好多博客总结的办法，当然最简单的就是你其中一个打开就好了）</p>
+<h2 id="多界面切换问题"><a href="#多界面切换问题" class="headerlink" title="多界面切换问题"></a>多界面切换问题</h2><p>主界面（Widget) 对话框（Dialog)也可以称为子界面</p>
+<p>对于一个界面我们有这么几种操作可以做</p>
+<ul>
+<li>close()  关闭界面，如果是主界面那么直接退出程序</li>
+<li>hide()  隐藏界面，一般用于界面转换的时候，由主界面转向子界面</li>
+<li>show()  显示一个界面<br>以及一些其他的更改界面大小之类的操作</li>
+</ul>
+<p>当我们从主界面跳转至子界面<br>主界面中我们这么写ps– this-&gt;hide();new-&gt;exec();this-&gt;show();<br>子界面可以</p>
+<ul>
+<li>槽函数clicked() 和 accept();</li>
+<li>close(); </li>
+</ul>
+<p>这里说一下show() 和 exec()的区别</p>
+<h3 id="show-非模式对话框"><a href="#show-非模式对话框" class="headerlink" title="show()非模式对话框"></a>show()非模式对话框</h3><p>显示一个非模式对话框。控制权即刻返回给调用函数。<br>弹出窗口是否模式对话框，取决于modal属性的值。<br>（原文：Shows the dialog as a modeless dialog. Control returns immediately to the calling code. The dialog will be modal or modeless according to the value of the modal property. ）<br><img src="https://img-blog.csdn.net/20160405192916896" alt=""></p>
+<h3 id="exec-模式对话框"><a href="#exec-模式对话框" class="headerlink" title="exec()模式对话框"></a>exec()模式对话框</h3><p>显示一个模式对话框，并且锁住程序直到用户关闭该对话框为止。函数返回一个DialogCode结果。<br>在对话框弹出期间，用户不可以切换同程序下的其它窗口，直到该对话框被关闭。<br>（原文：Shows the dialog as a modal , blocking until the user closes it. The function returns a DialogCode result.<br>Users cannot interact with any other window in the same application until they close the dialog. ）<br><img src="https://img-blog.csdn.net/20160405193105350" alt=""></p>
+<p>也就是说如果是exec()那么只有这个操作结束返回之后才会进行下一步操作，也就是阻塞（开启一个事件循环，所谓事件循环，可以理解成一个无限循环。Qt 在开启了事件循环之后，系统发出的各种事件才能够被程序监听到。这个事件循环相当于一种轮询的作用。既然是无限循环，当然在开启了事件循环的地方，代码就会被阻塞，后面的语句也就不会被执行到。因此，对于使用了exec()显示的模态对话框，我们可以在exec()函数之后直接从对话框的对象获取到数据值。）<br>通俗的说就是运用exec()之后我们只有对这个对话框完成操作后才能进行其他的，而show()则可以同时进行其他操作（默认情况下）。<br>exec()是有返回值的，QDialog::Accepted  or  QDialog::Rejected<br>当然我们调用槽函数accept() 也可以在show()中达到这个操作。</p>
+<h2 id="显示数据可直接更改问题。"><a href="#显示数据可直接更改问题。" class="headerlink" title="显示数据可直接更改问题。"></a>显示数据可直接更改问题。</h2><p>ui-&gt;tableView-&gt;setEditTriggers(QTableView::NoEditTriggers); 设置不可编辑成功这是只针对TableView的。其他的也类似。</p>
+<p>先说说如何显示数据吧，有三种</p>
+<ul>
+<li><p>Table View (即以表格的形式显示<br><code>`</code><br>  需要引用QStandardItemModel头文件<br>  QStandardItemModel  *model = new QStandardItemModel();<br>  model-&gt;setColumnCount(7);   //设置列数<br>  model-&gt;setHeaderData(0,Qt::Horizontal,QString::fromStdString(“XX”));   //设置每列的名称<br>  model-&gt;setHeaderData(1,Qt::Horizontal,QString::fromStdString(“XX”));<br>  model-&gt;setHeaderData(2,Qt::Horizontal,QString::fromStdString(“XXX”));<br>  model-&gt;setHeaderData(3,Qt::Horizontal,QString::fromStdString(“XX”));<br>  model-&gt;setHeaderData(4,Qt::Horizontal,QString::fromStdString(“XX”));<br>  model-&gt;setHeaderData(5,Qt::Horizontal,QString::fromStdString(“XX”));<br>  model-&gt;setHeaderData(6,Qt::Horizontal,QString::fromStdString(“XXX”));<br>  ui-&gt;tableView-&gt;setModel(model);  //在界面中显示我们设置的表格<br>  当然也可以逐个读取<br>  QStringList headers;<br>  headers &lt;&lt; “ID” &lt;&lt; “Name” &lt;&lt; “Age” &lt;&lt; “Sex”;<br>  tableWidget.setHorizontalHeaderLabels(headers);</p>
+<p>  读入数据<br>  ui-&gt;tableView-&gt;setEditTriggers(QTableView::NoEditTriggers);<br>  for(int i = 0;i &lt; 7;i++)<br>  {</p>
+<pre><code>  ui-&gt;tableView-&gt;setColumnWidth(i,70);  设置宽度
+</code></pre><p>  }<br>  set<user>::iterator p = Index::user.begin();<br>  model-&gt;removeRows(0,model-&gt;rowCount());   //删除行，也就是初始化显示界面<br>  for(int i = 0;i &lt; Index::user.size();i++)<br>  {</user></p>
+<pre><code>  model-&gt;setItem(i,0,new QStandardItem(QString::fromStdString(p-&gt;GetName())));
+  model-&gt;setItem(i,1,new QStandardItem(QString::fromStdString(p-&gt;GetSex())));
+  model-&gt;setItem(i,2,new QStandardItem(QString::fromStdString(p-&gt;GetId_number())));
+  model-&gt;setItem(i,3,new QStandardItem(QString::number(p-&gt;GetAge())));
+  model-&gt;setItem(i,4,new QStandardItem(QString::fromStdString(p-&gt;GetAddress())));
+  model-&gt;setItem(i,5,new QStandardItem(QString::fromStdString(p-&gt;GetCareer())));
+  model-&gt;setItem(i,6,new QStandardItem(QString::fromStdString(p-&gt;GetPhone_number())));
+  p++;
+</code></pre><p>  }<br>  具体看你自己的程序</p>
+</li>
+<li><p>List View (即以列表的形式）</p>
+</li>
+<li>QStringList user;<br>user += “first”;<br>user +=”second”;<br>QStringListModel *model = new QStringListModel(user);<br>userList-&gt;setModel(model);        //userList是个QListView<br>user += “third”;<br>model-&gt;setStringList(user);<br>model-&gt;removeRows(0,model-&gt;rowCount());//从第0行开始，删除所有行<br>model-&gt;removeRows(0,2);//从第0行开始，删除前2行</li>
+</ul>
+<ul>
+<li>Tree View (即以树状图形式）<br>这个比较详细 我不在多说<br><a href="http://www.it165.net/pro/html/201405/14029.html" target="_blank" rel="noopener">http://www.it165.net/pro/html/201405/14029.html</a></li>
+</ul>
+<p><code>`</code></p>
+<p>以后再做补充</p>
 
       
     </div>
@@ -614,7 +669,7 @@
                 
                   <a href="/archives">
                 
-                    <span class="site-state-item-count">15</span>
+                    <span class="site-state-item-count">16</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -730,7 +785,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#信号和槽。"><span class="nav-number">1.</span> <span class="nav-text">信号和槽。</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#文字兼容问题"><span class="nav-number">1.</span> <span class="nav-text">文字兼容问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多界面切换问题"><span class="nav-number">2.</span> <span class="nav-text">多界面切换问题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#show-非模式对话框"><span class="nav-number">2.1.</span> <span class="nav-text">show()非模式对话框</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#exec-模式对话框"><span class="nav-number">2.2.</span> <span class="nav-text">exec()模式对话框</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#显示数据可直接更改问题。"><span class="nav-number">3.</span> <span class="nav-text">显示数据可直接更改问题。</span></a></li></ol></div>
             
 
           </div>
@@ -780,7 +835,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共28.7k字</span>
+  <span class="post-count">博客全站共30.7k字</span>
 </div>
         
 <div class="busuanzi-count">

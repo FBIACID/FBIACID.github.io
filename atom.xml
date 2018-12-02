@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-11-26T15:39:21.079Z</updated>
+  <updated>2018-12-02T13:44:38.204Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>set</title>
+    <link href="http://yoursite.com/2018/12/02/set/"/>
+    <id>http://yoursite.com/2018/12/02/set/</id>
+    <published>2018-12-02T09:36:09.000Z</published>
+    <updated>2018-12-02T13:44:38.204Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;本文记一下自己的程序设计周&lt;/p&gt;
+&lt;h2 id=&quot;往set容器内插入自定义类（自定义排序函数）&quot;&gt;&lt;a href=&quot;#往set容器内插入自定义类（自定义排序函数）&quot; class=&quot;headerlink&quot; title=&quot;往set容器内插入自定义类（自定义排序函数）&quot;&gt;&lt;/a
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Pyquery解析库</title>
@@ -47,14 +67,14 @@
     <link href="http://yoursite.com/2018/11/25/QT/"/>
     <id>http://yoursite.com/2018/11/25/QT/</id>
     <published>2018-11-25T09:06:12.000Z</published>
-    <updated>2018-11-27T06:55:26.580Z</updated>
+    <updated>2018-12-02T16:16:17.807Z</updated>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;本文简单的说一下，Qt的一些基本用法。以及一些坑。&lt;/p&gt;
-&lt;h2 id=&quot;信号和槽。&quot;&gt;&lt;a href=&quot;#信号和槽。&quot; class=&quot;headerlink&quot; title=&quot;信号和槽。&quot;&gt;&lt;/a&gt;信号和槽。&lt;/h2&gt;&lt;p&gt;新建一个新的QT项目，然后点击.ui文件进行拖拉控
+        &lt;p&gt;本文简单的说一下，Qt一些坑。&lt;/p&gt;
+&lt;h2 id=&quot;文字兼容问题&quot;&gt;&lt;a href=&quot;#文字兼容问题&quot; class=&quot;headerlink&quot; title=&quot;文字兼容问题&quot;&gt;&lt;/a&gt;文字兼容问题&lt;/h2&gt;&lt;p&gt;由于字符编码的储存不一样，Qt的中文显示会出现一些问题（如果仅
       
     
     </summary>
@@ -135,9 +155,9 @@
       <category term="爬虫" scheme="http://yoursite.com/categories/%E7%88%AC%E8%99%AB/"/>
     
     
-      <category term="爬虫" scheme="http://yoursite.com/tags/%E7%88%AC%E8%99%AB/"/>
-    
       <category term="web网页" scheme="http://yoursite.com/tags/web%E7%BD%91%E9%A1%B5/"/>
+    
+      <category term="爬虫" scheme="http://yoursite.com/tags/%E7%88%AC%E8%99%AB/"/>
     
   </entry>
   
