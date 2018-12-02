@@ -4,6 +4,12 @@
     <title><![CDATA[set]]></title>
     <url>%2F2018%2F12%2F02%2Fset%2F</url>
     <content type="text"><![CDATA[本文记一下自己的程序设计周 往set容器内插入自定义类（自定义排序函数） 需要重载（） 或者&lt; 运算符，虽然它内部自定义了排序函数，但是对于我们自定义的类它无法自主判断`bool USER::operator&lt;(const USER &amp; demo) const{ if (this-&gt;GetId_number() == demo.GetId_number()) //通过比较身份证号码去重 { return false; } else { if (Age != demo.Age) //如果年龄不同按年龄升序排列，如果相同则按身份证号码升序排列。 { return Age &lt; demo.Age; } else { return Id_number &lt; demo.Id_number; } }} 如果重载的是（）运算符那么是这样bool USER::operator()(const USER &amp; demo,const USER &amp; demo2) const{ if (demo-&gt;GetId_number() == demo2.GetId_number()) ////通过比较身份证号码去重 { return false; } else { if (demo.Age != demo2.Age) //如果年龄不同按年龄升序排列，如果相同则按身份证号码升序排列。 { return demo.Age &lt; demo2.Age; } else { return demo.Id_number &lt; demo2.Id_number; } }} ## 如何对容器内对象进行更改 放入&lt;set&gt;容器内的对象默认是不可更改的，是常对象。但一般我们还是需要对其更改，这时候我们只有采取先删除这个元素然后添加新元素的方法。 set::iterator p = user.begin();`这里是我自己定义的类USER,user为已经保存数据的,采取生成迭代器方法，然后令指针指向容器的第一个元素。（注，begin()/end()不会检查容器是否为空，可用empty()检查）begin()和end()是指向第一个元素和最后一个元素吗？？有些博客上说end()是最后一个元素，其实是错的。end()指向最后一个元素之后为空的部分 删除元素-erase() ps-需要加一个判断，如果指针指向了容器的end()，没有办法删除操作。添加元素-insert() ps-不要忘记自定义排序函数 补一句既然是常对象，那么如果你要定义类函数访问他的某个属性，那么函数必须为常函数。 其他常见函数见https://zh.cppreference.com/w/cpp/container/set]]></content>
+      <categories>
+        <category>数据结构</category>
+      </categories>
+      <tags>
+        <tag>数据结构</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[Pyquery解析库]]></title>
