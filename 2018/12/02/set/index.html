@@ -112,19 +112,19 @@
 
 
 
-  <meta name="description" content="本文记一下自己的程序设计周 往set容器内插入自定义类（自定义排序函数） 需要重载（） 或者&amp;lt; 运算符，虽然它内部自定义了排序函数，但是对于我们自定义的类它无法自主判断`bool USER::operator&amp;lt;(const USER &amp;amp; demo) const{  if (this-&amp;gt;GetId_number() == demo.GetId_number())  //通过">
+  <meta name="description" content="本文记一下自己的程序设计周 往set容器内插入自定义类（自定义排序函数） 需要重载（） 或者&amp;lt; 运算符，虽然它内部自定义了排序函数，但是对于我们自定义的类它无法自主判断   bool USER::operator&amp;lt;(const USER &amp;amp; demo) const {     if (this-&amp;gt;GetId_number() == demo.GetId_number())">
 <meta name="keywords" content="数据结构">
 <meta property="og:type" content="article">
 <meta property="og:title" content="set">
 <meta property="og:url" content="http://yoursite.com/2018/12/02/set/index.html">
 <meta property="og:site_name" content="烟柳画桥&amp;晚来风急">
-<meta property="og:description" content="本文记一下自己的程序设计周 往set容器内插入自定义类（自定义排序函数） 需要重载（） 或者&amp;lt; 运算符，虽然它内部自定义了排序函数，但是对于我们自定义的类它无法自主判断`bool USER::operator&amp;lt;(const USER &amp;amp; demo) const{  if (this-&amp;gt;GetId_number() == demo.GetId_number())  //通过">
+<meta property="og:description" content="本文记一下自己的程序设计周 往set容器内插入自定义类（自定义排序函数） 需要重载（） 或者&amp;lt; 运算符，虽然它内部自定义了排序函数，但是对于我们自定义的类它无法自主判断   bool USER::operator&amp;lt;(const USER &amp;amp; demo) const {     if (this-&amp;gt;GetId_number() == demo.GetId_number())">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://yoursite.com/img/set.jpg">
-<meta property="og:updated_time" content="2018-12-02T16:23:05.927Z">
+<meta property="og:updated_time" content="2018-12-03T11:51:14.530Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="set">
-<meta name="twitter:description" content="本文记一下自己的程序设计周 往set容器内插入自定义类（自定义排序函数） 需要重载（） 或者&amp;lt; 运算符，虽然它内部自定义了排序函数，但是对于我们自定义的类它无法自主判断`bool USER::operator&amp;lt;(const USER &amp;amp; demo) const{  if (this-&amp;gt;GetId_number() == demo.GetId_number())  //通过">
+<meta name="twitter:description" content="本文记一下自己的程序设计周 往set容器内插入自定义类（自定义排序函数） 需要重载（） 或者&amp;lt; 运算符，虽然它内部自定义了排序函数，但是对于我们自定义的类它无法自主判断   bool USER::operator&amp;lt;(const USER &amp;amp; demo) const {     if (this-&amp;gt;GetId_number() == demo.GetId_number())">
 <meta name="twitter:image" content="http://yoursite.com/img/set.jpg">
 
 
@@ -404,7 +404,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2018-12-03 00:23:05" itemprop="dateModified" datetime="2018-12-03T00:23:05+08:00">2018-12-03</time>
+                <time title="修改时间：2018-12-03 19:51:14" itemprop="dateModified" datetime="2018-12-03T19:51:14+08:00">2018-12-03</time>
               
             
           </span>
@@ -481,23 +481,50 @@
       
         <p>本文记一下自己的程序设计周</p>
 <h2 id="往set容器内插入自定义类（自定义排序函数）"><a href="#往set容器内插入自定义类（自定义排序函数）" class="headerlink" title="往set容器内插入自定义类（自定义排序函数）"></a>往set容器内插入自定义类（自定义排序函数）</h2><ul>
-<li>需要重载（） 或者&lt; 运算符，虽然它内部自定义了排序函数，但是对于我们自定义的类它无法自主判断<br><code>`</code><br>bool USER::operator&lt;(const USER &amp; demo) const<br>{<br>  if (this-&gt;GetId_number() == demo.GetId_number())  //通过比较身份证号码去重<br>  {<pre><code>  return false;
-</code></pre>  }<br>  else<br>  {<pre><code>  if (Age != demo.Age)    //如果年龄不同按年龄升序排列，如果相同则按身份证号码升序排列。
-  {
-      return Age &lt; demo.Age;
-  }
-  else
-  {
-      return Id_number &lt; demo.Id_number;
-  }
-</code></pre>  }<br>}</li>
+<li>需要重载（） 或者&lt; 运算符，虽然它内部自定义了排序函数，但是对于我们自定义的类它无法自主判断</li>
 </ul>
-<p>如果重载的是（）运算符那么是这样<br>bool USER::operator()(const USER &amp; demo,const USER &amp; demo2) const<br>{<br>    if (demo-&gt;GetId_number() == demo2.GetId_number())  ////通过比较身份证号码去重<br>    {<br>        return false;<br>    }<br>    else<br>    {<br>        if (demo.Age != demo2.Age)                                        //如果年龄不同按年龄升序排列，如果相同则按身份证号码升序排列。<br>        {<br>            return demo.Age &lt; demo2.Age;<br>        }<br>        else<br>        {<br>            return demo.Id_number &lt; demo2.Id_number;<br>        }<br>    }<br>}</p>
-<pre><code>
-## 如何对容器内对象进行更改
+<pre><code> bool USER::operator&lt;(const USER &amp; demo) const
+{
+    if (this-&gt;GetId_number() == demo.GetId_number())  //通过比较身份证号码去重
+    {
+        return false;
+    }
+    else
+    {
+        if (Age != demo.Age)    //如果年龄不同按年龄升序排列，如果相同则按身份证号码升序排列。
+        {
+            return Age &lt; demo.Age;
+        }
+        else
+        {
+            return Id_number &lt; demo.Id_number;
+        }
+    }
+}
 
-放入&lt;set&gt;容器内的对象默认是不可更改的，是常对象。但一般我们还是需要对其更改，这时候我们只有采取先删除这个元素然后添加新元素的方法。
-</code></pre><p>set<user>::iterator p = user.begin();<br><code>`</code><br>这里是我自己定义的类USER,user为已经保存数据的<set>,采取生成迭代器方法，然后令指针指向容器的第一个元素。（注，begin()/end()不会检查容器是否为空，可用empty()检查）<br>begin()和end()是指向第一个元素和最后一个元素吗？？<br><img src="https://i.imgur.com/8g6ibTO.png" alt=""><br>有些博客上说end()是最后一个元素，其实是错的。end()指向最后一个元素之后为空的部分</set></user></p>
+如果重载的是（）运算符那么是这样
+bool USER::operator()(const USER &amp; demo,const USER &amp; demo2) const
+{
+    if (demo-&gt;GetId_number() == demo2.GetId_number())  ////通过比较身份证号码去重
+    {
+        return false;
+    }
+    else
+    {
+        if (demo.Age != demo2.Age)                                        //如果年龄不同按年龄升序排列，如果相同则按身份证号码升序排列。
+        {
+            return demo.Age &lt; demo2.Age;
+        }
+        else
+        {
+            return demo.Id_number &lt; demo2.Id_number;
+        }
+    }
+}
+
+</code></pre><h2 id="如何对容器内对象进行更改"><a href="#如何对容器内对象进行更改" class="headerlink" title="如何对容器内对象进行更改"></a>如何对容器内对象进行更改</h2><p>放入<set>容器内的对象默认是不可更改的，是常对象。但一般我们还是需要对其更改，这时候我们只有采取先删除这个元素然后添加新元素的方法。</set></p>
+<pre><code>set&lt;USER&gt;::iterator p = user.begin();  
+</code></pre><p>这里是我自己定义的类USER,user为已经保存数据的<set>,采取生成迭代器方法，然后令指针指向容器的第一个元素。（注，begin()/end()不会检查容器是否为空，可用empty()检查）<br>begin()和end()是指向第一个元素和最后一个元素吗？？<br><img src="https://i.imgur.com/8g6ibTO.png" alt=""><br>有些博客上说end()是最后一个元素，其实是错的。end()指向最后一个元素之后为空的部分</set></p>
 <p>删除元素-erase()  ps-需要加一个判断，如果指针指向了容器的end()，没有办法删除操作。<br>添加元素-insert() ps-不要忘记自定义排序函数</p>
 <p>补一句既然是常对象，那么如果你要定义类函数访问他的某个属性，那么函数必须为常函数。</p>
 <p>其他常见函数见<a href="https://zh.cppreference.com/w/cpp/container/set" target="_blank" rel="noopener">https://zh.cppreference.com/w/cpp/container/set</a></p>
@@ -750,7 +777,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#往set容器内插入自定义类（自定义排序函数）"><span class="nav-number">1.</span> <span class="nav-text">往set容器内插入自定义类（自定义排序函数）</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#往set容器内插入自定义类（自定义排序函数）"><span class="nav-number">1.</span> <span class="nav-text">往set容器内插入自定义类（自定义排序函数）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如何对容器内对象进行更改"><span class="nav-number">2.</span> <span class="nav-text">如何对容器内对象进行更改</span></a></li></ol></div>
             
 
           </div>
