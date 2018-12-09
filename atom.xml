@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-12-03T11:51:14.530Z</updated>
+  <updated>2018-12-07T13:48:22.225Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,20 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>代理的使使用</title>
+    <link href="http://yoursite.com/2018/12/07/%E4%BB%A3%E7%90%86%E7%9A%84%E4%BD%BF%E4%BD%BF%E7%94%A8/"/>
+    <id>http://yoursite.com/2018/12/07/代理的使使用/</id>
+    <published>2018-12-07T13:48:21.000Z</published>
+    <updated>2018-12-07T13:48:22.225Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>set</title>
