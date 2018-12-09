@@ -121,7 +121,7 @@
 <meta property="og:description" content="本文记录一下代理的使用方法。 代理的分类代理有免费的和收费的。免费的一般很不稳定，可用率能有百分之10就不错了 国内有很多代理商，提供的代理质量也参差不齐，这里我们以阿步云为例，他提供两种隧道模式(协议的不同）。1——http隧道  专业版 动态版 经典版  2——socks隧道  经典版  http使用较多，我们就以它为例来说。专业版的代理会锁定一个ip 一分钟，到期后自动切换动态版顾名思义，每">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://yoursite.com/img/dl.jpg">
-<meta property="og:updated_time" content="2018-12-09T13:45:39.284Z">
+<meta property="og:updated_time" content="2018-12-09T13:51:22.503Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="代理的使用">
 <meta name="twitter:description" content="本文记录一下代理的使用方法。 代理的分类代理有免费的和收费的。免费的一般很不稳定，可用率能有百分之10就不错了 国内有很多代理商，提供的代理质量也参差不齐，这里我们以阿步云为例，他提供两种隧道模式(协议的不同）。1——http隧道  专业版 动态版 经典版  2——socks隧道  经典版  http使用较多，我们就以它为例来说。专业版的代理会锁定一个ip 一分钟，到期后自动切换动态版顾名思义，每">
@@ -404,7 +404,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2018-12-09 21:45:39" itemprop="dateModified" datetime="2018-12-09T21:45:39+08:00">2018-12-09</time>
+                <time title="修改时间：2018-12-09 21:51:22" itemprop="dateModified" datetime="2018-12-09T21:51:22+08:00">2018-12-09</time>
               
             
           </span>
@@ -538,7 +538,7 @@ print (resp)
 <li>代理通行证书</li>
 <li>代理通行密钥</li>
 </ul>
-<p>代理服务器和端口号三个版本各自不同且唯一，通行证书和密钥则是在你购买之后才会得到直接复制代码然后填入对应参数就可以了。<br>想要更多可以看这里<a href="https://github.com/abuyun/proxy-demo/blob/master/python/python3/urllib/proxy-demo.py" target="_blank" rel="noopener">https://github.com/abuyun/proxy-demo/blob/master/python/python3/urllib/proxy-demo.py</a></p>
+<p>代理服务器和端口号三个版本各自不同且唯一，通行证书和密钥则是在你购买之后才会得到直接复制代码然后填入对应参数就可以了。<br>想要更多可以看这里  <a href="https://github.com/abuyun/proxy-demo/blob/master/python/python3/urllib/proxy-demo.py" target="_blank" rel="noopener">https://github.com/abuyun/proxy-demo/blob/master/python/python3/urllib/proxy-demo.py</a></p>
 <p>假如我们要用selenium来操纵浏览器那么如何给他配置代理呢。<br>这里我们只列举selenium + Chrome的方法</p>
 <ul>
 <li>不用授权验证的代理</li>
@@ -548,7 +548,7 @@ options.add_argument(&#39;--proxy-server=http://ip:port&#39;)
 driver = webdriver.Chrome(executable_path=&quot;C:\chromedriver.exe&quot;, chrome_options=0ptions)
 driver.get(&quot;http://ip138.com/&quot;)
 print(driver.page_source)
-</code></pre><p>调用ChromeOptions这个接口把我们的代理ip放进去 然后再把参数传入我们的打开浏览器的接口里，这里注意一下————代码里的executable_path=”C:\chromedriver.exe” 是我们chromedriver.exe所在的路径，如果我们已经把它放到了python的Script目录，那么可以省略这个参数。</p>
+</code></pre><p>调用ChromeOptions这个接口把我们的代理ip放进去 然后再把参数传入我们的打开浏览器的接口里，这里注意一下————代码里的executable_path=”C:\chromedriver.exe” 是我们chromedriver.exe所在的路径，如果我们已经把它放到了python的Scripts目录，那么可以省略这个参数。</p>
 <ul>
 <li>需要授权验证的代理</li>
 </ul>
