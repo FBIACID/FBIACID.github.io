@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-12-07T13:48:22.225Z</updated>
+  <updated>2018-12-09T12:52:09.046Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,16 +17,26 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>代理的使使用</title>
-    <link href="http://yoursite.com/2018/12/07/%E4%BB%A3%E7%90%86%E7%9A%84%E4%BD%BF%E4%BD%BF%E7%94%A8/"/>
-    <id>http://yoursite.com/2018/12/07/代理的使使用/</id>
+    <title>代理的使用</title>
+    <link href="http://yoursite.com/2018/12/07/%E4%BB%A3%E7%90%86%E7%9A%84%E4%BD%BF%E7%94%A8/"/>
+    <id>http://yoursite.com/2018/12/07/代理的使用/</id>
     <published>2018-12-07T13:48:21.000Z</published>
-    <updated>2018-12-07T13:48:22.225Z</updated>
+    <updated>2018-12-09T12:52:09.046Z</updated>
     
     <summary type="html">
     
+      
+      
+        &lt;p&gt;本文记录一下代理的使用方法。&lt;/p&gt;
+&lt;h2 id=&quot;代理的分类&quot;&gt;&lt;a href=&quot;#代理的分类&quot; class=&quot;headerlink&quot; title=&quot;代理的分类&quot;&gt;&lt;/a&gt;代理的分类&lt;/h2&gt;&lt;p&gt;代理有免费的和收费的。免费的一般很不稳定，可用率能有百分之10就不错了&lt;
+      
+    
     </summary>
     
+      <category term="爬虫" scheme="http://yoursite.com/categories/%E7%88%AC%E8%99%AB/"/>
+    
+    
+      <category term="爬虫" scheme="http://yoursite.com/tags/%E7%88%AC%E8%99%AB/"/>
     
   </entry>
   

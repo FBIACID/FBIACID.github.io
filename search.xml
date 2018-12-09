@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[代理的使使用]]></title>
-    <url>%2F2018%2F12%2F07%2F%E4%BB%A3%E7%90%86%E7%9A%84%E4%BD%BF%E4%BD%BF%E7%94%A8%2F</url>
-    <content type="text"></content>
+    <title><![CDATA[代理的使用]]></title>
+    <url>%2F2018%2F12%2F07%2F%E4%BB%A3%E7%90%86%E7%9A%84%E4%BD%BF%E7%94%A8%2F</url>
+    <content type="text"><![CDATA[本文记录一下代理的使用方法。 代理的分类代理有免费的和收费的。免费的一般很不稳定，可用率能有百分之10就不错了]]></content>
+      <categories>
+        <category>爬虫</category>
+      </categories>
+      <tags>
+        <tag>爬虫</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[set]]></title>
