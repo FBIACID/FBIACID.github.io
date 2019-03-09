@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-12-09T13:51:22.503Z</updated>
+  <updated>2019-03-09T15:02:57.010Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>转轮密码机</title>
+    <link href="http://yoursite.com/2019/03/09/%E8%BD%AC%E8%BD%AE%E5%AF%86%E7%A0%81%E6%9C%BA/"/>
+    <id>http://yoursite.com/2019/03/09/转轮密码机/</id>
+    <published>2019-03-09T14:07:17.000Z</published>
+    <updated>2019-03-09T15:02:57.010Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;原理&quot;&gt;&lt;a href=&quot;#原理&quot; class=&quot;headerlink&quot; title=&quot;原理&quot;&gt;&lt;/a&gt;原理&lt;/h2&gt;&lt;p&gt;转轮密码机是多表代换密码的典型例子，在二战中广泛应用。分为三个轮子-快中慢，每次敲击一次字符轮子就会转动一次，从而打破了明文密文的固定代替关
+      
+    
+    </summary>
+    
+      <category term="密码学" scheme="http://yoursite.com/categories/%E5%AF%86%E7%A0%81%E5%AD%A6/"/>
+    
+    
+      <category term="密码学" scheme="http://yoursite.com/tags/%E5%AF%86%E7%A0%81%E5%AD%A6/"/>
+    
+  </entry>
   
   <entry>
     <title>代理的使用</title>

@@ -112,20 +112,20 @@
 
 
 
-  <meta name="description" content="本文记一下自己的程序设计周 往set容器内插入自定义类（自定义排序函数） 需要重载（） 或者&amp;lt; 运算符，虽然它内部自定义了排序函数，但是对于我们自定义的类它无法自主判断   bool USER::operator&amp;lt;(const USER &amp;amp; demo) const {     if (this-&amp;gt;GetId_number() == demo.GetId_number())">
-<meta name="keywords" content="数据结构">
+  <meta name="description" content="原理转轮密码机是多表代换密码的典型例子，在二战中广泛应用。分为三个轮子-快中慢，每次敲击一次字符轮子就会转动一次，从而打破了明文密文的固定代替关系。快轮子转动26次-即循环了字母表则中轮子会转动一个字符，整个密码机的周期为262626.  代码实现ElemType fgear[2][26] = { {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15">
+<meta name="keywords" content="密码学">
 <meta property="og:type" content="article">
-<meta property="og:title" content="set">
-<meta property="og:url" content="http://yoursite.com/2018/12/02/set/index.html">
+<meta property="og:title" content="转轮密码机">
+<meta property="og:url" content="http://yoursite.com/2019/03/09/转轮密码机/index.html">
 <meta property="og:site_name" content="烟柳画桥&amp;晚来风急">
-<meta property="og:description" content="本文记一下自己的程序设计周 往set容器内插入自定义类（自定义排序函数） 需要重载（） 或者&amp;lt; 运算符，虽然它内部自定义了排序函数，但是对于我们自定义的类它无法自主判断   bool USER::operator&amp;lt;(const USER &amp;amp; demo) const {     if (this-&amp;gt;GetId_number() == demo.GetId_number())">
+<meta property="og:description" content="原理转轮密码机是多表代换密码的典型例子，在二战中广泛应用。分为三个轮子-快中慢，每次敲击一次字符轮子就会转动一次，从而打破了明文密文的固定代替关系。快轮子转动26次-即循环了字母表则中轮子会转动一个字符，整个密码机的周期为262626.  代码实现ElemType fgear[2][26] = { {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://yoursite.com/img/set.jpg">
-<meta property="og:updated_time" content="2018-12-03T11:51:14.530Z">
+<meta property="og:image" content="https://camo.githubusercontent.com/095c4fbde6c9fdbde144dc229c477cc2d0e488cd/68747470733a2f2f7777342e73696e61696d672e636e2f6c617267652f303036744e6252776c793166646d346636756961326a3330676f30626d3074792e6a7067">
+<meta property="og:updated_time" content="2019-03-09T15:02:57.010Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="set">
-<meta name="twitter:description" content="本文记一下自己的程序设计周 往set容器内插入自定义类（自定义排序函数） 需要重载（） 或者&amp;lt; 运算符，虽然它内部自定义了排序函数，但是对于我们自定义的类它无法自主判断   bool USER::operator&amp;lt;(const USER &amp;amp; demo) const {     if (this-&amp;gt;GetId_number() == demo.GetId_number())">
-<meta name="twitter:image" content="http://yoursite.com/img/set.jpg">
+<meta name="twitter:title" content="转轮密码机">
+<meta name="twitter:description" content="原理转轮密码机是多表代换密码的典型例子，在二战中广泛应用。分为三个轮子-快中慢，每次敲击一次字符轮子就会转动一次，从而打破了明文密文的固定代替关系。快轮子转动26次-即循环了字母表则中轮子会转动一个字符，整个密码机的周期为262626.  代码实现ElemType fgear[2][26] = { {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15">
+<meta name="twitter:image" content="https://camo.githubusercontent.com/095c4fbde6c9fdbde144dc229c477cc2d0e488cd/68747470733a2f2f7777342e73696e61696d672e636e2f6c617267652f303036744e6252776c793166646d346636756961326a3330676f30626d3074792e6a7067">
 
 
 
@@ -134,7 +134,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/12/02/set/"/>
+  <link rel="canonical" href="http://yoursite.com/2019/03/09/转轮密码机/"/>
 
 
 
@@ -144,7 +144,7 @@
   };
 </script>
 
-  <title>set | 烟柳画桥&晚来风急</title>
+  <title>转轮密码机 | 烟柳画桥&晚来风急</title>
   
 
 
@@ -345,7 +345,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/02/set/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/09/转轮密码机/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="烟柳画桥">
@@ -362,7 +362,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">set
+          <h1 class="post-title" itemprop="name headline">转轮密码机
               
             
           </h1>
@@ -387,24 +387,12 @@
                 
               
 
-              <time title="创建时间：2018-12-02 17:36:09" itemprop="dateCreated datePublished" datetime="2018-12-02T17:36:09+08:00">2018-12-02</time>
+              <time title="创建时间：2019-03-09 22:07:17 / 修改时间：23:02:57" itemprop="dateCreated datePublished" datetime="2019-03-09T22:07:17+08:00">2019-03-09</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2018-12-03 19:51:14" itemprop="dateModified" datetime="2018-12-03T19:51:14+08:00">2018-12-03</time>
               
             
           </span>
@@ -421,7 +409,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/数据结构/" itemprop="url" rel="index"><span itemprop="name">数据结构</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/密码学/" itemprop="url" rel="index"><span itemprop="name">密码学</span></a></span>
 
                 
                 
@@ -461,73 +449,180 @@
 
       
       
-        <div class="post-gallery" itemscope itemtype="http://schema.org/ImageGallery">
-          
-          
-            <div class="post-gallery-row">
-              <a class="post-gallery-img fancybox"
-                 href="/img/set.jpg" rel="gallery_cjt1mca0t001egct99ecmdm84"
-                 itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
-                <img src="/img/set.jpg" itemprop="contentUrl"/>
-              </a>
-            
-          
-
-          
-          </div>
-        </div>
-      
 
       
-        <p>本文记一下自己的程序设计周</p>
-<h2 id="往set容器内插入自定义类（自定义排序函数）"><a href="#往set容器内插入自定义类（自定义排序函数）" class="headerlink" title="往set容器内插入自定义类（自定义排序函数）"></a>往set容器内插入自定义类（自定义排序函数）</h2><ul>
-<li>需要重载（） 或者&lt; 运算符，虽然它内部自定义了排序函数，但是对于我们自定义的类它无法自主判断</li>
-</ul>
-<pre><code> bool USER::operator&lt;(const USER &amp; demo) const
-{
-    if (this-&gt;GetId_number() == demo.GetId_number())  //通过比较身份证号码去重
-    {
-        return false;
-    }
-    else
-    {
-        if (Age != demo.Age)    //如果年龄不同按年龄升序排列，如果相同则按身份证号码升序排列。
-        {
-            return Age &lt; demo.Age;
-        }
-        else
-        {
-            return Id_number &lt; demo.Id_number;
-        }
-    }
-}
+        <h2 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h2><p>转轮密码机是多表代换密码的典型例子，在二战中广泛应用。分为三个轮子-快中慢，每次敲击一次字符轮子就会转动一次，从而打破了明文密文的固定代替关系。快轮子转动26次-即循环了字母表则中轮子会转动一个字符，整个密码机的周期为26<em>26</em>26.</p>
+<p><img src="https://camo.githubusercontent.com/095c4fbde6c9fdbde144dc229c477cc2d0e488cd/68747470733a2f2f7777342e73696e61696d672e636e2f6c617267652f303036744e6252776c793166646d346636756961326a3330676f30626d3074792e6a7067" alt=""></p>
+<h2 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h2><pre class=" language-bash"><code class="language-bash">ElemType fgear<span class="token punctuation">[</span>2<span class="token punctuation">]</span><span class="token punctuation">[</span>26<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token punctuation">{</span>1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26<span class="token punctuation">}</span>,<span class="token punctuation">{</span>8, 18, 26, 17, 20, 22, 10, 3, 13, 11, 4, 23, 5, 24, 9, 12, 25, 16, 19, 6, 15, 21, 2, 7, 1, 14<span class="token punctuation">}</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>  //快轮
+ElemType mgear<span class="token punctuation">[</span>2<span class="token punctuation">]</span><span class="token punctuation">[</span>26<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token punctuation">{</span>26, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25<span class="token punctuation">}</span>,<span class="token punctuation">{</span>20, 1, 6, 4, 15, 3, 14, 12, 23, 5, 16, 2, 22, 19, 11, 18, 25, 24, 13, 7, 10, 8, 21, 9, 26, 17<span class="token punctuation">}</span> <span class="token punctuation">}</span><span class="token punctuation">;</span> //中轮
+ElemType sgear<span class="token punctuation">[</span>2<span class="token punctuation">]</span><span class="token punctuation">[</span>26<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token punctuation">{</span>24, 25, 26, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23<span class="token punctuation">}</span>,<span class="token punctuation">{</span>21, 3, 15, 1, 19, 10, 14, 26, 20, 8, 16, 7, 22, 4, 11, 5, 17, 9, 12, 23, 18, 2, 25, 6, 24, 13<span class="token punctuation">}</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>  //慢轮
+</code></pre>
+<p>我们密码机的初态定义如上，应用循环链表来把初态输入我们的程序。</p>
+<pre class=" language-bash"><code class="language-bash">class Gear<span class="token punctuation">;</span>   //主类
+class Node <span class="token punctuation">{</span>
+private:
+    ElemType leftElement<span class="token punctuation">;</span>
+    ElemType rightElement<span class="token punctuation">;</span>
+    Node *link<span class="token punctuation">;</span>
+    friend class Gear<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>  //链表类
 
-如果重载的是（）运算符那么是这样
-bool USER::operator()(const USER &amp; demo,const USER &amp; demo2) const
-{
-    if (demo-&gt;GetId_number() == demo2.GetId_number())  ////通过比较身份证号码去重
-    {
-        return false;
-    }
-    else
-    {
-        if (demo.Age != demo2.Age)                                        //如果年龄不同按年龄升序排列，如果相同则按身份证号码升序排列。
-        {
-            return demo.Age &lt; demo2.Age;
-        }
-        else
-        {
-            return demo.Id_number &lt; demo2.Id_number;
-        }
-    }
-}
+</code></pre>
+<p>那么我们具体需要什么方法来实现呢，要有移动轮子的 move() 方法，还有把初态密码机输入程序的 InitGear() 方法，寻找每个轮子左列与输入下标相同的元素的 Search()方法， 当然右列也一样 Find() 方法，当然还有不可缺少的构造函数和析构函数（实际是完成Node链表的初始化和销毁）</p>
+<pre class=" language-bash"><code class="language-bash">class Gear <span class="token punctuation">{</span>
+public:
+    Gear<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> first <span class="token operator">=</span> NULL<span class="token punctuation">;</span> <span class="token punctuation">}</span>                        //构造函数
+    ~Gear<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>                                        //析构函数
+    void initGear<span class="token punctuation">(</span>ElemType data<span class="token punctuation">[</span>2<span class="token punctuation">]</span><span class="token punctuation">[</span>26<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    bool Find<span class="token punctuation">(</span>ElemType in, ElemType <span class="token operator">&amp;</span>x<span class="token punctuation">)</span> const<span class="token punctuation">;</span>      //查找每个轮子左列与输入下标相同的元素的值
+    ElemType Search<span class="token punctuation">(</span>ElemType x<span class="token punctuation">)</span> const<span class="token punctuation">;</span>              //查找每个轮子右列与输入元素值相同的元素的下标
+    bool move<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>                                    //每加密一个字母，旋转一下轮子
 
-</code></pre><h2 id="如何对容器内对象进行更改"><a href="#如何对容器内对象进行更改" class="headerlink" title="如何对容器内对象进行更改"></a>如何对容器内对象进行更改</h2><p>放入<set>容器内的对象默认是不可更改的，是常对象。但一般我们还是需要对其更改，这时候我们只有采取先删除这个元素然后添加新元素的方法。</set></p>
-<pre><code>set&lt;USER&gt;::iterator p = user.begin();  
-</code></pre><p>这里是我自己定义的类USER,user为已经保存数据的<set>,采取生成迭代器方法，然后令指针指向容器的第一个元素。（注，begin()/end()不会检查容器是否为空，可用empty()检查）<br>begin()和end()是指向第一个元素和最后一个元素吗？？<br><img src="https://i.imgur.com/8g6ibTO.png" alt=""><br>有些博客上说end()是最后一个元素，其实是错的。end()指向最后一个元素之后为空的部分</set></p>
-<p>删除元素-erase()  ps-需要加一个判断，如果指针指向了容器的end()，没有办法删除操作。<br>添加元素-insert() ps-不要忘记自定义排序函数</p>
-<p>补一句既然是常对象，那么如果你要定义类函数访问他的某个属性，那么函数必须为常函数。</p>
-<p>其他常见函数见<a href="https://zh.cppreference.com/w/cpp/container/set" target="_blank" rel="noopener">https://zh.cppreference.com/w/cpp/container/set</a></p>
+private:
+    Node *first<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+bool Gear::move<span class="token punctuation">(</span><span class="token punctuation">)</span>  //
+<span class="token punctuation">{</span>
+    Node *p <span class="token operator">=</span> first<span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span>ElemType i <span class="token operator">=</span> 0<span class="token punctuation">;</span> i <span class="token operator">&lt;</span> 25<span class="token punctuation">;</span> i++<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        p <span class="token operator">=</span> p-<span class="token operator">></span>link<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    first <span class="token operator">=</span> p<span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+Gear::~Gear<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    Node *p<span class="token operator">=</span>first-<span class="token operator">></span>link,*q<span class="token punctuation">;</span>   //令p指向first的下一位，最后释放first指针
+    <span class="token keyword">while</span> <span class="token punctuation">(</span>p<span class="token operator">!=</span>first<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        q <span class="token operator">=</span> p-<span class="token operator">></span>link<span class="token punctuation">;</span>
+        first-<span class="token operator">></span>link <span class="token operator">=</span> q<span class="token punctuation">;</span>
+        delete p<span class="token punctuation">;</span>
+        p <span class="token operator">=</span> q<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    delete first<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+void Gear::initGear<span class="token punctuation">(</span>ElemType data<span class="token punctuation">[</span>2<span class="token punctuation">]</span><span class="token punctuation">[</span>26<span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    Node *p<span class="token operator">=</span>first, *q<span class="token punctuation">;</span>
+    p <span class="token operator">=</span> first<span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span>ElemType i <span class="token operator">=</span> 0<span class="token punctuation">;</span> i <span class="token operator">&lt;</span> 26<span class="token punctuation">;</span> i++<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        q <span class="token operator">=</span> new Node<span class="token punctuation">;</span>   //创建新节点
+        q-<span class="token operator">></span>leftElement <span class="token operator">=</span> data<span class="token punctuation">[</span>0<span class="token punctuation">]</span><span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+        q-<span class="token operator">></span>rightElement <span class="token operator">=</span> data<span class="token punctuation">[</span>1<span class="token punctuation">]</span><span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>i <span class="token operator">==</span> 0<span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            first <span class="token operator">=</span> q<span class="token punctuation">;</span>
+            p <span class="token operator">=</span> q<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>i<span class="token operator">==</span>25<span class="token punctuation">)</span>  //实现首尾相连
+        <span class="token punctuation">{</span>
+            p-<span class="token operator">></span>link <span class="token operator">=</span> q<span class="token punctuation">;</span>
+            p <span class="token operator">=</span> q<span class="token punctuation">;</span>
+            q-<span class="token operator">></span>link <span class="token operator">=</span> first<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">else</span>
+        <span class="token punctuation">{</span>
+            p-<span class="token operator">></span>link <span class="token operator">=</span> q<span class="token punctuation">;</span>
+            p <span class="token operator">=</span> q<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+ElemType Gear::Search<span class="token punctuation">(</span>ElemType x<span class="token punctuation">)</span> const
+<span class="token punctuation">{</span>
+    Node *p <span class="token operator">=</span> first<span class="token punctuation">;</span>
+    ElemType i<span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span>i <span class="token operator">=</span> 0<span class="token punctuation">;</span> p <span class="token operator">&amp;&amp;</span> p-<span class="token operator">></span>rightElement <span class="token operator">!=</span> x<span class="token punctuation">;</span> ++i<span class="token punctuation">)</span> <span class="token punctuation">{</span>    //从第一个元素开始查找，一直到 p 指向 NULL 或 p 指向的节点的 element 值与 x 相等
+        p <span class="token operator">=</span> p-<span class="token operator">></span>link<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>p<span class="token punctuation">)</span> <span class="token punctuation">{</span>        //若 p 不指向 NULL，return 当前下标
+        <span class="token keyword">return</span> i<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> -1<span class="token punctuation">;</span>
+
+<span class="token punctuation">}</span>
+bool Gear::Find<span class="token punctuation">(</span>ElemType in,ElemType <span class="token operator">&amp;</span>x<span class="token punctuation">)</span> const
+<span class="token punctuation">{</span>
+    Node *p<span class="token punctuation">;</span>
+    p <span class="token operator">=</span> first<span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span>ElemType i <span class="token operator">=</span> 0<span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token keyword">in</span><span class="token punctuation">;</span> i++<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        p <span class="token operator">=</span> p-<span class="token operator">></span>link<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    x <span class="token operator">=</span> p-<span class="token operator">></span>leftElement<span class="token punctuation">;</span>  //利用x返回此时的值
+    <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+
+ElemType Encode<span class="token punctuation">(</span>ElemType in, Gear *gFast, Gear *gMiddle, Gear *gSlow<span class="token punctuation">)</span> 
+<span class="token punctuation">{</span>
+    ElemType x, result<span class="token punctuation">;</span>
+    gSlow-<span class="token operator">></span>Find<span class="token punctuation">(</span>in, x<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    result <span class="token operator">=</span> gSlow-<span class="token operator">></span>Search<span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    gMiddle-<span class="token operator">></span>Find<span class="token punctuation">(</span>result, x<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    result <span class="token operator">=</span> gMiddle-<span class="token operator">></span>Search<span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    gFast-<span class="token operator">></span>Find<span class="token punctuation">(</span>result, x<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    result <span class="token operator">=</span> gFast-<span class="token operator">></span>Search<span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> result<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>   //加密函数，模拟轮子的电路操作一一对应。
+
+
+</code></pre>
+<p>这里要停一下假如我们这样设置加密函数</p>
+<pre class=" language-bash"><code class="language-bash">ElemType Encode<span class="token punctuation">(</span>ElemType in, Gear gFast, Gear gMiddle, Gear gSlow<span class="token punctuation">)</span> 
+</code></pre>
+<p>正常的传入我们的对象gFast,gMiddle,gSlow会发生什么 函数结束的时候对象会自动析构，要知道我们没有设置拷贝构造函数，但我们的对象中有动态空间（Node类，这里我们的Node附属于Gear的，会随着Gear消失而消失），就会发生指针指向NULL，从而GG程序宣告失败。这里用到的是C++的深浅拷贝问题以及函数的传参知识。</p>
+<p>函数传参有三种传参方式：传值、传址、传引用。<br>1、按值传递<br>    （1）形参和实参各占一个独立的存储空间。<br>    （2）形参的存储空间是函数被调用时才分配的，调用开始，系统为形参开辟一个临时的存储区，然后将各实参传递给形参，这是形参就得到了实参的值。<br>2、地址传递<br>    地址传递与值传递的不同在于，它把实参的存储地址传送给形参，使得形参指针和实参指针指向同一块地址。因此，被调用函数中对形参指针所指向的地址中内容的任何改变都会影响到实参。<br>3、引用传递<br>    引用传递是以引用为参数，则既可以使得对形参的任何操作都能改变相应数据，又使函数调用方便。引用传递是在形参调用前加入引用运算符“&amp;”。引用为实参的别名，和实参是同一个变量，则他们的值也相同，该引用改变则它的实参也改变。<br>注：引用是C++的概念，C中没有，同时布尔类型也是C++的概念。</p>
+<p>那么我们的转轮密码机做完了吗，显然还没有。我们只是搭好了架子做好了轮子还没有组装</p>
+<pre class=" language-bash"><code class="language-bash">void Encodeword<span class="token punctuation">(</span>Gear gFast, Gear gMiddle, Gear gSlow<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+    char plain<span class="token punctuation">[</span>100<span class="token punctuation">]</span>, cipher<span class="token punctuation">[</span>100<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    ElemType in<span class="token punctuation">[</span>100<span class="token punctuation">]</span>, out<span class="token punctuation">[</span>100<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    ElemType i <span class="token operator">=</span> 0<span class="token punctuation">;</span>
+    ElemType gf <span class="token operator">=</span> 0, gm <span class="token operator">=</span> 0<span class="token punctuation">;</span>
+
+    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"请输入您要加密的内容（空格以'／'代替）: "</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+    cin <span class="token operator">>></span> plain<span class="token punctuation">;</span>
+    ElemType n <span class="token operator">=</span> <span class="token punctuation">(</span>ElemType<span class="token punctuation">)</span><span class="token punctuation">(</span>strlen<span class="token punctuation">(</span>plain<span class="token punctuation">))</span><span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"正在加密......\n"</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span>i <span class="token operator">=</span> 0<span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> ++i<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>plain<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">&lt;</span> 65 <span class="token operator">||</span> plain<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">></span> 122 <span class="token operator">||</span> plain<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">==</span> 91 <span class="token operator">||</span> plain<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">==</span> 92 <span class="token operator">||</span> plain<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">==</span> 93 <span class="token operator">||</span> plain<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">==</span> 94 <span class="token operator">||</span> plain<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">==</span> 95 <span class="token operator">||</span> plain<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">==</span> 96<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            cipher<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> plain<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">else</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>plain<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">>=</span> 97 <span class="token operator">&amp;&amp;</span> plain<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">&lt;=</span> 122<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                in<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> plain<span class="token punctuation">[</span>i<span class="token punctuation">]</span> - 32 - <span class="token string">'A'</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">else</span> <span class="token punctuation">{</span>
+                in<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> plain<span class="token punctuation">[</span>i<span class="token punctuation">]</span> - <span class="token string">'A'</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            out<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> Encode<span class="token punctuation">(</span>in<span class="token punctuation">[</span>i<span class="token punctuation">]</span>, <span class="token operator">&amp;</span>gFast, <span class="token operator">&amp;</span>gMiddle, <span class="token operator">&amp;</span>gSlow<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            cipher<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> char<span class="token punctuation">(</span>out<span class="token punctuation">[</span>i<span class="token punctuation">]</span> + <span class="token string">'A'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            gf++<span class="token punctuation">;</span>
+            gFast.move<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>gf <span class="token operator">==</span> 26<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                gm++<span class="token punctuation">;</span>
+                gMiddle.move<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                gf <span class="token operator">=</span> 0<span class="token punctuation">;</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span>gm <span class="token operator">==</span> 26<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    gSlow.move<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    gm <span class="token operator">=</span> 0<span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        cipher<span class="token punctuation">[</span>i + 1<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">'\0'</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"加密成功！密文是："</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> cipher<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>*/
+
+</code></pre>
+<p>有兴趣的可以自己写解密函数，还可以加上文件读写的功能使其可以对文件进行加密。</p>
 
       
     </div>
@@ -562,7 +657,7 @@ bool USER::operator()(const USER &amp; demo,const USER &amp; demo2) const
       
         <div class="post-tags">
           
-            <a href="/tags/数据结构/" rel="tag"><i class="fa fa-tag"></i> 数据结构</a>
+            <a href="/tags/密码学/" rel="tag"><i class="fa fa-tag"></i> 密码学</a>
           
         </div>
       
@@ -575,8 +670,8 @@ bool USER::operator()(const USER &amp; demo,const USER &amp; demo2) const
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/11/26/pq/" rel="next" title="Pyquery解析库">
-                <i class="fa fa-chevron-left"></i> Pyquery解析库
+              <a href="/2018/12/07/代理的使用/" rel="next" title="代理的使用">
+                <i class="fa fa-chevron-left"></i> 代理的使用
               </a>
             
           </div>
@@ -584,10 +679,6 @@ bool USER::operator()(const USER &amp; demo,const USER &amp; demo2) const
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/12/07/代理的使用/" rel="prev" title="代理的使用">
-                代理的使用 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -785,7 +876,7 @@ bool USER::operator()(const USER &amp; demo,const USER &amp; demo2) const
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#往set容器内插入自定义类（自定义排序函数）"><span class="nav-number">1.</span> <span class="nav-text">往set容器内插入自定义类（自定义排序函数）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如何对容器内对象进行更改"><span class="nav-number">2.</span> <span class="nav-text">如何对容器内对象进行更改</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#原理"><span class="nav-number">1.</span> <span class="nav-text">原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码实现"><span class="nav-number">2.</span> <span class="nav-text">代码实现</span></a></li></ol></div>
             
 
           </div>
