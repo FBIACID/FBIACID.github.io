@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-03-09T15:02:57.010Z</updated>
+  <updated>2019-03-10T08:22:46.121Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>希尔密码</title>
+    <link href="http://yoursite.com/2019/03/10/%E5%B8%8C%E5%B0%94%E5%AF%86%E7%A0%81/"/>
+    <id>http://yoursite.com/2019/03/10/希尔密码/</id>
+    <published>2019-03-10T06:47:49.000Z</published>
+    <updated>2019-03-10T08:22:46.121Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;原理&quot;&gt;&lt;a href=&quot;#原理&quot; class=&quot;headerlink&quot; title=&quot;原理&quot;&gt;&lt;/a&gt;原理&lt;/h2&gt;&lt;p&gt;希尔密码是基于矩阵的线性变换,其最大的好处就是隐藏了字符的频率信息, 使得传统的通过字频来破译密文的方法失效。（例如维吉尼亚密码等都有统计规
+      
+    
+    </summary>
+    
+      <category term="密码学" scheme="http://yoursite.com/categories/%E5%AF%86%E7%A0%81%E5%AD%A6/"/>
+    
+    
+      <category term="密码学" scheme="http://yoursite.com/tags/%E5%AF%86%E7%A0%81%E5%AD%A6/"/>
+    
+  </entry>
   
   <entry>
     <title>转轮密码机</title>
