@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-03-19T02:16:29.181Z</updated>
+  <updated>2019-03-19T02:21:13.821Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,14 +21,14 @@
     <link href="http://yoursite.com/2019/03/18/%E8%BF%9B%E7%A8%8B%EF%BC%8C%E7%BA%BF%E7%A8%8B%EF%BC%8C%E5%BC%82%E6%AD%A5%E5%8D%8F%E7%A8%8B/"/>
     <id>http://yoursite.com/2019/03/18/进程，线程，异步协程/</id>
     <published>2019-03-18T14:18:04.000Z</published>
-    <updated>2019-03-19T02:16:29.181Z</updated>
+    <updated>2019-03-19T02:21:13.821Z</updated>
     
     <summary type="html">
     
       
       
-        &lt;h2 id=&quot;进程&quot;&gt;&lt;a href=&quot;#进程&quot; class=&quot;headerlink&quot; title=&quot;进程&quot;&gt;&lt;/a&gt;进程&lt;/h2&gt;&lt;p&gt;狭义的进程可以代表一个应用程序的执行过程，比如我们打开任务管理器，可以看到很多程序在运行，这些都可以都可以说是一个个进程。&lt;/p&gt;
-&lt;p&gt;广
+        &lt;p&gt;本文记录一下自己观看很多博客后，多余线程，进程，协程的理解。&lt;/p&gt;
+&lt;h2 id=&quot;进程&quot;&gt;&lt;a href=&quot;#进程&quot; class=&quot;headerlink&quot; title=&quot;进程&quot;&gt;&lt;/a&gt;进程&lt;/h2&gt;&lt;p&gt;狭义的进程可以代表一个应用程序的执行过程，比如我们打开任务管理器
       
     
     </summary>
