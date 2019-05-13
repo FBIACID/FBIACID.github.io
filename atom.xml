@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-03-19T02:21:13.821Z</updated>
+  <updated>2019-05-13T16:36:21.407Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,20 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Tree</title>
+    <link href="http://yoursite.com/2019/05/14/Tree/"/>
+    <id>http://yoursite.com/2019/05/14/Tree/</id>
+    <published>2019-05-13T16:36:21.000Z</published>
+    <updated>2019-05-13T16:36:21.407Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>进程，线程，异步协程</title>
@@ -502,32 +516,6 @@
       <category term="爬虫" scheme="http://yoursite.com/tags/%E7%88%AC%E8%99%AB/"/>
     
       <category term="Python" scheme="http://yoursite.com/tags/Python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Python链接数据库报错</title>
-    <link href="http://yoursite.com/2018/08/28/first/"/>
-    <id>http://yoursite.com/2018/08/28/first/</id>
-    <published>2018-08-28T10:01:07.000Z</published>
-    <updated>2019-03-10T08:41:10.618Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;本文是自己刚接触python时踩的坑&lt;/p&gt;
-&lt;h2 id=&quot;在pycharm中连接数据库报错&quot;&gt;&lt;a href=&quot;#在pycharm中连接数据库报错&quot; class=&quot;headerlink&quot; title=&quot;在pycharm中连接数据库报错&quot;&gt;&lt;/a&gt;在pycharm中连接数
-      
-    
-    </summary>
-    
-      <category term="Python" scheme="http://yoursite.com/categories/Python/"/>
-    
-    
-      <category term="Python" scheme="http://yoursite.com/tags/Python/"/>
-    
-      <category term="Mysql" scheme="http://yoursite.com/tags/Mysql/"/>
     
   </entry>
   
