@@ -112,13 +112,13 @@
 
 
 
-  <meta name="description" content="这是kaggle官网的一个基础入门题目，作为自己的一道入门尝试我觉得还是有一定意义的，将自己在kaggle学习的简单技能做了简单的整合，毕竟只理论太容易被忘记。 数据预处理· 特征值的选取 首先我们要知道我们的数据大概包含什么，然后才能进行下一步的特征值处理以及之后的预测。 import numpy as np import seaborn as sns import xgboost as">
+  <meta name="description" content="这是kaggle官网的一个基础入门题目，作为自己的一道入门尝试我觉得还是有一定意义的，将自己在kaggle学习的简单技能做了简单的整合，毕竟只理论太容易被忘记。 数据预处理 特征值的选取  首先我们要知道我们的数据大概包含什么，然后才能进行下一步的特征值处理以及之后的预测。 import numpy as np import seaborn as sns import xgboost as">
 <meta name="keywords" content="数据分析,机器学习">
 <meta property="og:type" content="article">
 <meta property="og:title" content="SalePrice_Predict">
 <meta property="og:url" content="http://yoursite.com/2019/05/15/SalePrice-Predict/index.html">
 <meta property="og:site_name" content="烟柳画桥&amp;晚来风急">
-<meta property="og:description" content="这是kaggle官网的一个基础入门题目，作为自己的一道入门尝试我觉得还是有一定意义的，将自己在kaggle学习的简单技能做了简单的整合，毕竟只理论太容易被忘记。 数据预处理· 特征值的选取 首先我们要知道我们的数据大概包含什么，然后才能进行下一步的特征值处理以及之后的预测。 import numpy as np import seaborn as sns import xgboost as">
+<meta property="og:description" content="这是kaggle官网的一个基础入门题目，作为自己的一道入门尝试我觉得还是有一定意义的，将自己在kaggle学习的简单技能做了简单的整合，毕竟只理论太容易被忘记。 数据预处理 特征值的选取  首先我们要知道我们的数据大概包含什么，然后才能进行下一步的特征值处理以及之后的预测。 import numpy as np import seaborn as sns import xgboost as">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://i.imgur.com/7q29nIW.png">
 <meta property="og:image" content="https://i.imgur.com/dRm0rrj.png">
@@ -126,10 +126,10 @@
 <meta property="og:image" content="https://i.imgur.com/bAJqDx0.png">
 <meta property="og:image" content="https://i.imgur.com/ceEtHlp.png">
 <meta property="og:image" content="https://i.imgur.com/wjXbmz4.png">
-<meta property="og:updated_time" content="2019-05-15T08:47:15.016Z">
+<meta property="og:updated_time" content="2019-05-15T08:51:32.016Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SalePrice_Predict">
-<meta name="twitter:description" content="这是kaggle官网的一个基础入门题目，作为自己的一道入门尝试我觉得还是有一定意义的，将自己在kaggle学习的简单技能做了简单的整合，毕竟只理论太容易被忘记。 数据预处理· 特征值的选取 首先我们要知道我们的数据大概包含什么，然后才能进行下一步的特征值处理以及之后的预测。 import numpy as np import seaborn as sns import xgboost as">
+<meta name="twitter:description" content="这是kaggle官网的一个基础入门题目，作为自己的一道入门尝试我觉得还是有一定意义的，将自己在kaggle学习的简单技能做了简单的整合，毕竟只理论太容易被忘记。 数据预处理 特征值的选取  首先我们要知道我们的数据大概包含什么，然后才能进行下一步的特征值处理以及之后的预测。 import numpy as np import seaborn as sns import xgboost as">
 <meta name="twitter:image" content="https://i.imgur.com/7q29nIW.png">
 
 
@@ -392,7 +392,7 @@
                 
               
 
-              <time title="创建时间：2019-05-15 16:46:43 / 修改时间：16:47:15" itemprop="dateCreated datePublished" datetime="2019-05-15T16:46:43+08:00">2019-05-15</time>
+              <time title="创建时间：2019-05-15 16:46:43 / 修改时间：16:51:32" itemprop="dateCreated datePublished" datetime="2019-05-15T16:46:43+08:00">2019-05-15</time>
             
 
             
@@ -457,7 +457,9 @@
 
       
         <p>   这是kaggle官网的一个基础入门题目，作为自己的一道入门尝试我觉得还是有一定意义的，将自己在kaggle学<br>习的简单技能做了简单的整合，毕竟只理论太容易被忘记。</p>
-<h2 id="数据预处理"><a href="#数据预处理" class="headerlink" title="数据预处理"></a>数据预处理</h2><p>· 特征值的选取</p>
+<h2 id="数据预处理"><a href="#数据预处理" class="headerlink" title="数据预处理"></a>数据预处理</h2><ul>
+<li>特征值的选取</li>
+</ul>
 <p>首先我们要知道我们的数据大概包含什么，然后才能进行下一步的特征值处理以及之后的预测。</p>
 <pre><code>import numpy as np
 import seaborn as sns
@@ -496,7 +498,9 @@ Index([&#39;Id&#39;, &#39;MSSubClass&#39;, &#39;MSZoning&#39;, &#39;LotFrontage&
 <p><img src="https://i.imgur.com/dRm0rrj.png" alt=""></p>
 <p>我们可以直接选这十个特征值（记得除去SalePrice自己，不然会存在数据泄露，导致训练结果高的吓人，但对于真正的数据会一无是处。</p>
 <p>这里我并没有这么做，因为舍弃了太多特征值，表现效果不理想。</p>
-<p>· 缺失值处理</p>
+<ul>
+<li>缺失值处理</li>
+</ul>
 <p>选定特征值之后要做什么呢，当然是处理一些不太听话的数据（可能各种各样的情况导致的缺失，结合实际分析）<br>缺失值有两种处理方法<br>1：填充缺失值<br>2：删除缺失值所在的列<br>（删除有任意一行数据缺失的列，通过Xgboost大概是百分之80左右的正确率）</p>
 <p>这里我们计算缺失率，将缺失过多的进行删除，我们有理由认为，他缺失过多是因为他不重要。缺失较少的根据我们的分析进行对应的填充操作。</p>
 <pre><code>#训练集的缺失值
@@ -553,7 +557,9 @@ for i in [&#39;TotalBsmtSF&#39;,&#39;BsmtUnfSF&#39;]:
 train_data = train_data.drop([&#39;Utilities&#39;, &#39;Street&#39;, &#39;PoolQC&#39;,], axis=1)
 test_data = test_data.drop([&#39;Utilities&#39;, &#39;Street&#39;, &#39;PoolQC&#39;,], axis=1)
 </code></pre><p>（这里我们可以将训练集和测试集先进行合并然后进行数据预处理，可以减少一部分代码量）</p>
-<p>· 数据转化<br>缺失值经过填充，我们的数据集（某些特征值）已经可以进行预测了，虽然正确率可能并不高，但不会因为空值报错，我们还要对数据进行下一步的整理。<br>1：对一些数值型数据转化为字符串（我们后面还要对非数值型数据进行编码，我们认为这一部分数据作为编码对于模型的贡献要优于数值）<br>MSSubClass:建筑类<br>MoSold:已售出月份<br>YrSold:已售出年份<br>可能有人会问，那么房子的建设日期等一些其他的为什么不做转化-答案很简单，因为其他的分布杂乱，后面的编码会出现很多的空列，所以没有必要当然也可以这么做，自己取舍就可以了。</p>
+<ul>
+<li>数据转化<br>缺失值经过填充，我们的数据集（某些特征值）已经可以进行预测了，虽然正确率可能并不高，但不会因为空值报错，我们还要对数据进行下一步的整理。<br>1：对一些数值型数据转化为字符串（我们后面还要对非数值型数据进行编码，我们认为这一部分数据作为编码对于模型的贡献要优于数值）<br>MSSubClass:建筑类<br>MoSold:已售出月份<br>YrSold:已售出年份<br>可能有人会问，那么房子的建设日期等一些其他的为什么不做转化-答案很简单，因为其他的分布杂乱，后面的编码会出现很多的空列，所以没有必要当然也可以这么做，自己取舍就可以了。</li>
+</ul>
 <p>2：数据的转化（有时也做正规化等等），有时候数据的分布并不符合我们的预期，这个时候我们为了使其更好的匹配模型，就要进行对应的转化，常用的有取log log1p等，对于变量的分布我们可以通过绘图来观察。</p>
 <pre><code>from scipy.stats import norm
 final_data[&#39;SalePrice&#39;] = np.log(final_data[&#39;SalePrice&#39;])
