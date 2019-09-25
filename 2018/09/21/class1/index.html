@@ -112,18 +112,18 @@
 
 
 
-  <meta name="description" content="本文简单的讲一下requests库的基本操作 requests库的安装首先确定你已经安装了requests库，如果没有的话 pip install requests  简单的使用请求可以这样写 $      r = requests.get(&quot;http://www.baidu.com&quot;)  #对应GET $     data = {&apos;key&apos;:&apos;value&apos;} $     r = requests">
+  <meta name="description" content="本文简单的讲一下requests库的基本操作 requests库的安装首先确定你已经安装了requests库，如果没有的话 pip install requests  简单的使用请求可以这样写  import requests  r = requests.get(&quot;http://www.baidu.com&quot;)  #对应GET  data = {&apos;key&apos;:&apos;value&apos;}  r = request">
 <meta name="keywords" content="爬虫,Python">
 <meta property="og:type" content="article">
 <meta property="og:title" content="requests 库 and 正则表达式">
 <meta property="og:url" content="http://yoursite.com/2018/09/21/class1/index.html">
 <meta property="og:site_name" content="烟柳画桥&amp;晚来风急">
-<meta property="og:description" content="本文简单的讲一下requests库的基本操作 requests库的安装首先确定你已经安装了requests库，如果没有的话 pip install requests  简单的使用请求可以这样写 $      r = requests.get(&quot;http://www.baidu.com&quot;)  #对应GET $     data = {&apos;key&apos;:&apos;value&apos;} $     r = requests">
+<meta property="og:description" content="本文简单的讲一下requests库的基本操作 requests库的安装首先确定你已经安装了requests库，如果没有的话 pip install requests  简单的使用请求可以这样写  import requests  r = requests.get(&quot;http://www.baidu.com&quot;)  #对应GET  data = {&apos;key&apos;:&apos;value&apos;}  r = request">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-03-10T08:40:33.964Z">
+<meta property="og:updated_time" content="2019-08-11T12:46:38.759Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="requests 库 and 正则表达式">
-<meta name="twitter:description" content="本文简单的讲一下requests库的基本操作 requests库的安装首先确定你已经安装了requests库，如果没有的话 pip install requests  简单的使用请求可以这样写 $      r = requests.get(&quot;http://www.baidu.com&quot;)  #对应GET $     data = {&apos;key&apos;:&apos;value&apos;} $     r = requests">
+<meta name="twitter:description" content="本文简单的讲一下requests库的基本操作 requests库的安装首先确定你已经安装了requests库，如果没有的话 pip install requests  简单的使用请求可以这样写  import requests  r = requests.get(&quot;http://www.baidu.com&quot;)  #对应GET  data = {&apos;key&apos;:&apos;value&apos;}  r = request">
 
 
 
@@ -262,7 +262,7 @@
           
           <li class="menu-item menu-item-archives">
     <a href="/archives" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档<span class="badge">22</span></a>
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档<span class="badge">24</span></a>
   </li>
 
       
@@ -402,7 +402,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-03-10 16:40:33" itemprop="dateModified" datetime="2019-03-10T16:40:33+08:00">2019-03-10</time>
+                <time title="修改时间：2019-08-11 20:46:38" itemprop="dateModified" datetime="2019-08-11T20:46:38+08:00">2019-08-11</time>
               
             
           </span>
@@ -473,13 +473,14 @@
 <pre class=" language-python"><code class="language-python">pip install requests
 </code></pre>
 <h2 id="简单的使用"><a href="#简单的使用" class="headerlink" title="简单的使用"></a>简单的使用</h2><p>请求可以这样写</p>
-<pre class=" language-python"><code class="language-python">$      r <span class="token operator">=</span> requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">"http://www.baidu.com"</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true">#对应GET</span>
-$     data <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">'key'</span><span class="token punctuation">:</span><span class="token string">'value'</span><span class="token punctuation">}</span>
-$     r <span class="token operator">=</span> requests<span class="token punctuation">.</span>post<span class="token punctuation">(</span><span class="token string">"http://www.baidu.com"</span><span class="token punctuation">,</span>data<span class="token operator">=</span>data<span class="token punctuation">)</span>  <span class="token comment" spellcheck="true">#对应POST 提交表单, data为表单数据，以字典型数据存储</span>
-$     <span class="token comment" spellcheck="true">#主要前两种后面几乎用不到</span>
-$     r <span class="token operator">=</span> requests<span class="token punctuation">.</span>put<span class="token punctuation">(</span><span class="token string">"http://www.baidu.com"</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true">#对应PUT</span>
-$     r <span class="token operator">=</span> requests<span class="token punctuation">.</span>delete<span class="token punctuation">(</span><span class="token string">"http://www.baidu.com"</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">#对应删除DELETE</span>
-$     r <span class="token operator">=</span> requests<span class="token punctuation">.</span>head<span class="token punctuation">(</span><span class="token string">"http://www.baidu.com"</span><span class="token punctuation">)</span>   <span class="token comment" spellcheck="true">#</span>
+<pre class=" language-python"><code class="language-python"> <span class="token keyword">import</span> requests
+ r <span class="token operator">=</span> requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">"http://www.baidu.com"</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true">#对应GET</span>
+ data <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">'key'</span><span class="token punctuation">:</span><span class="token string">'value'</span><span class="token punctuation">}</span>
+ r <span class="token operator">=</span> requests<span class="token punctuation">.</span>post<span class="token punctuation">(</span><span class="token string">"http://www.baidu.com"</span><span class="token punctuation">,</span>data<span class="token operator">=</span>data<span class="token punctuation">)</span>  <span class="token comment" spellcheck="true">#对应POST 提交表单, data为表单数据，以字典型数据存储</span>
+     <span class="token comment" spellcheck="true">#主要前两种后面几乎用不到</span>
+ r <span class="token operator">=</span> requests<span class="token punctuation">.</span>put<span class="token punctuation">(</span><span class="token string">"http://www.baidu.com"</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true">#对应PUT</span>
+ r <span class="token operator">=</span> requests<span class="token punctuation">.</span>delete<span class="token punctuation">(</span><span class="token string">"http://www.baidu.com"</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">#对应删除DELETE</span>
+ r <span class="token operator">=</span> requests<span class="token punctuation">.</span>head<span class="token punctuation">(</span><span class="token string">"http://www.baidu.com"</span><span class="token punctuation">)</span>   <span class="token comment" spellcheck="true">#</span>
 </code></pre>
 <p>很方便的看出请求很简单，一行代码就可以完成请求，但是这只是一般网站的主页，我们肯定是要去其他部分提取信息的，所以会附加一大串的参数，比如</p>
 <pre class=" language-python"><code class="language-python">r <span class="token operator">=</span> requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">'http://httpbin.org/get?name=germey&amp;age=22'</span><span class="token punctuation">)</span>  
@@ -500,18 +501,18 @@ headers <span class="token operator">=</span> <span class="token punctuation">{<
     <span class="token string">'Upgrade-Insecure-Requests'</span> <span class="token punctuation">:</span> <span class="token string">'1'</span><span class="token punctuation">,</span>
     <span class="token string">'User-Agent'</span> <span class="token punctuation">:</span> <span class="token string">'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36'</span>
 <span class="token punctuation">}</span>
-requests<span class="token punctuation">,</span>get<span class="token punctuation">(</span><span class="token string">'http://weixin.sogou.com'</span><span class="token punctuation">,</span>headers <span class="token operator">=</span> headers<span class="token punctuation">)</span>
+requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">'http://weixin.sogou.com'</span><span class="token punctuation">,</span>headers <span class="token operator">=</span> headers<span class="token punctuation">)</span>
 当然也可以cookies <span class="token operator">=</span> <span class="token punctuation">{</span>
     <span class="token string">'a'</span> <span class="token punctuation">:</span> <span class="token string">'a'</span><span class="token punctuation">,</span>
 <span class="token punctuation">}</span>
-requests<span class="token punctuation">,</span>get<span class="token punctuation">(</span><span class="token string">'http://weixin.sogou.com'</span><span class="token punctuation">,</span>cookies <span class="token operator">=</span> cookies<span class="token punctuation">)</span>
+requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">'http://weixin.sogou.com'</span><span class="token punctuation">,</span>cookies <span class="token operator">=</span> cookies<span class="token punctuation">)</span>
 但显然直接复制更方便
 如果遇到反爬措施怎么更换代理呢，requests也有十分简单的方法，类似于上面的参数提交
 proxies <span class="token operator">=</span> <span class="token punctuation">{</span>
     <span class="token string">"http"</span> <span class="token punctuation">:</span> <span class="token string">"http:127.0.0.1:8080"</span><span class="token punctuation">,</span>
     <span class="token string">"https"</span> <span class="token punctuation">:</span> <span class="token string">"https://127.0.0.0:5555"</span>
 <span class="token punctuation">}</span>
-r <span class="token operator">=</span> requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">'http:www.zhihu.com'</span><span class="token punctuation">,</span>proxies<span class="token operator">=</span>proxies<span class="token punctuation">)</span> <span class="token comment" spellcheck="true">#当然上面的代理是不能用的，你可以找国内哪些免费网站上寻找，或者用后续的维护一个代理池，当然付费代理最为好用。</span>
+r <span class="token operator">=</span> requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">'http:www.zhihu.com'</span><span class="token punctuation">,</span>proxies<span class="token operator">=</span>proxies<span class="token punctuation">)</span> <span class="token comment" spellcheck="true">#当然上面的代理是不能用的，你可以找国内哪些免费网站上寻找，或者自己维护一个代理池（从各大网站上爬取代理ip,验证其可用性保存在数据库备用），当然付费代理最为好用。</span>
 还有一个超时操作的处理直接在末尾的timeout 参数赋值即可，如果你使用的是GET、OPTIONS、POST、PUT、PATCH 或者 DELETE，那么你可以通过 allow_redirects 参数禁用重定向处理：
 r <span class="token operator">=</span> requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">'http://github.com'</span><span class="token punctuation">,</span> allow_redirects<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">)</span>
 </code></pre>
@@ -523,7 +524,7 @@ r <span class="token operator">=</span> requests<span class="token punctuation">
 <pre class=" language-python"><code class="language-python"><span class="token keyword">import</span> requests
 <span class="token keyword">from</span> requests<span class="token punctuation">.</span>packages <span class="token keyword">import</span> urllib3
 urllib3<span class="token punctuation">.</span>disable_warnings<span class="token punctuation">(</span><span class="token punctuation">)</span> 
-response <span class="token operator">=</span> requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">'https//www.12306.cn'</span><span class="token punctuation">,</span>verify<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">)</span>
+response <span class="token operator">=</span> requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">'https://www.12306.cn'</span><span class="token punctuation">,</span>verify<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">)</span>
 </code></pre>
 <p>讲完了请求那么我们获取的数据怎么拿到呢。</p>
 <pre class=" language-python"><code class="language-python">r<span class="token punctuation">.</span>status_code  <span class="token comment" spellcheck="true">#获取响应码，判断自己是否成功访问网站</span>
@@ -547,7 +548,7 @@ r<span class="token punctuation">.</span>content  <span class="token comment" sp
     <span class="token keyword">print</span><span class="token punctuation">(</span>result<span class="token punctuation">.</span>group<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
 </code></pre>
 <p>我们的正则表达式以^作为开头，然后\s匹配空白字符，\d匹配数字,\d{3}代表匹配三个数字，\w{5},匹配字母数字或下划线共五个。我们运行一下发现匹配到了 Hello 123 456 World，调用group()获取匹配内容，span()获取匹配范围。match()函数有两个参数，1为正则，二为待匹配字符串。<br>如果我们想要得到某一具体内容怎么办呢，比如只想得到123。那么我们可以在正则表达式中用()把它括起来</p>
-<pre class=" language-python"><code class="language-python">result <span class="token operator">=</span> re<span class="token punctuation">.</span>match<span class="token punctuation">(</span><span class="token string">'^Hello\s(\d+)\s\d{3}\sWorld'</span><span class="token punctuation">,</span>str<span class="token punctuation">)</span>
+<pre class=" language-python"><code class="language-python">result <span class="token operator">=</span> re<span class="token punctuation">.</span>match<span class="token punctuation">(</span><span class="token string">'^Hello\s(\d+)\s\d{3}\s\w{5}'</span><span class="token punctuation">,</span>str<span class="token punctuation">)</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span>result<span class="token punctuation">.</span>group<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
 </code></pre>
 <p>这样难免有点繁琐，我们使用通用匹配就很方便——.<em>(.可匹配除换行符之外的任意字符。</em>匹配无限次)完成上面的匹配，我们可以这样写</p>
@@ -572,7 +573,7 @@ result1
 result2 KEraCN
 </code></pre>
 <h3 id="修饰符"><a href="#修饰符" class="headerlink" title="修饰符"></a>修饰符</h3><p>正则表达式可以包含一些可选标志修饰符来控制匹配的模式 修饰符被指定为一个可选的标志。<br>我们改一下字符串 </p>
-<pre class=" language-python"><code class="language-python">str <span class="token operator">=</span> <span class="token string">"Hello 123 456 World is a demo"</span>
+<pre class=" language-python"><code class="language-python">str <span class="token operator">=</span> <span class="token string">"Hello 123 456 \nWorld is a demo"</span>
 result <span class="token operator">=</span> re<span class="token punctuation">.</span>match<span class="token punctuation">(</span><span class="token string">'^Hello.*demo'</span><span class="token punctuation">,</span>str<span class="token punctuation">)</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span>result<span class="token punctuation">.</span>group<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
 发现报错，未成功得到字符
@@ -610,16 +611,12 @@ result <span class="token operator">=</span> re<span class="token punctuation">.
     &lt;/li>
     &lt;/ul>
     &lt;/div>'''</span>
-    result <span class="token operator">=</span> re<span class="token punctuation">,</span>search<span class="token punctuation">(</span><span class="token string">'&lt;li.*?active.*?singer='</span><span class="token punctuation">(</span><span class="token punctuation">.</span><span class="token operator">*</span>?<span class="token punctuation">)</span><span class="token string">'>(.*?)&lt;/a>'</span><span class="token punctuation">,</span>html<span class="token punctuation">,</span>re<span class="token punctuation">.</span>S<span class="token punctuation">)</span>
+    result <span class="token operator">=</span> re<span class="token punctuation">.</span>search<span class="token punctuation">(</span><span class="token string">"&lt;li.*?active.*?singer='(.*?)'>(.*?)&lt;/a>"</span><span class="token punctuation">,</span>html<span class="token punctuation">,</span>re<span class="token punctuation">.</span>S<span class="token punctuation">)</span>
     <span class="token keyword">print</span><span class="token punctuation">(</span>result<span class="token punctuation">.</span>group<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span>result<span class="token punctuation">.</span>group<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-    <span class="token operator">>></span><span class="token operator">></span>齐秦往事随风
-    result <span class="token operator">=</span> re<span class="token punctuation">,</span>search<span class="token punctuation">(</span><span class="token string">'&lt;li.*?singer='</span><span class="token punctuation">(</span><span class="token punctuation">.</span><span class="token operator">*</span>?<span class="token punctuation">)</span><span class="token string">'>(.*?)&lt;/a>'</span><span class="token punctuation">,</span>html<span class="token punctuation">,</span>re<span class="token punctuation">.</span>S<span class="token punctuation">)</span>
+    <span class="token operator">>></span><span class="token operator">></span>齐秦 往事随风
+    result <span class="token operator">=</span> re<span class="token punctuation">.</span>search<span class="token punctuation">(</span><span class="token string">"&lt;li.*?singer='(.*?)'>(.*?)&lt;/a>"</span><span class="token punctuation">,</span>html<span class="token punctuation">,</span>re<span class="token punctuation">.</span>S<span class="token punctuation">)</span>
     <span class="token keyword">print</span><span class="token punctuation">(</span>result<span class="token punctuation">.</span>group<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span>result<span class="token punctuation">.</span>group<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
     <span class="token operator">>></span><span class="token operator">></span>任贤齐沧海一声笑
-    假如我们去掉换行符re<span class="token punctuation">.</span>S
-    result <span class="token operator">=</span> re<span class="token punctuation">,</span>search<span class="token punctuation">(</span><span class="token string">'&lt;li.*?singer='</span><span class="token punctuation">(</span><span class="token punctuation">.</span><span class="token operator">*</span>?<span class="token punctuation">)</span><span class="token string">'>(.*?)&lt;/a>'</span><span class="token punctuation">,</span>html<span class="token punctuation">)</span>
-    <span class="token keyword">print</span><span class="token punctuation">(</span>result<span class="token punctuation">.</span>group<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span>result<span class="token punctuation">.</span>group<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-    <span class="token operator">>></span><span class="token operator">></span>beyond光辉岁月
 </code></pre>
 <h3 id="findall"><a href="#findall" class="headerlink" title="findall()"></a>findall()</h3><p>search方法只能返回一个值，显然不足以满足我们的需求，findall方法返回所有符合要求的字符串，以列表的形式存储。</p>
 <pre class=" language-python"><code class="language-python">    re<span class="token punctuation">.</span>findall<span class="token punctuation">(</span>pattern<span class="token punctuation">,</span> string<span class="token punctuation">,</span> flags<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">)</span>
@@ -640,8 +637,9 @@ result <span class="token operator">=</span> re<span class="token punctuation">.
 </code></pre>
 <h3 id="compile"><a href="#compile" class="headerlink" title="compile()"></a>compile()</h3><p>前面所讲的方法都是用来处理字符串的方法，最后再介绍一下 compile()方法，这个方法可以将<br>正则字符串编译成正则表达式对象，以便在后面的匹配中复用</p>
 <pre class=" language-python"><code class="language-python"><span class="token keyword">import</span> re 
-contnet <span class="token operator">=</span> <span class="token string">'2018-2-11 12:00'</span>
-pattrtn <span class="token operator">=</span> re<span class="token punctuation">.</span>compile<span class="token punctuation">(</span><span class="token string">'\d{2}:\d{2}'</span><span class="token punctuation">)</span>
+content <span class="token operator">=</span> <span class="token string">'2018-2-11 12:00'</span>
+patten <span class="token operator">=</span> re<span class="token punctuation">.</span>compile<span class="token punctuation">(</span><span class="token string">'\d{2}:\d{2}'</span><span class="token punctuation">)</span>
+pattem<span class="token punctuation">.</span>split<span class="token punctuation">(</span>content<span class="token punctuation">)</span>
 </code></pre>
 <p>另外， compile()还可以传入修饰符，例如 re.S等修饰符，这样search(),findall()等方法中<br>就不需要额外传了 所以compile()方法可以说是给正则表达式做了一层封装，以使我们更好地复用</p>
 <p>ok 扯淡完毕本节结束具体看实例吧</p>
@@ -780,7 +778,7 @@ pattrtn <span class="token operator">=</span> re<span class="token punctuation">
                 
                   <a href="/archives">
                 
-                    <span class="site-state-item-count">22</span>
+                    <span class="site-state-item-count">24</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -958,7 +956,7 @@ pattrtn <span class="token operator">=</span> re<span class="token punctuation">
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共41.3k字</span>
+  <span class="post-count">博客全站共42.1k字</span>
 </div>
         
 <div class="busuanzi-count">
